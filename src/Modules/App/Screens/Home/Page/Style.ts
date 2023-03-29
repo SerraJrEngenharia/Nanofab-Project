@@ -7,7 +7,5 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  /* background-color: #F8F8F8; */
   background-image: url(${BackgroundSvg});
 `;
