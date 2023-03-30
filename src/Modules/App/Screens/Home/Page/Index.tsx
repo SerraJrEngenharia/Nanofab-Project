@@ -18,32 +18,6 @@ import SubArticlesPage from "../Templates/Subarticles/Page/Index";
 import { PageProps } from "./Types";
 
 const HomePage: React.FC<PageProps> = ({}) => {
-  const navLinks = [
-    {
-      name: "Home",
-      url: "/",
-    },
-    {
-      name: "Equipe",
-      url: "/equipe",
-    },
-    {
-      name: "Andamento",
-      url: "/andamento",
-    },
-    {
-      name: "Submissão de Projetos",
-      url: "/submissao_projetos",
-    },
-    {
-      name: "Publicações",
-      url: "/publicacoes",
-    },
-    {
-      name: "Parcerias",
-      url: "/parcerias",
-    },
-  ];
 
   const articleDescriptions = [
     {
@@ -74,7 +48,7 @@ const HomePage: React.FC<PageProps> = ({}) => {
 
   return (
     <Container>
-      <HeaderTemplate navLinks={navLinks}/>
+      <HeaderTemplate />
 
       <ArticlePage descriptions={articleDescriptions} />
 

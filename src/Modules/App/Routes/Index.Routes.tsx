@@ -11,6 +11,7 @@ import {
 
 // Pages
 import HomePage from "@/Modules/App/Screens/Home/Page/Index";
+import ErrorPage from "@/Modules/App/Screens/Error/Page/Index";
 
 // @Types
 import { RoutesProps } from "./Types";
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "about",
     element: <HomePage />,
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);
 

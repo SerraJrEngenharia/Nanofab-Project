@@ -17,13 +17,40 @@ import NavigationTemplate from "../Templates/Navigation/Page/Index";
 // @Types
 import { PageProps } from "./Types";
 
-const HeaderTemplate: React.FC<PageProps> = ({ navLinks }) => {
+const HeaderTemplate: React.FC<PageProps> = ({}) => {
+  const navLinks = [
+    {
+      name: "Home",
+      url: "/",
+    },
+    {
+      name: "Equipe",
+      url: "/equipe",
+    },
+    {
+      name: "Andamento",
+      url: "/andamento",
+    },
+    {
+      name: "Submissão de Projetos",
+      url: "/submissao_projetos",
+    },
+    {
+      name: "Publicações",
+      url: "/publicacoes",
+    },
+    {
+      name: "Parcerias",
+      url: "/parcerias",
+    },
+  ];
+
   return (
     <Container>
       <Section>
         <LogoCompany src={NanoImage} />
 
-        <NavigationTemplate urls={navLinks}/>
+        <NavigationTemplate urls={navLinks} />
       </Section>
 
       <BannerComponent />

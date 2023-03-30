@@ -46,7 +46,7 @@ export default {
     text: {
       title: "#000",
       content: "#626262",
-      highlight: "#01fe87",
+      highlight: "#FFF",
       TitleSubArticles: "#114676",
     },
   },
