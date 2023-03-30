@@ -1,13 +1,16 @@
 import { ThemesProvider } from "./Hooks/Themes/Themes.Hooks";
 
-import HomePage from "./Modules/App/Screens/Home/Page/Index";
+// Router
+import Routes from "./Routes/Index.Routes";
+
+// Global Style
 import { GlobalStyle } from "./GlobalStyle";
 
 function App() {
   return (
     <ThemesProvider>
       <GlobalStyle />
-      <HomePage />
+      <Routes />
     </ThemesProvider>
   );
 }
