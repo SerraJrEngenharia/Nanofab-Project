@@ -19,6 +19,9 @@ const NavigationTemplate: React.FC<NavigationProps> = ({}) => {
       name: "Equipe",
     },
     {
+      name: "Andamento",
+    },
+    {
       name: "Submissão de Projetos",
     },
     {

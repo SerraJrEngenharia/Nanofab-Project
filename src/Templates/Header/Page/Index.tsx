@@ -5,7 +5,8 @@ import React from "react";
 import { Container, LogoCompany, Section } from "./Style";
 
 // Assets
-import NanoImage from "@/Assets/Company/nanofab.png";
+//import NanoImage from "@/Assets/Company/nanofab.png";
+import NanoImage from "../../../Assets/Company/nanofab.png";
 
 // Components
 import BannerComponent from "../Components/Banner/Index";

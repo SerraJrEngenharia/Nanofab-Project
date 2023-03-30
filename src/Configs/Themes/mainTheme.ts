@@ -1,6 +1,14 @@
 export default {
   title: "main",
 
+  fonts: {
+    extrasmall: 16,
+    small: 24,
+    medium: 56,
+    large: 76,
+    extralarge: 96,
+  },
+
   colors: {
     primary: {
       light: "#f08",
@@ -39,6 +47,7 @@ export default {
       title: "#FFF",
       content: "#626262",
       highlight: "#01fe87",
+      TitleSubArticles: "#114676",
     },
   },
 };

@@ -12,5 +12,13 @@ export const GlobalStyle = createGlobalStyle`
     h1, h2, h3, h4, span{
       font-family: "Maven Pro";
     }
+
+    :root{
+      --extra-small: 16px;
+      --small: 24px;
+      --medium: 56px;
+      --large: 76px;
+      --extra-large: 96px;
+    }
   }
 `;

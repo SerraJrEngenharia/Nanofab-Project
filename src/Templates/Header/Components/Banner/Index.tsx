@@ -8,9 +8,12 @@ import { Container, Logo } from "./Style";
 import { BannerProps } from "./Types";
 
 // Images
-import LogoUerj from "@/Assets/Banner/uerj.png";
-import LogoNanoFab from "@/Assets/Banner/nanofab-lab.png";
-import LogoEngrenagem from "@/Assets/Banner/engrenagem.png";
+// import LogoUerj from "@/Assets/Banner/uerj.png";
+// import LogoNanoFab from "@/Assets/Banner/nanofab-lab.png";
+// import LogoEngrenagem from "@/Assets/Banner/engrenagem.png";
+import LogoUerj from "../../../../Assets/Banner/uerj.png";
+import LogoNanoFab from "../../../../Assets/Banner/nanofab-lab.png";
+import LogoEngrenagem from "../../../../Assets/Banner/engrenagem.png";
 
 const BannerComponent: React.FC<BannerProps> = ({}) => {
   return (

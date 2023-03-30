@@ -39,6 +39,16 @@ declare module "styled-components" {
       title: string;
       content: string;
       highlight: string;
+      TitleSubArticles: string;
     };
+
+    fonts:{
+      extrasmall: number;
+      small: number;
+      medium: number;
+      large: number;
+      extralarge: number;
+    };
+
   }
 }
