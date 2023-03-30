@@ -48,7 +48,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/Nanofab",
+    basename: "/",
   }
 );
 
