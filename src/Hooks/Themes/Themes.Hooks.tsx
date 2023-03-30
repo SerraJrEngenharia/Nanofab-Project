@@ -14,7 +14,7 @@ import { HookData, ThemesProps } from "./Types";
 const ThemesContext = createContext<HookData>({} as HookData);
 
 export const ThemesProvider: React.FC<ThemesProps> = ({ children }) => {
-  const [theme, setTheme] = useState(mainTheme.colors);
+  const [theme, setTheme] = useState(mainTheme);
 
   return (
     <ThemesContext.Provider

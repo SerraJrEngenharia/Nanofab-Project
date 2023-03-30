@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: bottom;
   align-items: center;
-  background-color: ${({ theme }) => theme.foreground};
+  background-color: ${({ theme }) => theme.colors.middleground};
   width: 100%;
   height: 15vh;
   display: flex;
@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const Line = styled.div`
   width: 85%;
   height: 3px;
-  background: ${({ theme }) => theme.middleground};
+  background: ${({ theme }) => theme.colors.text.content};
   margin-bottom: 10px;
 `;
 
@@ -33,4 +33,6 @@ export const Text = styled.span`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.text.content};
 `;

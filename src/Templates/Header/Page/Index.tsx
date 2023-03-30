@@ -6,7 +6,7 @@ import { Container, LogoCompany, Section } from "./Style";
 
 // Assets
 //import NanoImage from "@/Assets/Company/nanofab.png";
-import NanoImage from "../../../Assets/Company/nanofab.png";
+import NanoImage from "@/Assets/Company/nanofab.png";
 
 // Components
 import BannerComponent from "../Components/Banner/Index";
@@ -17,7 +17,7 @@ import NavigationTemplate from "../Templates/Navigation/Page/Index";
 // @Types
 import { PageProps } from "./Types";
 
-const HeaderTemplate: React.FC<PageProps> = ({ leftLogoTitle }) => {
+const HeaderTemplate: React.FC<PageProps> = ({  }) => {
   return (
     <Container>
       <Section>

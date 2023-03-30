@@ -8,7 +8,6 @@ export const Container = styled.div`
   cursor: pointer;
   text-align: center;
   padding: 10px;
-  background-color: #f5f5f5;
   transition: all 0.2s linear;
 
   &:hover {
@@ -19,6 +18,7 @@ export const Container = styled.div`
 
 export const Text = styled.span`
   font-family: "Maven Pro";
-  font-size: 1.5rem;
+  font-size: ${({ theme }) => theme.fonts.medium}px;
   color: #626262;
+  color: ${({ theme }) => theme.colors.text.title};
 `;

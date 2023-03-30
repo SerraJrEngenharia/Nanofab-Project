@@ -3,10 +3,10 @@ export default {
 
   fonts: {
     extrasmall: 16,
-    small: 24,
-    medium: 56,
-    large: 76,
-    extralarge: 96,
+    small: 18,
+    medium: 20,
+    large: 26,
+    extralarge: 36,
   },
 
   colors: {
@@ -40,11 +40,11 @@ export default {
     },
 
     foreground: "#D9D9D9",
-    middleground: "#4a4a4a",
+    middleground: "#f5f5f5",
     background: "#292E2E",
 
     text: {
-      title: "#FFF",
+      title: "#000",
       content: "#626262",
       highlight: "#01fe87",
       TitleSubArticles: "#114676",

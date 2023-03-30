@@ -1,14 +1,29 @@
 import styled from "styled-components";
 
+import BackgroundSvg from "@/Assets/Banner/background.svg";
+
 export const Container = styled.div`
-  height: 20vh;
+  width: 100%;
   display: flex;
-  background-color: #f5f5f5;
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
+
+  background-image: url(${BackgroundSvg});
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+`;
+
+export const Items = styled.div`
+  width: 50%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 export const Logo = styled.img`
-  height: 90%;
+  height: 95%;
+  border-radius: 10px;
 `;

@@ -8,7 +8,7 @@ import { Container, Image } from "./Style";
 import { LogoProps } from "./Types";
 
 // Images
-import ChemistryIcon from '../../../../../../../../Assets/Chemistry/chemistry.png';
+import ChemistryIcon from '@/Assets/Chemistry/chemistry.png';
 
 const LogoComponent: React.FC<LogoProps> = ({}) => {
   return (
