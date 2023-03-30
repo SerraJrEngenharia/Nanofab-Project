@@ -17,13 +17,13 @@ import NavigationTemplate from "../Templates/Navigation/Page/Index";
 // @Types
 import { PageProps } from "./Types";
 
-const HeaderTemplate: React.FC<PageProps> = ({  }) => {
+const HeaderTemplate: React.FC<PageProps> = ({ navLinks }) => {
   return (
     <Container>
       <Section>
         <LogoCompany src={NanoImage} />
 
-        <NavigationTemplate />
+        <NavigationTemplate urls={navLinks}/>
       </Section>
 
       <BannerComponent />

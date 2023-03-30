@@ -7,9 +7,9 @@ import { Container, Text } from "./Style";
 // @Types
 import { LinkProps } from "./Types";
 
-const LinkComponent: React.FC<LinkProps> = ({ name }) => {
+const LinkComponent: React.FC<LinkProps> = ({ name, url }) => {
   return (
-    <Container>
+    <Container href={url}>
       <Text>{name}</Text>
     </Container>
   );

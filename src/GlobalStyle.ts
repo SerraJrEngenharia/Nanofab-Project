@@ -20,5 +20,9 @@ export const GlobalStyle = createGlobalStyle`
       --large: 76px;
       --extra-large: 96px;
     }
+
+    a{
+      text-decoration: none;
+    }
   }
 `;

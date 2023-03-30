@@ -1,3 +1,4 @@
 export interface LinkProps {
-   name: string
+   name: string;
+   url: string;
 }

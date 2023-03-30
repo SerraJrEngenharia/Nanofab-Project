@@ -18,6 +18,33 @@ import SubArticlesPage from "../Templates/Subarticles/Page/Index";
 import { PageProps } from "./Types";
 
 const HomePage: React.FC<PageProps> = ({}) => {
+  const navLinks = [
+    {
+      name: "Home",
+      url: "/",
+    },
+    {
+      name: "Equipe",
+      url: "/equipe",
+    },
+    {
+      name: "Andamento",
+      url: "/andamento",
+    },
+    {
+      name: "Submissão de Projetos",
+      url: "/submissao_projetos",
+    },
+    {
+      name: "Publicações",
+      url: "/publicacoes",
+    },
+    {
+      name: "Parcerias",
+      url: "/parcerias",
+    },
+  ];
+
   const articleDescriptions = [
     {
       text: "O Laboratório Multiusuário de Nanofabricaçao e Caracterizaçao de Nanomateriais, NANOFAB, foi criado no Departamento de Engenharia Mecânica da UERJ e está vinculado ao Programa de Pós-graduaçao em Engenharia Mecânica (PPG-EM/UERJ) através da proposta aprovada para a aquisiçao de um microscópio eletrônico de alta resoluçao do tipo MEV-FEG no Edital Pró-Equipamentos CAPES 2013. Este projeto partiu de uma demanda científica e tecnológica na área de microscopia eletrônica e em nanotecnologia, a partir da existencia de grupos de pesquisa em nanomateriais e nanodispositivos, organizados em redes de cooperaçao. Neste contexto, o NANOFAB estuda materiais cujas dimensőes estăo abaixo da faixa micrométrica. Além disso, o NANOFAB atenderá demandas na área de nanofabricaçao com a aquisiçao de um microscópio FIB (Focused Ion Beam), a partir de recursos aprovados no Edital FAPERJ 2015, Grandes Equipamentos.",
@@ -47,7 +74,7 @@ const HomePage: React.FC<PageProps> = ({}) => {
 
   return (
     <Container>
-      <HeaderTemplate />
+      <HeaderTemplate navLinks={navLinks}/>
 
       <ArticlePage descriptions={articleDescriptions} />
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,6 +9,8 @@ export const Container = styled.div`
   text-align: center;
   padding: 10px;
   transition: all 0.2s linear;
+
+  
 
   &:hover {
     background-color: #e6e6e6;

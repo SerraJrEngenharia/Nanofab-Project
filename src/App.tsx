@@ -1,7 +1,7 @@
 import { ThemesProvider } from "./Hooks/Themes/Themes.Hooks";
 
 // Router
-import Routes from "./Routes/Index.Routes";
+import Routes from "./Modules/App/Routes/Index.Routes";
 
 // Global Style
 import { GlobalStyle } from "./GlobalStyle";
