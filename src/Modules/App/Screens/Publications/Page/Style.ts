@@ -1,5 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import BackgroundSvg from "@/Assets/Background/background2.svg";
 
 export const Container = styled.div`
-  
+  width: 100%;
+  min-width: 100vh;
+  background-image: url(${BackgroundSvg});
+  background-repeat: no-repeat;
+  background-size: cover;
 `;

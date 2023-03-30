@@ -16,6 +16,7 @@ import {
 import TeamIcon from "@/Assets/Team/team.png";
 
 // Components
+import PublicationComponent from "@/Modules/App/Screens/Publications/Templates/List/Components/Publication/Index";
 import LabelComponent from "../Components/Label/Index";
 import ItemComponent from "../Components/Item/Index";
 
@@ -23,24 +24,6 @@ import ItemComponent from "../Components/Item/Index";
 import { PageProps } from "./Types";
 
 const ListTemplate: React.FC<PageProps> = ({ list }) => {
-  const labels = [
-    {
-      text: "Nome",
-    },
-    {
-      text: "PPG/IES",
-    },
-    {
-      text: "Vínculo",
-    },
-    {
-      text: "Titulação",
-    },
-    {
-      text: "Função",
-    },
-  ];
-
   return (
     <Container>
       <Section>
