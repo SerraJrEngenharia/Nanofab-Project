@@ -4,8 +4,12 @@ import React from "react";
 // Native Components
 import { Container } from "./Style";
 
+// Assets
+import PublicationIcon from "@/Assets/Publications/pub.svg";
+
 // Templates
 import HeaderTemplate from "@/Templates/Header/Page/Index";
+import SubHeaderTemplate from "../Templates/SubHeader/Page/Index";
 import ListTemplate from "../Templates/List/Page/Index";
 import FooterTemplate from "@/Templates/Footer/Page/Index";
 
@@ -61,6 +65,8 @@ const PublicationsPage: React.FC<PageProps> = ({}) => {
   return (
     <Container>
       <HeaderTemplate />
+
+      <SubHeaderTemplate title="Publicações" image={PublicationIcon} />
 
       {publications.map((eachPublication) => (
         <ListTemplate
