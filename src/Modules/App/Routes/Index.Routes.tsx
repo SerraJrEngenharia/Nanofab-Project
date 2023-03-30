@@ -16,36 +16,41 @@ import ErrorPage from "@/Modules/App/Screens/Error/Page/Index";
 // @Types
 import { RoutesProps } from "./Types";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <HomePage />,
+    },
+    {
+      path: "/equipe",
+      element: <TeamPage />,
+    },
+    {
+      path: "/andamento",
+      element: <ProgressPage />,
+    },
+    {
+      path: "/submissao_projetos",
+      element: <ProjectsPage />,
+    },
+    {
+      path: "/publicacoes",
+      element: <PublicationsPage />,
+    },
+    {
+      path: "/parcerias",
+      element: <PartnershipsPage />,
+    },
+    {
+      path: "*",
+      element: <ErrorPage />,
+    },
+  ],
   {
-    path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/equipe",
-    element: <TeamPage />,
-  },
-  {
-    path: "/andamento",
-    element: <ProgressPage />,
-  },
-  {
-    path: "/submissao_projetos",
-    element: <ProjectsPage />,
-  },
-  {
-    path: "/publicacoes",
-    element: <PublicationsPage />,
-  },
-  {
-    path: "/parcerias",
-    element: <PartnershipsPage />,
-  },
-  {
-    path: "*",
-    element: <ErrorPage />,
-  },
-]);
+    basename: "/Nanofab",
+  }
+);
 
 const Routes: React.FC<RoutesProps> = ({}) => {
   return <RouterProvider router={router} />;
