@@ -16,11 +16,12 @@ export const Container = styled.div`
 `;
 
 export const Items = styled.div`
-  width: 50%;
+  width: 60%;
   height: 15vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  /* background: red; */
 `;
 
 export const Logo = styled.img`
