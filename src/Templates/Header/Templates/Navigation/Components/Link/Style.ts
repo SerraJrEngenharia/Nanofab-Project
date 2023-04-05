@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
 export const Container = styled.a`
   display: flex;
   justify-content: center;
@@ -18,7 +20,7 @@ export const Container = styled.a`
   }
 `;
 
-export const Text = styled.span`
+export const Text = styled(Link)`
   font-family: "Maven Pro";
   font-size: ${({ theme }) => theme.fonts.medium}px;
   color: #626262;

@@ -87,8 +87,7 @@ export const CardCont = styled.div`
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
   }
 
-  @media screen and (min-width: ${width.extralargeDesktop}) {
-  }
+
 `;
 
 export const ImageContainer = styled.div`

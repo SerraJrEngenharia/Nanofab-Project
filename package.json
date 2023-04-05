@@ -1,6 +1,7 @@
 {
   "name": "nanofab",
   "private": true,
+  "homepage": "https://serrajrengenharia.github.io/Nanofab-Project",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
