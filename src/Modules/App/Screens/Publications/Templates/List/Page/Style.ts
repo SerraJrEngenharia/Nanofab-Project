@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { width } from "@/Services/screenSizes";
 
 export const Container = styled.div`
   width: 100%;
@@ -51,4 +52,12 @@ export const Items = styled.div`
   align-items: center;
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(20px);
+
+  @media screen and (max-width: ${width.mobile}) {    
+    width: 80%; 
+  }
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+    width: 90%;
+  }
 `;

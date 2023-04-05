@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { width } from "@/Services/screenSizes";
 
 export const Container = styled.div`
   width: 100%;
@@ -7,6 +8,16 @@ export const Container = styled.div`
   align-items: center;
   min-height: 55vh;
   margin: 50px 0px;
+
+  @media screen and (max-width: ${width.mobile}) {
+    
+  }
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+  }
+
+  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
+  }
 `;
 
 export const Section = styled.div`
@@ -35,10 +46,30 @@ export const LogoContainer = styled.div`
   position: absolute;
   top: -70px;
   left: 10px;
+  @media screen and (max-width: ${width.mobile}) {
+    top: -20px;
+    left: -15px;
+  }
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+    top: -50px;
+    left: -10px;
+  }
 `;
 
 export const Logo = styled.img`
-  height: 180px;
+  height: 160px;
+  @media screen and (max-width: ${width.mobile}) {
+    height: 80px;
+  }
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+    height: 100px;
+  }
+
+  @media screen and (min-width: 700px) and (max-width: 821px) {
+    height: 120px;
+  }
+
 `;
 
 export const Title = styled.span`
@@ -46,11 +77,54 @@ export const Title = styled.span`
   font-weight: bold;
   color: ${({ theme }) => theme.colors.text.TitleSubArticles};
   text-align: center;
+
+  @media screen and (max-width: ${width.mobile}) {
+    font-size: ${({ theme }) => theme.fonts.medium}px;
+  }
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+    font-size: ${({ theme }) => theme.fonts.large}px;
+  }
 `;
 
 export const Items = styled.div`
   width: 100%;
-  padding: 20px 20px;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: ${width.mobile}) {
+    overflow-x: scroll;
+    ::-webkit-scrollbar {
+      width: 20px;
+    }
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #114676;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #114676;
+    }
+  }
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+    overflow-x: scroll;
+    ::-webkit-scrollbar {
+      width: 20px;
+    }
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #114676;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #114676;
+    }
+  }
 `;

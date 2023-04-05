@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { width } from "@/Services/screenSizes";
 
 import BackgroundSvg from "@/Assets/Banner/background.svg";
 
@@ -16,15 +17,27 @@ export const Container = styled.div`
 `;
 
 export const Items = styled.div`
-  width: 60%;
-  height: 15vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* background: red; */
+
+  @media screen and (max-width: ${width.mobile}) {    
+    flex-direction: column;
+  }
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+    flex-direction: column;
+  }
 `;
 
 export const Logo = styled.img`
-  height: 95%;
+  width: 20%;
+
+  @media screen and (max-width: ${width.mobile}) {    
+    width: 50%;
+  }
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+    width: 50%;
+  }
+  
   border-radius: 10px;
 `;

@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { width } from "@/Services/screenSizes";
 
 interface ContainerStyleProps {
   styleActive?: boolean;
@@ -6,6 +7,8 @@ interface ContainerStyleProps {
 
 export const Container = styled.div<ContainerStyleProps>`
   width: 100%;
+  height: 50px;
+  align-items: center;
   display: flex;
   flex-direction: row;
 
@@ -17,6 +20,15 @@ export const Container = styled.div<ContainerStyleProps>`
       : css`
           background-color: ${({ theme }) => theme.colors.middleground}55;
         `}
+
+  @media screen and (max-width: ${width.mobile}) {
+    width: 900px;  
+  } 
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+    width: 1000px;
+
+  }
 `;
 
 export const FirstLabel = styled.span`
@@ -25,6 +37,10 @@ export const FirstLabel = styled.span`
   font-weight: 400;
   color: ${({ theme }) => theme.colors.text.title};
   padding-left: 10px;
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+    width: 25%;
+  }
 `;
 
 export const SecondLabel = styled.span`
@@ -33,4 +49,9 @@ export const SecondLabel = styled.span`
   font-size: ${({ theme }) => theme.fonts.small}px;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.text.title};
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+    width: 18.75%; // Enough to tell the user to scroll to the side, shows the second tab slightly
+  }
+
 `;

@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { width } from '@/Services/screenSizes'
+
 
 export const Container = styled.div`
     background: #895A95;
@@ -16,7 +18,15 @@ export const Container = styled.div`
     -webkit-backdrop-filter: blur( 3.5px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     background-color: transparent;
-    
+    @media screen and (max-width: ${width.largeDesktop}){
+        height: 16%;
+    }
+    @media screen and (max-width: ${width.tablet}){
+        height: 17%;
+    }
+    @media screen and (min-width: ${width.extraLargeDesktop}) {
+	    height: 17%;
+    }
     &::before{
         content: "";
         height: 250px;

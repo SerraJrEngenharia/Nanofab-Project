@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { width } from "@/Services/screenSizes";
 
 export const Container = styled.div`
   width: 35%;
@@ -15,6 +16,29 @@ export const Container = styled.div`
   overflow: visible;
   margin-bottom: 5%;
   position: relative;
+
+  @media screen and (max-width: ${width.mobile}) {    
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {   
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
 `;
 
 export const ImgContainer = styled.div`
@@ -25,6 +49,7 @@ export const ImgContainer = styled.div`
   top: -90px;
   background-color: ${({ theme }) => theme.colors.foreground};
   border-radius: 100%;
+  margin-top: 5%;
 `;
 
 export const Image = styled.img`
@@ -48,4 +73,16 @@ export const Title = styled.span`
   color: ${({ theme }) => theme.colors.text.TitleSubArticles};
   text-align: center;
   margin-top: 90px;
+
+  @media screen and (max-width: ${width.mobile}) {    
+    margin-bottom: 5px;
+  }
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+    margin-bottom: 5px;
+  }
+  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {   
+    margin-bottom: 0px;
+    margin: 10px;
+    margin-top: 100px;
+  }
 `;

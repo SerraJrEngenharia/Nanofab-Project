@@ -15,6 +15,7 @@ import ErrorPage from "@/Modules/App/Screens/Error/Page/Index";
 
 // @Types
 import { RoutesProps } from "./Types";
+import { Container } from "./Style";
 
 const router = createBrowserRouter(
   [
@@ -53,7 +54,11 @@ const router = createBrowserRouter(
 );
 
 const Routes: React.FC<RoutesProps> = ({}) => {
-  return <RouterProvider router={router} />;
+  return (
+    <Container>
+      <RouterProvider router={router} />
+    </Container>
+  );
 };
 
 export default Routes;

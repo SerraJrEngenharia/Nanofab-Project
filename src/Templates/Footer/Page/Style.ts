@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { width } from "@/Services/screenSizes";
 
 export const Container = styled.div`
   display: flex;
@@ -19,6 +20,10 @@ export const Line = styled.div`
   height: 3px;
   background: ${({ theme }) => theme.colors.text.content};
   margin-bottom: 10px;
+
+  @media screen and (max-width: ${width.mobile}) {    
+    width: 50%;
+  }
 `;
 
 export const BottomSection = styled.div`
@@ -27,6 +32,10 @@ export const BottomSection = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: ${width.mobile}) {    
+    flex-direction: column;
+  }
 `;
 
 export const Text = styled.span`

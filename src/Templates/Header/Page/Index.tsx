@@ -13,9 +13,11 @@ import BannerComponent from "../Components/Banner/Index";
 
 // Templates
 import NavigationTemplate from "../Templates/Navigation/Page/Index";
+import MobileNavigationTemplate from "../Templates/MobileNavigation/Index";
 
 // @Types
 import { PageProps } from "./Types";
+
 
 const HeaderTemplate: React.FC<PageProps> = ({}) => {
   const navLinks = [
@@ -51,6 +53,7 @@ const HeaderTemplate: React.FC<PageProps> = ({}) => {
         <LogoCompany src={NanoImage} />
 
         <NavigationTemplate urls={navLinks} />
+        <MobileNavigationTemplate />
       </Section>
 
       <BannerComponent />
