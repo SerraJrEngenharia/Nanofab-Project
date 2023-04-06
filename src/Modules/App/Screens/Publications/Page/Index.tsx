@@ -5,7 +5,7 @@ import React from "react";
 import { Container } from "./Style";
 
 // Assets
-import PublicationIcon from "@/Assets/Publications/pub.svg";
+import PublicationIcon from "@/Assets/Publications/publications.svg";
 
 // Templates
 import HeaderTemplate from "@/Templates/Header/Page/Index";

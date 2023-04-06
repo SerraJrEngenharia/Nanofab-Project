@@ -3,7 +3,7 @@ import { width } from "@/Services/screenSizes";
 
 export const Container = styled.div`
   width: 100%;
-
+  /* height: */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,22 +18,38 @@ export const Container = styled.div`
   }
 
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-    width: 90%;
     margin-top: 10%;
     margin-bottom: 10%;
   }
 
   @media screen and (min-width: 720px) and (max-width: 770px) {
-    width: 60%;
+
   }
 
   @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
   }
 
   @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
-
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
-`;
+
+  @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+  @media screen and (min-width: ${width.desktop}) and (max-width: ${width.largeDesktop}) {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
+    max-width: 2000px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  `;
 
 export const CardCont = styled.div`
   width: 70%;
@@ -44,17 +60,17 @@ export const CardCont = styled.div`
   background-color: rgb(217, 217, 217, 0.5);
   border-radius: 150px;
   justify-content: space-around;
-
+  
   @media screen and (max-width: ${width.mobile}) {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     /* padding: 20%; */
     padding-top: 5%;
     border-radius: 50px;
   }
-
+  
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     display: flex;
     flex-direction: column;
@@ -71,20 +87,22 @@ export const CardCont = styled.div`
     align-items: center;
     justify-content: center;
     width: 60%;
+    border-radius: 60px;
+
   }
 
   @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
     border-radius: 70px;
-    /* vim até aqui: ass por Kauan */
   }
-
+  
   @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {
   }
-
+  
   @media screen and (min-width: ${width.desktop}) and (max-width: ${width.largeDesktop}) {
   }
-
+  
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
+    border-radius: 100px;
   }
 
 
@@ -119,6 +137,14 @@ export const ContentContainer = styled.div`
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     width: 95%;
   }
+
+  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
+    width: 80%; 
+  }
 `;
 
 export const Title = styled.span`
@@ -135,6 +161,10 @@ export const Title = styled.span`
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     font-size: 23px;
     margin-bottom: 10%;
+  }
+
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
+    font-size: 40px; 
   }
 `;
 
@@ -153,6 +183,10 @@ export const Paragraph = styled.span`
     width: 100%;
     font-size: 20px;
   }
+
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
+    font-size: 24px;
+  }
 `;
 
 export const Image = styled.img`
@@ -164,6 +198,12 @@ export const Image = styled.img`
   object-fit: scale-down;
   overflow: visible;
   background-color: white;
+
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+  }
 `;
 
 export const ExternalImageContainer = styled.div`

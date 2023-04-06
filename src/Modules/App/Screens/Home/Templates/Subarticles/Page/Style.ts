@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { width } from '@/Services/screenSizes';
 
 export const Container = styled.div`
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
 
@@ -38,4 +38,8 @@ export const Container = styled.div`
         margin-bottom: 2%;
         margin-top: 2%;
   }
+
+    @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+        width: 90%;
+    }
 `;

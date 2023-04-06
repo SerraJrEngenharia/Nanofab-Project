@@ -13,6 +13,10 @@ export const Container = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding-bottom: 15px;
+
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+   height: 10vh;
+  }
 `;
 
 export const Line = styled.div`
@@ -44,4 +48,9 @@ export const Text = styled.span`
   justify-content: space-between;
   font-weight: 600;
   color: ${({ theme }) => theme.colors.text.content};
+
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+   font-size: 30px;
+  }
+
 `;

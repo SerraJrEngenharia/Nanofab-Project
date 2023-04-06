@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-top: 8%;
 `;
 
 export const Text = styled.span`

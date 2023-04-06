@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const Image = styled.img`
     width: 120px;
-    height: 150px;
+    /* height: 150px; */
 	margin: 0 20px;
 	transition: 0.5s;
 	overflow: hidden;
@@ -21,22 +21,22 @@ export const Image = styled.img`
 
     @media screen and (max-width: ${width.largeMobile}) {
 	    width: 150px;
-        height: 120px;
+        /* height: 120px; */
     }
     @media screen and (max-width: ${width.mobile}){
         width: 120px;
-        height: 120px;
+        /* height: 120px; */
     }
     @media screen and (min-width: ${width.desktop}) {
 	    width: 180px;
     }
     @media screen and (min-width: ${width.largeDesktop}) {
 	    width: 240px;
-        height: 210px;
+        /* height: 210px; */
     }
     @media screen and (min-width: ${width.extraLargeDesktop}) {
 	    width: 380px;
-        height: 300px;
+        /* height: 300px; */
     }
     @media screen and (max-width: ${width.notebook}){
         width: 120px;

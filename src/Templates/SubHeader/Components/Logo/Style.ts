@@ -5,5 +5,6 @@ export const Container = styled.div`
 `;
 
 export const Image = styled.img`
-  height: 100%;
+  height: 150px;
+  width: 150px;
 `;

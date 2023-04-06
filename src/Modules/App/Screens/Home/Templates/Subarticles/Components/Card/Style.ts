@@ -32,12 +32,17 @@ export const Container = styled.div`
       align-items: center;
       justify-content: center;
     }
+
   @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {   
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+  }
+
+  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+    text-align: left;
   }
 `;
 
@@ -60,9 +65,11 @@ export const Image = styled.img`
 `;
 
 export const Text = styled.span`
-  margin: 20px;
+  margin: 10px;
   font-size: ${({ theme }) => theme.fonts.small}px;
   padding: 20px;
+
+
 `;
 
 export const Title = styled.span`

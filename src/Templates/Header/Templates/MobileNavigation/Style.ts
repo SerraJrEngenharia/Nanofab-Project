@@ -10,7 +10,7 @@ export const Container = styled.nav`
     justify-content: flex-end;
     align-items: center;
 
-    @media screen and (min-width: 1024px) {    
+    @media screen and (min-width: 1300px) {    
         display: none;
     }
 `;
@@ -51,8 +51,9 @@ export const Menu = styled.nav`
     top: 80px;
     transition: 0.2s;
     z-index: 10;
-   
-    background: rgba(255, 255, 255, 0.15);
+    
+    border: 1px solid #c2c2c2;
+    background: #f2f2f2;
     border-radius: 15px 0px 0px 15px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);

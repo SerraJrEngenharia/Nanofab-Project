@@ -3,21 +3,19 @@ import { width } from '@/Services/screenSizes'
 
 
 export const Container = styled.div`
-    background: #895A95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 	-webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
-	box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
 	overflow: hidden;
 	position: relative;
-	width: 100vw;
+	width: 100%;
     height: 21vh;
-    background: rgba( 255, 255, 255, 0.05 );
+    background: #fff;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 3.5px );
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
     -webkit-backdrop-filter: blur( 3.5px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    background-color: transparent;
     @media screen and (max-width: ${width.largeDesktop}){
         height: 16%;
     }
@@ -27,35 +25,34 @@ export const Container = styled.div`
     @media screen and (min-width: ${width.extraLargeDesktop}) {
 	    height: 17%;
     }
-    &::before{
-        content: "";
-        height: 250px;
-        position: absolute;
-        width: 200px;
-        z-index: 2;
-        left: 0;
-	    top: 0;
+
+    @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+        margin-top: 5%; 
     }
-    &::after{
-        content: "";
-        height: 250px;
-        position: absolute;
-        width: 200px;
-        z-index: 2;
-        right: 0;
-        top: 0;
-        -webkit-transform: rotateZ(180deg);
-        transform: rotateZ(180deg);
+
+    @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {    
+        margin-top: 5%; 
     }
+
+    @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+        margin-top: 5%; 
+    }
+
+
+
+`;
+
+export const Text = styled.span`
+    font-size: ${({ theme }) => theme.fonts.medium}px;
+    color: ${({ theme }) => theme.colors.text.content};
+    text-align: center;
+    margin: 10px;
 `;
 
 export const LogoSliderTrack = styled.div`
-    -webkit-animation: logo-scroll 60s linear infinite;
-	animation: logo-scroll 60s linear infinite;
+    -webkit-animation: logo-scroll 40s linear infinite;
+	animation: logo-scroll 40s linear infinite;
 	display: flex;
-	width: calc(250px * 14);
-	animation-duration: 30s;
-	animation-iteration-count: infinite;
 	margin: 0;
     @-webkit-keyframes logo-scroll {
         0% {

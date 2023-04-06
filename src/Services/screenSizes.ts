@@ -28,7 +28,7 @@ export const width = {
     // 
     // }
     extraLargeDesktop: '3840px',
-    // @media screen and (min-width: ${width.extralargeDesktop}){    
+    // @media screen and (min-width: ${width.extraLargeDesktop}){    
     // 
     // }
 }

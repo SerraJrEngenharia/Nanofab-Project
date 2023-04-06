@@ -2,7 +2,7 @@
 import React from "react";
 
 // Native Components
-import { Container } from "./Style";
+import { Center, Container } from "./Style";
 import PartnerSlider from "../Templates/PartnerSlider/Index";
 
 // Templates
@@ -12,11 +12,10 @@ import SubHeaderTemplate from '@/Templates/SubHeader/Page/Index';
 import PartnershipItem from "../Templates/Itens/Index";
 
 // Images
-import PartnershipIcon from "@/Assets/Chemistry/handleshake.svg";
+import PartnershipIcon from "@/Assets/Chemistry/handshake.png";
 import CBPFImage from "@/Assets/ParceriasLogos/cbpf.jpg";
 import FAPERJImage from "@/Assets/ParceriasLogos/faperj.svg";
 import FINEPImage from "@/Assets/ParceriasLogos/finep.svg";
-import LogoUff from "@/Assets/ParceriasLogos/logoUFF.png";
 
 // @Types
 import { PageProps } from "./Types";
@@ -47,16 +46,18 @@ const PartnershipsPage: React.FC<PageProps> = ({}) => {
       <HeaderTemplate />
 
       <SubHeaderTemplate title="Parcerias" image={PartnershipIcon}/>
+      <Center>
+          {
+          partners.map((eachDescription) => {
+            return <PartnershipItem 
+              key={partners.indexOf(eachDescription)} 
+              image={eachDescription.image} 
+              title={eachDescription.title} 
+              paragraph={eachDescription.paragraph}/>
+          })
+        }
+      </Center>
       
-      {
-        partners.map((eachDescription) => {
-          return <PartnershipItem 
-            key={partners.indexOf(eachDescription)} 
-            image={eachDescription.image} 
-            title={eachDescription.title} 
-            paragraph={eachDescription.paragraph}/>
-        })
-      }
 
       <PartnerSlider />
 

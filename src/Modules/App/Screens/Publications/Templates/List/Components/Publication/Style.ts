@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { width } from "@/Services/screenSizes"
 
 export const Container = styled.div`
   width: 90%;
@@ -6,6 +7,14 @@ export const Container = styled.div`
   padding: 15px;
   border-radius: 20px;
   background-color: ${({ theme }) => theme.colors.foreground};
+
+  @media screen and (max-width: ${width.mobile}) {    
+    text-align: left;
+  }
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+    text-align: left;
+  }
 `;
 
 export const Text = styled.span`

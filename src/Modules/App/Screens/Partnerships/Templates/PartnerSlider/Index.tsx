@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Native Components
-import { Container, LogoSliderTrack } from "./Style";
+import { Container, LogoSliderTrack, Text } from "./Style";
 
 // @Types
 import { PartnerSliderProps } from './Types';
@@ -54,10 +54,75 @@ const PartnerSlider: React.FC<PartnerSliderProps> = ({}) => {
     {
       image: CEFETImage,
        altText: 'CEFET - Centro Federal de Educação Tecnológica Celso Suckow da Fonseca'
+    },
+    {
+      image: CBPFImage,
+      altText: 'Centro Brasileiro de Pesquisas Físicas - CBPF'
+    },
+    {
+      image: FAPERJImage,
+      altText: 'Fundação Carlos Chagas Filho de Amparo a Pesquisa do Estado do Rio de Janeiro'
+    },
+    {
+      image: FINEPImage,
+      altText: 'FINEP - Agência Brasileira de Inovação'
+    },
+    {
+      image: UFFImage,
+      altText: 'UFF - Universidade Federal Fluminense'
+    },
+    {
+      image: IMEImage,
+      altText: 'IME - Instituto Militar de Engenharia'
+    },
+    {
+      image: UFRJImage,
+      altText: 'UFRJ - Universidade Federal do Rio de Janeiro'
+    },
+    {
+      image: PUCImage,
+      altText: 'PUC - Pontifícia Universidade Católica do Rio de Janeiro '  
+    },
+    {
+      image: CEFETImage,
+       altText: 'CEFET - Centro Federal de Educação Tecnológica Celso Suckow da Fonseca'
+    },
+    {
+      image: CBPFImage,
+      altText: 'Centro Brasileiro de Pesquisas Físicas - CBPF'
+    },
+    {
+      image: FAPERJImage,
+      altText: 'Fundação Carlos Chagas Filho de Amparo a Pesquisa do Estado do Rio de Janeiro'
+    },
+    {
+      image: FINEPImage,
+      altText: 'FINEP - Agência Brasileira de Inovação'
+    },
+    {
+      image: UFFImage,
+      altText: 'UFF - Universidade Federal Fluminense'
+    },
+    {
+      image: IMEImage,
+      altText: 'IME - Instituto Militar de Engenharia'
+    },
+    {
+      image: UFRJImage,
+      altText: 'UFRJ - Universidade Federal do Rio de Janeiro'
+    },
+    {
+      image: PUCImage,
+      altText: 'PUC - Pontifícia Universidade Católica do Rio de Janeiro '  
+    },
+    {
+      image: CEFETImage,
+       altText: 'CEFET - Centro Federal de Educação Tecnológica Celso Suckow da Fonseca'
     }
   ]
   return (
     <Container>
+      <Text>Parceiros</Text>
         <LogoSliderTrack>
           {
             partners.map((eachPartner) => {

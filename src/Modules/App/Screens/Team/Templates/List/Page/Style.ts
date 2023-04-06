@@ -29,6 +29,13 @@ export const Section = styled.div`
   align-items: center;
   border-radius: 40px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+        width: 95%;
+    }
+  @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {    
+    width: 90%;
+  }
 `;
 
 export const Aside = styled.div`

@@ -8,6 +8,7 @@ export const Container = styled.div`
   align-items: center;
   min-height: 55vh;
   margin: 50px 0px;
+
 `;
 
 export const Section = styled.div`
@@ -20,6 +21,8 @@ export const Section = styled.div`
   border-radius: 40px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+
+  
 `;
 
 export const Aside = styled.div`
@@ -50,11 +53,11 @@ export const Items = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(20px);
+  /* background-color: rgba(255, 255, 255, 0.4); */
+  /* backdrop-filter: blur(20px); */
 
   @media screen and (max-width: ${width.mobile}) {    
-    width: 80%; 
+    width: 60%; 
   }
 
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    

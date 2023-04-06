@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { width } from "@/Services/screenSizes";
 
 export const Container = styled.div`
+  position: relative;
   width: 70%;
   display: flex;
   justify-content: center;
@@ -17,7 +18,7 @@ export const Container = styled.div`
   @media screen and (max-width: ${width.mobile}) {    
         flex-direction: column;
         width: 80%;
-        margin-top: 12%;
+        margin-top: 19%;
     }
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
       display: flex;
@@ -27,7 +28,7 @@ export const Container = styled.div`
       justify-content: center;
       margin-bottom: 5%;
       padding: 10px;
-      margin-top: 12%;
+      margin-top: 15%;
   }
   @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {    
       display: flex;
@@ -35,6 +36,7 @@ export const Container = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-top: 12%;
       margin-bottom: 5%;
       padding: 10px;
   }

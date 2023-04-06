@@ -11,6 +11,7 @@ import FooterTemplate from "@/Templates/Footer/Page/Index";
 
 // @Types
 import { PageProps } from "./Types";
+import ListDropdownTemplate from "../Templates/ListDropdown/Page/Index";
 
 const TeamPage: React.FC<PageProps> = ({}) => {
   const persons = [
@@ -259,6 +260,8 @@ const TeamPage: React.FC<PageProps> = ({}) => {
       <HeaderTemplate />
 
       <ListTemplate list={persons} />
+
+      <ListDropdownTemplate list={persons} />
 
       <FooterTemplate />
     </Container>
