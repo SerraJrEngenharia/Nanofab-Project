@@ -750,7 +750,7 @@ Error generating stack: `+i.message+`
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  background-color: green;
+  /* background-color: green; */
 `,y1=L.div`
     width: 40%;
     margin: 10px;
@@ -768,7 +768,7 @@ Error generating stack: `+i.message+`
 `,w1=L.button`
     width: 100%;
     background-color: #f2f2f2;
-    border: none;
+    border: 1px solid #c2c2c2;
     padding: 10px;
     display: flex;
     justify-content: space-between;
