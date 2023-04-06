@@ -21,7 +21,7 @@ export const Container = styled.div`
 export const ButtonArea = styled.button`
     width: 100%;
     background-color: #f2f2f2;
-    border: none;
+    border: 1px solid #c2c2c2;
     padding: 10px;
     display: flex;
     justify-content: space-between;
