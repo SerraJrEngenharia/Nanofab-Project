@@ -1,14 +1,11 @@
 import styled from 'styled-components';
-
+import { DropdownStyleProps } from './Types';
 import { width } from '@/Services/screenSizes';
 
 export const Container = styled.div`
     width: 40%;
     margin: 10px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #f2f2f2;
-    
+
     @media screen and (max-width: ${width.mobile}) {   
         width: 90%;
     }
@@ -50,12 +47,48 @@ export const Title = styled.span`
     color: ${({ theme }) => theme.colors.text.title};
 `;
 
-export const Content = styled.div`
+export const Content = styled.div<DropdownStyleProps>`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
     flex-wrap: wrap;
+    background-color: #f2f2f2;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #c2c2c2;
+    border-top: none;
+
+    ${({isVisible}) => isVisible ?
+        `
+        -webkit-animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	    animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        
+        @-webkit-keyframes fade-in {
+            0% {
+                opacity: 0;
+                max-height: 0px;
+            }
+            100% {
+                opacity: 1;
+                max-height: 400px;
+            }
+          }
+          @keyframes fade-in {
+            0% {
+                opacity: 0;
+                max-height: 0px;
+            }
+            100% {
+                opacity: 1;
+                max-height: 400px;
+            }
+          }
+        
+        `
+        :
+        null
+    }
     
 `;
 

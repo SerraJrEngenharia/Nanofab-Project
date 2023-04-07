@@ -9,10 +9,6 @@ import { RiArrowDropDownFill } from "react-icons/ri";
 // @Types
 import { DropdownComponentProps } from './Types';
 
-
-
-
-
 const DropdownComponent: React.FC<DropdownComponentProps> = ({
   name, 
   unit, 
@@ -22,6 +18,7 @@ const DropdownComponent: React.FC<DropdownComponentProps> = ({
 }) => {
 
   const [visible, setVisible] = useState(false)
+
   return (
     <Container>
       <ButtonArea onClick={() => setVisible(!visible)}>
@@ -34,7 +31,7 @@ const DropdownComponent: React.FC<DropdownComponentProps> = ({
       </ButtonArea>
 
       {visible ?
-        <Content>
+        <Content isVisible={visible}>
           <TextContainer>
             <SubTitle>PPG/IES</SubTitle>
             <Text>{unit}</Text>
@@ -54,7 +51,7 @@ const DropdownComponent: React.FC<DropdownComponentProps> = ({
             <SubTitle>Função</SubTitle>
             <Text>{personFunction}</Text>
           </TextContainer>
-        </Content>
+      </Content>
         :
         null
       }
