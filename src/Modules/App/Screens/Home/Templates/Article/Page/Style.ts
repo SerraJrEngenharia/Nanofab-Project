@@ -67,8 +67,9 @@ export const Content = styled.div`
 export const Text = styled.span`
   margin: 10px 20px 5px 20px;
   font-size: ${({ theme }) => theme.fonts.small}px;
+  text-align: justify;
 
-  @media screen and (max-width: ${width.mobile}) {    
+  /* @media screen and (max-width: ${width.mobile}) {    
     text-align: justify;
   }
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
@@ -76,5 +77,5 @@ export const Text = styled.span`
   }
   @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {    
     text-align: justify;
-  }
+  } */
 `;

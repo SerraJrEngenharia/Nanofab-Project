@@ -22,7 +22,9 @@ export const Section = styled.div`
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   overflow: hidden;
 
-  
+  @media screen and (max-width: ${width.mobile}) {    
+    width: 90%;
+  }
 `;
 
 export const Aside = styled.div`
@@ -57,7 +59,7 @@ export const Items = styled.div`
   /* backdrop-filter: blur(20px); */
 
   @media screen and (max-width: ${width.mobile}) {    
-    width: 60%; 
+    width: 80%; 
   }
 
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    

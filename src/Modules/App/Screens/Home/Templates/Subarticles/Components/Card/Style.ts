@@ -68,8 +68,7 @@ export const Text = styled.span`
   margin: 10px;
   font-size: ${({ theme }) => theme.fonts.small}px;
   padding: 20px;
-
-
+  text-align: justify;
 `;
 
 export const Title = styled.span`

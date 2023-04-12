@@ -9,14 +9,8 @@ export const Container = styled.div`
   min-height: 55vh;
   margin: 50px 0px;
 
-  @media screen and (max-width: ${width.mobile}) {
-    
-  }
-
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-  }
-
-  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
+  @media screen and (max-width: 1022px) {
+    display: none;
   }
 `;
 

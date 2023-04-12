@@ -7,12 +7,12 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-	-webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
 	overflow: hidden;
 	position: relative;
 	width: 100%;
     height: 21vh;
     background: #fff;
+    -webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 3.5px );
     -webkit-backdrop-filter: blur( 3.5px );

@@ -3,18 +3,21 @@ import { width } from "@/Services/screenSizes";
 
 export const Container = styled.div`
   width: 100%;
-  /* height: */
+  /*height: 300px;*/
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.9;
+  opacity: 1;
   margin-top: 5%;
   margin-bottom: 5%;
   align-self: center;
 
+  /* @media screen and (max-width: ${width.mobile}) {    
+        flex-direction: column;
+        width: 80%;
+        margin-top: 19%; */
   @media screen and (max-width: ${width.mobile}) {
     margin-top: 10%;
-    margin-bottom: 20%;
   }
 
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
@@ -57,7 +60,7 @@ export const CardCont = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: rgb(217, 217, 217, 0.5);
+  background-color: rgb(217, 217, 217, 0.9);
   border-radius: 150px;
   justify-content: space-around;
   
@@ -172,7 +175,7 @@ export const Paragraph = styled.span`
   color: black;
   text-align: center;
   font-size: 18px;
-  width: 60%;
+  width: 80%;
 
   @media screen and (max-width: ${width.mobile}) {
     font-size: 16px;

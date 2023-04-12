@@ -16,7 +16,7 @@ const ArticlePage: React.FC<PageProps> = ({ descriptions }) => {
     <Container>
       <LogoComponent />
 
-      <TitleComponent title="O Nanofab" />
+      <TitleComponent title="Sobre o NANOFAB" />
 
       <Content>
         {descriptions.map((eachDescription) => (

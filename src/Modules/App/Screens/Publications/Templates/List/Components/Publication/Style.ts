@@ -9,6 +9,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.foreground};
 
   @media screen and (max-width: ${width.mobile}) {    
+    width: 100%;
     text-align: left;
   }
 
