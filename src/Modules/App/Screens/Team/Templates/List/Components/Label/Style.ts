@@ -15,6 +15,19 @@ export const Container = styled.div`
     width: 1000px;
   }
 
+  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 `;
 
 export const FirstLabel = styled.span`
@@ -27,6 +40,18 @@ export const FirstLabel = styled.span`
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     width: 25%;
   }
+  
+  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+    font-size: ${({ theme }) => theme.fonts.medium}px;
+  }
+  
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  }
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    font-size: ${({ theme }) => theme.fonts.extralarge * 1.5}px;
+  }
+  
 `;
 
 export const SecondLabel = styled.span`
@@ -38,5 +63,16 @@ export const SecondLabel = styled.span`
 
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     width: 18.75%;
+  }
+
+  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+    font-size: ${({ theme }) => theme.fonts.medium}px;
+  }
+
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  }
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    font-size: ${({ theme }) => theme.fonts.extralarge * 1.5}px;
   }
 `;

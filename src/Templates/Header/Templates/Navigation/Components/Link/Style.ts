@@ -22,7 +22,6 @@ export const Container = styled.a`
 export const Text = styled(Link)`
   font-family: "Maven Pro";
   font-size: ${({ theme }) => theme.fonts.medium}px;
-  color: #626262;
   color: ${({ theme }) => theme.colors.text.title};
   
     // @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {    
@@ -32,5 +31,9 @@ export const Text = styled(Link)`
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
    font-size: 38px;
    font-weight: 500;
+  }
+
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    font-size: ${({ theme }) => theme.fonts.extralarge * 1.5}px;   
   }
 `;

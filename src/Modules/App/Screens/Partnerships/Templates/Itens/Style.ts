@@ -26,7 +26,6 @@ export const Container = styled.div`
   }
 
   @media screen and (min-width: 720px) and (max-width: 770px) {
-
   }
 
   @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
@@ -41,18 +40,29 @@ export const Container = styled.div`
     margin-top: 2%;
     margin-bottom: 2%;
   }
-  
+
   @media screen and (min-width: ${width.desktop}) and (max-width: ${width.largeDesktop}) {
     margin-top: 2%;
     margin-bottom: 2%;
   }
 
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
-    max-width: 2000px;
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
+    max-width: 2500px;
     margin-top: 2%;
     margin-bottom: 2%;
   }
-  `;
+
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    max-width: 3000px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+`;
 
 export const CardCont = styled.div`
   width: 70%;
@@ -63,7 +73,7 @@ export const CardCont = styled.div`
   background-color: rgb(217, 217, 217, 0.9);
   border-radius: 150px;
   justify-content: space-around;
-  
+
   @media screen and (max-width: ${width.mobile}) {
     display: flex;
     align-items: center;
@@ -72,8 +82,9 @@ export const CardCont = styled.div`
     /* padding: 20%; */
     padding-top: 5%;
     border-radius: 50px;
+    width: 80%;
   }
-  
+
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     display: flex;
     flex-direction: column;
@@ -82,6 +93,7 @@ export const CardCont = styled.div`
     padding-top: 4%;
     padding-bottom: 15%;
     border-radius: 50px;
+    width: 80%;
   }
 
   @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
@@ -91,24 +103,30 @@ export const CardCont = styled.div`
     justify-content: center;
     width: 60%;
     border-radius: 60px;
-
   }
 
   @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
     border-radius: 70px;
   }
-  
+
   @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {
   }
-  
+
   @media screen and (min-width: ${width.desktop}) and (max-width: ${width.largeDesktop}) {
   }
-  
+
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
     border-radius: 100px;
   }
 
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {
+    border-radius: 200px;
+  }
 
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    border-radius: 300px;
+    width: 80%;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -145,8 +163,8 @@ export const ContentContainer = styled.div`
     width: 100%;
   }
 
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
-    width: 80%; 
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
+    width: 80%;
   }
 `;
 
@@ -166,8 +184,16 @@ export const Title = styled.span`
     margin-bottom: 10%;
   }
 
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
-    font-size: 40px; 
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
+    font-size: 40px;
+  }
+
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  }
+
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    font-size: ${({ theme }) => theme.fonts.extralarge * 1.5}px;
   }
 `;
 
@@ -187,8 +213,16 @@ export const Paragraph = styled.span`
     font-size: 20px;
   }
 
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
     font-size: 24px;
+  }
+
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {
+    font-size: ${({ theme }) => theme.fonts.large}px;
+  }
+
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
   }
 `;
 
@@ -202,9 +236,15 @@ export const Image = styled.img`
   overflow: visible;
   background-color: white;
 
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
     width: 200px;
     height: 200px;
+    border-radius: 200px;
+  }
+
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    width: 250px;
+    height: 250px;
     border-radius: 200px;
   }
 `;

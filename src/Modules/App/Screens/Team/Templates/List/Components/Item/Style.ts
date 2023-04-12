@@ -29,6 +29,16 @@ export const Container = styled.div<ContainerStyleProps>`
     width: 1000px;
 
   }
+
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
 `;
 
 export const FirstLabel = styled.span`
@@ -41,6 +51,16 @@ export const FirstLabel = styled.span`
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     width: 25%;
   }
+
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
+    font-size: ${({ theme }) => theme.fonts.large}px;
+    padding-left: 20px;
+  }
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  }
+
+
 `;
 
 export const SecondLabel = styled.span`
@@ -54,4 +74,11 @@ export const SecondLabel = styled.span`
     width: 18.75%; // Enough to tell the user to scroll to the side, shows the second tab slightly
   }
 
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
+    font-size: ${({ theme }) => theme.fonts.large}px;
+  }
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  }
 `;
+

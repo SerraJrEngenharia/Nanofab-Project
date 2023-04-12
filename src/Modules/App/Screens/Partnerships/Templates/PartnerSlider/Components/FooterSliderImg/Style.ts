@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const Image = styled.img`
     width: 120px;
     /* height: 150px; */
-	margin: 0 20px;
+	margin: 0 40px;
 	transition: 0.5s;
 	overflow: hidden;
     &:hover{
@@ -35,7 +35,7 @@ export const Image = styled.img`
         /* height: 210px; */
     }
     @media screen and (min-width: ${width.extraLargeDesktop}) {
-	    width: 380px;
+	    width: 300px;
         /* height: 300px; */
     }
     @media screen and (max-width: ${width.notebook}){

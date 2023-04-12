@@ -21,7 +21,7 @@ const DropdownComponent: React.FC<DropdownComponentProps> = ({
 
   return (
     <Container>
-      <ButtonArea onClick={() => setVisible(!visible)}>
+      <ButtonArea onClick={() => setVisible(!visible)} isVisible={visible}>
         <Title>{name}</Title>
         {visible ?
           <RiArrowDropUpFill size={20}/>

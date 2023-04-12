@@ -12,6 +12,7 @@ export const Container = styled.div`
   @media screen and (max-width: 1022px) {
     display: none;
   }
+
 `;
 
 export const Section = styled.div`
@@ -25,10 +26,17 @@ export const Section = styled.div`
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 
   @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
-        width: 95%;
+    width: 95%;
     }
   @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {    
     width: 90%;
+  }
+
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    width: 70%;
+  }
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    width: 70%;
   }
 `;
 
@@ -41,6 +49,10 @@ export const Aside = styled.div`
   background-color: #d5d4d4;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    height: 8vh;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -55,10 +67,15 @@ export const LogoContainer = styled.div`
     top: -50px;
     left: -10px;
   }
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    top: -50px;
+    left: -10px;
+  }
+
 `;
 
 export const Logo = styled.img`
-  height: 160px;
+  height: 140px;
   @media screen and (max-width: ${width.mobile}) {
     height: 80px;
   }
@@ -70,7 +87,13 @@ export const Logo = styled.img`
   @media screen and (min-width: 700px) and (max-width: 821px) {
     height: 120px;
   }
-
+  
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
+    height: 200px;
+  }
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    height: 230px;
+  }
 `;
 
 export const Title = styled.span`
@@ -82,9 +105,19 @@ export const Title = styled.span`
   @media screen and (max-width: ${width.mobile}) {
     font-size: ${({ theme }) => theme.fonts.medium}px;
   }
+  
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     font-size: ${({ theme }) => theme.fonts.large}px;
   }
+  
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
+    font-size: ${({ theme }) => theme.fonts.extralarge * 1.5}px;
+  }
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    font-size: ${({ theme }) => theme.fonts.extralarge * 2.0}px;
+  }
+
+
 `;
 
 export const Items = styled.div`
@@ -128,4 +161,5 @@ export const Items = styled.div`
       background: #114676;
     }
   }
+
 `;

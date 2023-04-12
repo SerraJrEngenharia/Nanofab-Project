@@ -44,6 +44,10 @@ export const Container = styled.div`
   @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
     text-align: left;
   }
+
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {   
+    padding: 1%;
+  }
 `;
 
 export const ImgContainer = styled.div`
@@ -69,6 +73,13 @@ export const Text = styled.span`
   font-size: ${({ theme }) => theme.fonts.small}px;
   padding: 20px;
   text-align: justify;
+
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {   
+    font-size: ${({ theme }) => theme.fonts.large}px;
+  }
+  @media screen and (min-width: ${width.extraLargeDesktop}){     
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  }
 `;
 
 export const Title = styled.span`
@@ -90,5 +101,12 @@ export const Title = styled.span`
     margin-bottom: 0px;
     margin: 10px;
     margin-top: 100px;
+  }
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {   
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  }
+
+  @media screen and (min-width: ${width.extraLargeDesktop}){     
+    font-size: ${({ theme }) => theme.fonts.extralarge * 1.1}px;
   }
 `;

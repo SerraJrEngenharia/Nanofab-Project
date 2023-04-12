@@ -25,7 +25,7 @@ const FooterTemplate: React.FC<PageProps> = ({}) => {
           </DivColumn>
 
           <DivColumn>
-            <Title>Funciomento</Title>
+            <Title>Funcionamento</Title>
             <TextCustom>Segunda a sexta Xhrs às Yhrs</TextCustom>
           </DivColumn>
 

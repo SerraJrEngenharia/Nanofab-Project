@@ -43,10 +43,18 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.span`
-    font-size: ${({ theme }) => theme.fonts.medium}px;
-    color: ${({ theme }) => theme.colors.text.content};
-    text-align: center;
-    margin: 10px;
+  font-size: ${({ theme }) => theme.fonts.medium}px;
+  color: ${({ theme }) => theme.colors.text.content};
+  text-align: center;
+  margin: 10px;
+
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {
+    font-size: ${({ theme }) => theme.fonts.large}px;
+  }
+
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  }
 `;
 
 export const LogoSliderTrack = styled.div`

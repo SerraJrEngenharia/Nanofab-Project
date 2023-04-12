@@ -2,7 +2,7 @@
 import React from "react";
 
 // Native Components
-import { Container } from "./Style";
+import { Container, Section } from "./Style";
 
 // Assets
 import PublicationIcon from "@/Assets/Publications/publications2.svg";
@@ -180,9 +180,9 @@ const PublicationsPage: React.FC<PageProps> = ({}) => {
   return (
     <Container>
       <HeaderTemplate />
-
       <SubHeaderTemplate title="Publicações" image={PublicationIcon} />
 
+      <Section>
       {publications.map((eachPublication) => (
         <ListTemplate
           key={publications.indexOf(eachPublication)}
@@ -190,6 +190,7 @@ const PublicationsPage: React.FC<PageProps> = ({}) => {
           list={eachPublication.descriptions}
         />
       ))}
+      </Section>
 
       <FooterTemplate />
     </Container>

@@ -15,17 +15,47 @@ export const Container = styled.div`
     }
 `;
 
-export const ButtonArea = styled.button`
+export const ButtonArea = styled.button<DropdownStyleProps>`    
     width: 100%;
-    background-color: #f2f2f2;
+    background-color: white;
+    border-radius: 20px;
     border: 1px solid #c2c2c2;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    ${({isVisible}) => isVisible ?
+        `border-bottom-left-radius: 0px;
+         border-bottom-right-radius: 0px;
+        
+        -webkit-animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	    animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        
+        @-webkit-keyframes fade-in {
+            0% {
+                opacity: 0;
+                max-height: 0px;
+            }
+            100% {
+                opacity: 1;
+                max-height: 400px;
+            }
+          }
+          @keyframes fade-in {
+            0% {
+                opacity: 0;
+                max-height: 0px;
+            }
+            100% {
+                opacity: 1;
+                max-height: 400px;
+            }
+          }
+        ` : null}
 `;
 
 export const Content = styled.div<DropdownStyleProps>`
@@ -111,6 +141,7 @@ export const SubTitle = styled.span`
 export const Title = styled.span`
     font-size: ${({ theme }) => theme.fonts.small}px;
     color: ${({ theme }) => theme.colors.text.title};
+    text-align: left;
 `;
 
 

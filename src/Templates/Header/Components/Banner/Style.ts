@@ -27,6 +27,10 @@ export const Items = styled.div`
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
     flex-direction: column;
   }
+
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    width: 60%;
+  }
   
 `;
 
@@ -45,6 +49,9 @@ export const Logo = styled.img`
   }
   @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {    
     width: 30%;
+  }
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    width: 40%;
   }
   
   border-radius: 10px;

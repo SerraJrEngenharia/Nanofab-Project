@@ -15,14 +15,18 @@ export const Container = styled.div`
 
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
-   height: 10vh;
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
+    font-size: ${({ theme }) => theme.fonts.large}px;
+  }
+
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
   }
 `;
 
 export const Line = styled.div`
   width: 85%;
-  height: 3px;
+  height: 2px;
   background: ${({ theme }) => theme.colors.text.content};
   margin-bottom: 10px;
 
@@ -33,6 +37,7 @@ export const Line = styled.div`
 
 export const SecondBottomSection = styled.div`
   width: 70%;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,10 +55,13 @@ export const Text = styled.span`
   font-weight: 600;
   color: ${({ theme }) => theme.colors.text.content};
 
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
-   font-size: 30px;
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
+    font-size: 30px;
   }
 
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  }
 `;
 
 export const Title = styled.h3`
@@ -76,8 +84,12 @@ export const TextCustom = styled.span`
   color: ${({ theme }) => theme.colors.text.content};
   width: 70%;
 
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
-   font-size: 30px;
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
   }
 `;
 
@@ -102,7 +114,7 @@ export const FirstBottomSection = styled.div`
     justify-content: flex-end;
   } 
   @media screen and (min-width: 700px) and (max-width: 900px) {      
-      width: 83%;
+    width: 83%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -144,7 +156,17 @@ export const LogoImage = styled.img`
     margin-right: 3%;
   }
 
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {      
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     margin-right: 5%;
+  }
+
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
+    width: 130px;
+    height: 130px;
+  }
+
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    width: 200px;
+    height: 200px;
   }
 `;

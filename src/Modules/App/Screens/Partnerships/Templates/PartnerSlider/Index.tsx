@@ -19,6 +19,7 @@ import IMEImage from "@/Assets/ParceriasLogos/ime.jpg";
 import PUCImage from "@/Assets/ParceriasLogos/pucrj.jpg";
 import UFRJImage from "@/Assets/ParceriasLogos/UFRJ.jpg";
 import CEFETImage from "@/Assets/ParceriasLogos/cefet.png";
+import SerraJrImage from "@/Assets/ParceriasLogos/SerraJr.svg"
 
 const PartnerSlider: React.FC<PartnerSliderProps> = ({}) => {
 
@@ -53,7 +54,11 @@ const PartnerSlider: React.FC<PartnerSliderProps> = ({}) => {
     },
     {
       image: CEFETImage,
-       altText: 'CEFET - Centro Federal de Educação Tecnológica Celso Suckow da Fonseca'
+      altText: 'CEFET - Centro Federal de Educação Tecnológica Celso Suckow da Fonseca'
+    },
+    {
+      image: SerraJrImage,
+      altText: 'Serra Jr. - Serra Júnior Engenharia'
     },
     {
       image: CBPFImage,
@@ -88,6 +93,10 @@ const PartnerSlider: React.FC<PartnerSliderProps> = ({}) => {
        altText: 'CEFET - Centro Federal de Educação Tecnológica Celso Suckow da Fonseca'
     },
     {
+      image: SerraJrImage,
+      altText: 'Serra Jr. - Serra Júnior Engenharia'
+    },
+    {
       image: CBPFImage,
       altText: 'Centro Brasileiro de Pesquisas Físicas - CBPF'
     },
@@ -118,7 +127,11 @@ const PartnerSlider: React.FC<PartnerSliderProps> = ({}) => {
     {
       image: CEFETImage,
        altText: 'CEFET - Centro Federal de Educação Tecnológica Celso Suckow da Fonseca'
-    }
+    },
+    {
+      image: SerraJrImage,
+      altText: 'Serra Jr. - Serra Júnior Engenharia'
+    },
   ]
   return (
     <Container>

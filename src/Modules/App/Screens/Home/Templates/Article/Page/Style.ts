@@ -78,4 +78,13 @@ export const Text = styled.span`
   @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {    
     text-align: justify;
   } */
+
+  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
+    font-size: ${({ theme }) => theme.fonts.large}px;
+  }
+
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
+    
+  }
 `;

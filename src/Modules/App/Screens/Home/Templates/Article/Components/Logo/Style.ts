@@ -19,6 +19,10 @@ export const Container = styled.div`
     top: -30px;
     left: -30px;
   }
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    top: -40px;
+    left: -40px;
+  }
 `;
 
 export const Image = styled.img`
@@ -40,5 +44,9 @@ export const Image = styled.img`
   @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
     width: 120px;
     height: 120px;
+  }
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+    width: 200px;
+    height: 200px;
   }
 `;

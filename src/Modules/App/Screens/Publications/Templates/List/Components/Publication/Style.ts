@@ -16,6 +16,10 @@ export const Container = styled.div`
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
     text-align: left;
   }
+   
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    padding: 20px;
+  }
 `;
 
 export const Text = styled.span`
