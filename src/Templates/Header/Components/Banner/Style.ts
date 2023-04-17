@@ -21,38 +21,46 @@ export const Items = styled.div`
   justify-content: space-around;
   align-items: center;
 
-  @media screen and (max-width: ${width.mobile}) {    
-    flex-direction: column;
-  }
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+  @media screen and (max-width: ${width.mobile}) {
     flex-direction: column;
   }
 
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
     width: 60%;
   }
-  
 `;
 
 export const Logo = styled.img`
   width: 20%;
 
-  @media screen and (max-width: ${width.mobile}) {    
+  @media screen and (max-width: ${width.mobile}) {
     width: 50%;
   }
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     width: 50%;
   }
 
-  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
     width: 35%;
   }
-  @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {    
+
+  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
+    width: 35%;
+  }
+  @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {
     width: 30%;
   }
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
     width: 40%;
   }
-  
+
   border-radius: 10px;
 `;

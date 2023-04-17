@@ -51,6 +51,7 @@ export const Menu = styled.nav`
     top: 80px;
     transition: 0.2s;
     z-index: 10;
+    padding: 15px;
     
     border: 1px solid #c2c2c2;
     background: #f2f2f2;

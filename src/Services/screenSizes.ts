@@ -7,7 +7,7 @@ export const width = {
     // @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
     // 
     // }
-    tablet: '820px',
+    tablet: '819px',
     // @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {    
     // 
     // }

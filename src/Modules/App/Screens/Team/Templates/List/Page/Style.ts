@@ -109,6 +109,9 @@ export const Title = styled.span`
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     font-size: ${({ theme }) => theme.fonts.large}px;
   }
+  @media screen and (min-width: ${width.tablet}) and (max-width: 1025px) {
+    font-size: ${({ theme }) => theme.fonts.large}px;
+  }
   
   @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
     font-size: ${({ theme }) => theme.fonts.extralarge * 1.5}px;

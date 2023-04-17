@@ -5,6 +5,7 @@ export const Container = styled.div`
     width: 80%;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20px;
 
     @media screen and (max-width: ${width.mobile}) {    
         flex-direction: column;

@@ -10,7 +10,7 @@ export const Container = styled.div`
   margin: 50px 0px;
 
   @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {
-    width: 60%;
+    width: 90%;
   }
 
   @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {
@@ -35,6 +35,9 @@ export const Section = styled.div`
   border-radius: 40px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  background-color: rgba(217, 217, 217, 0.2);
+  backdrop-filter: blur(20px);
+
 
   @media screen and (max-width: ${width.mobile}) {
     width: 90%;
@@ -78,6 +81,7 @@ export const Items = styled.div`
   align-items: center;
   /* background-color: rgba(255, 255, 255, 0.4); */
   /* backdrop-filter: blur(20px); */
+  
 
   @media screen and (max-width: ${width.mobile}) {
     width: 80%;

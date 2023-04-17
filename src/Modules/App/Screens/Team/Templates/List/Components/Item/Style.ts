@@ -51,7 +51,12 @@ export const FirstLabel = styled.span`
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     width: 25%;
   }
-
+  @media screen and (min-width: ${width.tablet}) and (max-width: 1025px) {
+    font-size: ${({ theme }) => theme.fonts.extrasmall}px;
+  }
+  @media screen and (min-width: ${width.extraLargeDesktop}){    
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  }
   @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
     font-size: ${({ theme }) => theme.fonts.large}px;
     padding-left: 20px;
@@ -72,6 +77,10 @@ export const SecondLabel = styled.span`
 
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     width: 18.75%; // Enough to tell the user to scroll to the side, shows the second tab slightly
+  }
+
+  @media screen and (min-width: ${width.tablet}) and (max-width: 1025px) {
+    font-size: ${({ theme }) => theme.fonts.extrasmall}px;
   }
 
   @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    

@@ -16,6 +16,7 @@ export const Container = styled.div`
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 3.5px );
     -webkit-backdrop-filter: blur( 3.5px );
+    padding-bottom: 10px;
     @media screen and (max-width: ${width.largeDesktop}){
         height: 16%;
     }

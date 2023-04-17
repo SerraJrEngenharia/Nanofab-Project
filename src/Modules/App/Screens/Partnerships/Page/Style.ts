@@ -15,14 +15,19 @@ export const Center = styled.div`
   flex-direction: column;
 
   @media screen and (max-width: ${width.mobile}) {    
-    margin-top: 3%;
+    margin-top: 10%;
     margin-bottom: 3%;
   }
 
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-    margin-top: 3%;
+    margin-top: 8%;
     margin-bottom: 3%;
   }
+
+  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {    
+    margin-top: 7%;   
+  }
+
 
   @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
     margin-top: 7%;

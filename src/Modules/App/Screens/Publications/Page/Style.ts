@@ -14,8 +14,15 @@ export const Section = styled.div`
   @media screen and (max-width: ${width.mobile}) {
     margin-top: 7%;
   }
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     margin-top: 6%;
   }
 
+  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
+    margin-top: 5%;
+  }
+
+  @media screen and (min-width: ${width.desktop}) and (max-width: ${width.largeDesktop}) {
+    margin-top: 2%;
+  }
 `;

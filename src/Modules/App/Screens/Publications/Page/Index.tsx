@@ -12,6 +12,7 @@ import HeaderTemplate from "@/Templates/Header/Page/Index";
 import SubHeaderTemplate from "@/Templates/SubHeader/Page/Index";
 import ListTemplate from "../Templates/List/Page/Index";
 import FooterTemplate from "@/Templates/Footer/Page/Index";
+import ListDropdownTemplate from "../Templates/ListDropdown/Page/Index";
 
 // @Types
 import { PageProps } from "./Types";
@@ -183,13 +184,7 @@ const PublicationsPage: React.FC<PageProps> = ({}) => {
       <SubHeaderTemplate title="Publicações" image={PublicationIcon} />
 
       <Section>
-      {publications.map((eachPublication) => (
-        <ListTemplate
-          key={publications.indexOf(eachPublication)}
-          year={eachPublication.year}
-          list={eachPublication.descriptions}
-        />
-      ))}
+        <ListDropdownTemplate list={publications}/>
       </Section>
 
       <FooterTemplate />

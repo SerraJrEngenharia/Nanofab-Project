@@ -103,6 +103,7 @@ export const CardCont = styled.div`
     justify-content: center;
     width: 60%;
     border-radius: 60px;
+    padding: 5%;
   }
 
   @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
@@ -182,6 +183,10 @@ export const Title = styled.span`
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     font-size: 23px;
     margin-bottom: 10%;
+  }
+
+  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
+    font-size: 23px;
   }
 
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {

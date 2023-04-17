@@ -40,6 +40,9 @@ export const Container = styled.div`
       margin-bottom: 5%;
       padding: 10px;
   }
+  @media screen and (min-width: ${width.extraLargeDesktop}) {    
+      padding: 60px;
+  }
 
 `;
 
