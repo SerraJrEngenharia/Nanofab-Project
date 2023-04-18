@@ -1,8 +1,12 @@
 interface ItemProps {
   year: string;
-  descriptions: {
-    description: String 
-  }
+  descriptions: Array<DescriptionProps>
+}
+
+export interface DescriptionProps{
+  
+  description: String;
+  
 }
 
 // interface MinhaInterface{

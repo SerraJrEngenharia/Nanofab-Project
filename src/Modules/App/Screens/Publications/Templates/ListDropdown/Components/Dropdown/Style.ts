@@ -4,7 +4,7 @@ import { width } from '@/Services/screenSizes';
 
 export const Container = styled.div`
     width: 40%;
-    margin: 10px;
+    margin-bottom: 10px;
 
     @media screen and (max-width: ${width.mobile}) {   
         width: 90%;
@@ -12,6 +12,10 @@ export const Container = styled.div`
 
     @media screen and (min-width: ${width.largeMobile}) {    
         width: 70%;
+    }
+
+    @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+        margin-bottom: 20px;
     }
 `;
 
@@ -60,7 +64,7 @@ export const ButtonArea = styled.button<DropdownStyleProps>`
 
 export const Content = styled.div<DropdownStyleProps>`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     background-color: #f2f2f2;
     border-bottom-left-radius: 15px;
@@ -71,43 +75,14 @@ export const Content = styled.div<DropdownStyleProps>`
     @media screen and (max-width: ${width.mobile}) {   
         justify-content: space-between;
     }
-
-
-    ${({isVisible}) => isVisible ?
-        `
-        -webkit-animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	    animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        
-        @-webkit-keyframes fade-in {
-            0% {
-                opacity: 0;
-                max-height: 0px;
-            }
-            100% {
-                opacity: 1;
-                max-height: 400px;
-            }
-          }
-          @keyframes fade-in {
-            0% {
-                opacity: 0;
-                max-height: 0px;
-            }
-            100% {
-                opacity: 1;
-                max-height: 400px;
-            }
-          }
-        
-        `
-        :
-        null
+    @media screen and (min-width: ${width.extraLargeDesktop}) {    
+        padding: 30px;
     }
-    
 `;
 
 export const TextGroup = styled.div`
     width: 50%;
+    text-align: justify;
     
 
     @media screen and (min-width: 500px) {    
@@ -129,6 +104,7 @@ export const TextContainer = styled.div`
     @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
         min-height: 70px;
     }
+
 `;
 
 export const SubTitle = styled.span`
@@ -139,12 +115,29 @@ export const SubTitle = styled.span`
 `;
 
 export const Title = styled.span`
-    font-size: ${({ theme }) => theme.fonts.small}px;
-    color: ${({ theme }) => theme.colors.text.title};
+    font-size: ${({ theme }) => theme.fonts.medium}px;
     text-align: left;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #AE0806;
+
+    @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+        font-size: ${({ theme }) => theme.fonts.extralarge}px;
+    }
+    @media screen and (min-width: ${width.extraLargeDesktop}) {    
+        font-size: ${({ theme }) => theme.fonts.extralarge * 1.7}px;
+    }
 `;
 
 
 export const Text = styled.span`
+    text-align: justify;
 
+    @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
+        font-size: ${({ theme }) => theme.fonts.large}px;
+    }
+    @media screen and (min-width: ${width.extraLargeDesktop}) {    
+        font-size: ${({ theme }) => theme.fonts.extralarge * 1.1}px;
+    }
 `;

@@ -1,10 +1,8 @@
-
+import { DescriptionProps } from "../../Page/Types";
 
 export interface DropdownComponentProps {
   year: string,
-  descriptions: {
-    description: String;
-  }
+  descriptions: Array<DescriptionProps>
 }
 
 export interface DropdownStyleProps {

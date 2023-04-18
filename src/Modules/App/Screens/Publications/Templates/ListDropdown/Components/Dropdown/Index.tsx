@@ -30,13 +30,13 @@ const DropdownComponent: React.FC<DropdownComponentProps> = ({
       {visible ?
         <Content isVisible={visible}>
           
-          {/* {{descriptions.map((eachItem)=>{
-            return(
-              <TextContainer>
-                <Text>{eachItem.description}<Text>
-              </TextContainer>
-            )
-          })}} */}
+        {descriptions.map((eachDescription) => {
+          return (
+            <TextContainer>
+              <Text>{eachDescription.description}</Text>
+            </TextContainer>
+          )
+        })}
 
         </Content>
         :
