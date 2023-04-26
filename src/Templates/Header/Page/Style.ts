@@ -50,7 +50,7 @@ export const LogoCompany = styled.img`
   padding-left: 15px;
   width: 200px;
 
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
+  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
     width: 400px;
   }
 `;

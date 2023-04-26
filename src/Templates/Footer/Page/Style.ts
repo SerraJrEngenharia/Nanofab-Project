@@ -53,6 +53,7 @@ export const Text = styled.span`
   flex-direction: row;
   justify-content: space-between;
   font-weight: 600;
+  text-align: center;
   color: ${({ theme }) => theme.colors.text.content};
 
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
@@ -65,7 +66,7 @@ export const Text = styled.span`
 `;
 
 export const Title = styled.h3`
-
+  text-align: center;
 `;  
 
 export const DivColumn = styled.div`
@@ -74,16 +75,23 @@ export const DivColumn = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 6%;
-  
+  text-align: center;
 `;
 
 export const TextCustom = styled.span`
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
   font-weight: 600;
   color: ${({ theme }) => theme.colors.text.content};
-  width: 70%;
-
+  width: 100%;
+  text-align: center;
+  
+  @media screen and (max-width: ${width.mobile}){
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
     font-size: 30px;
   }
@@ -94,10 +102,10 @@ export const TextCustom = styled.span`
 `;
 
 export const FirstBottomSection = styled.div`
-  width: 83%;
+  width: 90%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: 1%;
   margin-top: 1%;
@@ -105,7 +113,7 @@ export const FirstBottomSection = styled.div`
   @media screen and (max-width: ${width.mobile}) {    
     width: 100%;
     margin-bottom: 3%;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {      
@@ -113,13 +121,14 @@ export const FirstBottomSection = styled.div`
     margin-bottom: 3%;
     justify-content: flex-end;
   } 
+  
   @media screen and (min-width: 700px) and (max-width: 900px) {      
     width: 83%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
     margin-top: 1%;
   }
 `;
@@ -127,17 +136,19 @@ export const FirstBottomSection = styled.div`
 export const Position = styled.div`
   display: flex;
   justify-content: center;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
 
   @media screen and (max-width: ${width.mobile}) {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {      
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
   } 
 
   @media screen and (min-width: 700px) and (max-width: 900px) {      
@@ -147,26 +158,4 @@ export const Position = styled.div`
   }
 `;
 
-export const LogoImage = styled.img`
-  width: 80px;
-  height: 80px;
-  filter: grayscale(1);
 
-  @media screen and (max-width: ${width.mobile}) {
-    margin-right: 3%;
-  }
-
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-    margin-right: 5%;
-  }
-
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
-    width: 130px;
-    height: 130px;
-  }
-
-  @media screen and (min-width: ${width.extraLargeDesktop}) {
-    width: 200px;
-    height: 200px;
-  }
-`;

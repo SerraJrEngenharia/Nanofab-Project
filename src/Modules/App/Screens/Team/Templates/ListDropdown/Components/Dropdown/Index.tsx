@@ -12,8 +12,7 @@ import { DropdownComponentProps } from './Types';
 const DropdownComponent: React.FC<DropdownComponentProps> = ({
   name, 
   unit, 
-  bond, 
-  personFunction, 
+  bond,  
   titration
 }) => {
 
@@ -50,10 +49,10 @@ const DropdownComponent: React.FC<DropdownComponentProps> = ({
               <Text>{titration}</Text>
             </TextContainer>
 
-            <TextContainer>
+            {/* <TextContainer>
               <SubTitle>Função</SubTitle>
               <Text>{personFunction}</Text>
-            </TextContainer>
+            </TextContainer> */}
           </TextGroup>
       </Content>
         :

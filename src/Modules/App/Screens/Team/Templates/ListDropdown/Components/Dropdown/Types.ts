@@ -3,7 +3,6 @@ export interface DropdownComponentProps {
   unit: string;
   bond: string;
   titration: string;
-  personFunction: string;
 }
 
 export interface DropdownStyleProps {

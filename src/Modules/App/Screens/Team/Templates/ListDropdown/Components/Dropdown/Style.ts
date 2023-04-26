@@ -32,29 +32,29 @@ export const ButtonArea = styled.button<DropdownStyleProps>`
         `border-bottom-left-radius: 0px;
          border-bottom-right-radius: 0px;
         
-        -webkit-animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	    animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        // -webkit-animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	    // animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         
-        @-webkit-keyframes fade-in {
-            0% {
-                opacity: 0;
-                max-height: 0px;
-            }
-            100% {
-                opacity: 1;
-                max-height: 400px;
-            }
-          }
-          @keyframes fade-in {
-            0% {
-                opacity: 0;
-                max-height: 0px;
-            }
-            100% {
-                opacity: 1;
-                max-height: 400px;
-            }
-          }
+        // @-webkit-keyframes fade-in {
+        //     0% {
+        //         opacity: 0;
+        //         max-height: 0px;
+        //     }
+        //     100% {
+        //         opacity: 1;
+        //         max-height: 400px;
+        //     }
+        //   }
+        //   @keyframes fade-in {
+        //     0% {
+        //         opacity: 0;
+        //         max-height: 0px;
+        //     }
+        //     100% {
+        //         opacity: 1;
+        //         max-height: 400px;
+        //     }
+        //   }
         ` : null}
 `;
 
@@ -73,7 +73,7 @@ export const Content = styled.div<DropdownStyleProps>`
     }
 
 
-    ${({isVisible}) => isVisible ?
+    /* ${({isVisible}) => isVisible ?
         `
         -webkit-animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	    animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -102,7 +102,7 @@ export const Content = styled.div<DropdownStyleProps>`
         `
         :
         null
-    }
+    } */
     
 `;
 

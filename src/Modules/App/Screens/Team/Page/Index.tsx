@@ -6,7 +6,6 @@ import { Container } from "./Style";
 
 // Templates
 import HeaderTemplate from "@/Templates/Header/Page/Index";
-import ListTemplate from "../Templates/List/Page/Index";
 import FooterTemplate from "@/Templates/Footer/Page/Index";
 
 // @Types
@@ -14,254 +13,241 @@ import { PageProps } from "./Types";
 import ListDropdownTemplate from "../Templates/ListDropdown/Page/Index";
 
 const TeamPage: React.FC<PageProps> = ({}) => {
-  const persons = [
+  const personsData = [
     {
-      name: "José Brant de Campos",
-      unit: "PPG-EM/UERJ",
-      bond: "Permanente",
-      titration: "Doutor, PQ 2, CNE ",
-      personFunction: "Coordenador e Comitê Gestor",
+        personFunction: 'Comitê Gestor',
+        persons: [
+            {
+                name: "José Brant de Campos",
+                unit: "PPG-EM/UERJ",
+                bond: "Permanente",
+                titration: "Doutor, PQ 2, CNE ",
+            },
+            {
+                name: "Noberto Mangiavacchi",
+                unit: "UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Hector Reynaldo Meneses",
+                unit: "CEFET-RJ",
+                bond: "Permanente",
+                titration: "Doutor, PQ 2",
+            },
+            {
+                name: "Rogério Navarro Correia de Siqueira",
+                unit: "PUC-Rio",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Suzana Bottega Peripolli",
+                unit: "PPG-EM/UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            }
+        ]
     },
     {
-      name: "Noberto Mangiavacchi",
-      unit: "UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Vice-Coodenador",
+        personFunction: 'Comitê de Usuários',
+        persons: [
+            {
+                name: "Lilian Pantoja Sosman",
+                unit: "IF - PPGF/UERJ",
+                bond: "Permanente",
+                titration: "Doutor, PQ 2",
+            },
+            {
+                name: "Ivana Lourenço de Mello Ferreira",
+                unit: "PPGQ/UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Marilia Garcia Diniz",
+                unit: "PPG-EM/UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "José Ricardo Muniz Ferreira",
+                unit: "Empresa R-CRio",
+                bond: "Sócio",
+                titration: "Doutor",
+            }
+            
+        ]
     },
     {
-      name: "Hector Reynaldo Meneses",
-      unit: "CEFET-RJ",
-      bond: "Permanente",
-      titration: "Doutor, PQ 2",
-      personFunction: "Comitê Gestor",
+        personFunction: 'Pesquisador',
+        persons: [
+            {
+                name: "Eduardo de Albuquerque Brocchi",
+                unit: "PUC-Rio",
+                bond: "Permanente",
+                titration: "Doutor, PQ 1C, CNE",
+            },
+            {
+                name: "José Guilherme Santos Silva",
+                unit: "PPG-EF/UERJ",
+                bond: "Permanente",
+                titration: "Doutor, PQ 1B, CNE",
+            },
+            {
+                name: "Luciano Rodrigues Ornelas de Lima",
+                unit: "PPG-EF/UERJ",
+                bond: "Permanente",
+                titration: "Doutor, PQ 1D, CNE",
+            },
+            {
+                name: "Marcos Antonio da Silva Costa",
+                unit: "PPGQ/UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Nakédia Maysa Freitas Carvalho",
+                unit: "PPGQ/UERJ",
+                bond: "Permanente",
+                titration: "Doutor, PQ 2, CNE",
+            },
+            {
+                name: "Francisco José Moura",
+                unit: "PUC-Rio",
+                bond: "Permanente",
+                titration: "Doutor, PQ 2",
+            },
+            {
+                name: "Rodrigo Fernandes Magalhães de Souza",
+                unit: "PUC-Rio",
+                bond: "Permanente",
+                titration: "Doutor, PQ2",
+            },
+            {
+                name: "Eric Cardona Romani",
+                unit: "SENAI",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Jorge Luis do Amaral",
+                unit: "PPG-EL/UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Marilza Sampaio Aguilar",
+                unit: "PPG-EM/UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Daniel José Naid Mansur Chalhub",
+                unit: "PPG-EM/UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "José da Rocha Miranda Pontes",
+                unit: "PPGQ/UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Ana Maria Furtado de Sousa",
+                unit: "PPGQ/UERJ",
+                bond: "Permanente",
+                titration: "Doutor, PQ2",
+            },
+            {
+                name: "Jaqueline Dias Senra",
+                unit: "PPGQ/UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Juliana Fonseca de Lima",
+                unit: "PPGQ/UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Herman Lima Pessoa",
+                unit: "CBPF",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Letícia Aguilera dos Santos",
+                unit: "IPRJ/UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Cecilia Vilani",
+                unit: "PUC-Rio",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "Celio Albano da Costa",
+                unit: "UFRJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+            {
+                name: "José Luis Lopes da Silveira",
+                unit: "UFRJ",
+                bond: "Permanente",
+                titration: "Doutor, PQ2",
+            },
+            {
+                name: "Eduardo Sousa Lima",
+                unit: "IME",
+                bond: "Permanente",
+                titration: "Doutor, PQ2",
+            },
+            {
+                name: "Eustáquio de Souza Baêta Junior",
+                unit: "PPG-EM/UERJ",
+                bond: "Permanente",
+                titration: "Doutor",
+            },
+        ]
     },
     {
-      name: "Rogério Navarro Correia de Siqueira",
-      unit: "PUC-Rio",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Comitê Gestor",
-    },
-    {
-      name: "Suzana Bottega Peripolli",
-      unit: "PPG-EM/UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Comitê Gestor",
-    },
-    {
-      name: "Lilian Pantoja Sosman",
-      unit: "IF - PPGF/UERJ",
-      bond: "Permanente",
-      titration: "Doutor, PQ 2",
-      personFunction: "Comitê de Usuários",
-    },
-    {
-      name: "Ivana Lourenço de Mello Ferreira",
-      unit: "PPGQ/UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Comitê de Usuários",
-    },
-    {
-      name: "Marilia Garcia Diniz",
-      unit: "PPG-EM/UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Comitê de Usuários",
-    },
-    {
-      name: "José Ricardo Muniz Ferreira",
-      unit: "Empresa R-CRio",
-      bond: "Sócio",
-      titration: "Doutor",
-      personFunction: "Comitê de Usuários",
-    },
-    {
-      name: "Eduardo de Albuquerque Brocchi",
-      unit: "PUC-Rio",
-      bond: "Permanente",
-      titration: "Doutor, PQ 1C, CNE",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "José Guilherme Santos Silva",
-      unit: "PPG-EF/UERJ",
-      bond: "Permanente",
-      titration: "Doutor, PQ 1B, CNE",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Luciano Rodrigues Ornelas de Lima",
-      unit: "PPG-EF/UERJ",
-      bond: "Permanente",
-      titration: "Doutor, PQ 1D, CNE",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Marcos Antonio da Silva Costa",
-      unit: "PPGQ/UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Nakédia Maysa Freitas Carvalho",
-      unit: "PPGQ/UERJ",
-      bond: "Permanente",
-      titration: "Doutor, PQ 2, CNE",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Francisco José Moura",
-      unit: "PUC-Rio",
-      bond: "Permanente",
-      titration: "Doutor, PQ 2",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Rodrigo Fernandes Magalhães de Souza",
-      unit: "PUC-Rio",
-      bond: "Permanente",
-      titration: "Doutor, PQ2",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Eric Cardona Romani",
-      unit: "SENAI",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Jorge Luis do Amaral",
-      unit: "PPG-EL/UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Marilza Sampaio Aguilar",
-      unit: "PPG-EM/UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Daniel José Naid Mansur Chalhub",
-      unit: "PPG-EM/UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "José da Rocha Miranda Pontes",
-      unit: "PPGQ/UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Ana Maria Furtado de Sousa",
-      unit: "PPGQ/UERJ",
-      bond: "Permanente",
-      titration: "Doutor, PQ2",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Jaqueline Dias Senra",
-      unit: "PPGQ/UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Juliana Fonseca de Lima",
-      unit: "PPGQ/UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Herman Lima Pessoa",
-      unit: "CBPF",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Letícia Aguilera dos Santos",
-      unit: "IPRJ/UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Cecilia Vilani",
-      unit: "PUC-Rio",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Celio Albano da Costa",
-      unit: "UFRJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "José Luis Lopes da Silveira",
-      unit: "UFRJ",
-      bond: "Permanente",
-      titration: "Doutor, PQ2",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Eduardo Sousa Lima",
-      unit: "IME",
-      bond: "Permanente",
-      titration: "Doutor, PQ2",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Eustáquio de Souza Baêta Junior",
-      unit: "PPG-EM/UERJ",
-      bond: "Permanente",
-      titration: "Doutor",
-      personFunction: "Pesquisador",
-    },
-    {
-      name: "Maybi Fálker Sampaio",
-      unit: "NANOFAB/UERJ",
-      bond: "Bolsista QUALITEC/UERJ",
-      titration: "Doutor",
-      personFunction: "Equipe NANOFAB",
-    },
-    {
-      name: "Kellen Venâncio dos Santos",
-      unit: "NANOFAB/UERJ",
-      bond: "Bolsista TCT/FAPERJ",
-      titration: "Engenheira",
-      personFunction: "Equipe NANOFAB",
-    },
-    {
-      name: "Camila Alves Pelicarto Silva",
-      unit: "NANOFAB/UERJ",
-      bond: "Bolsista PROATEC/UERJ",
-      titration: "Engenheira",
-      personFunction: "Equipe NANOFAB",
-    },
-  ];
+        personFunction: 'Equipe NANOFAB',
+        persons:[
+            {
+                name: "Maybi Fálker Sampaio",
+                unit: "NANOFAB/UERJ",
+                bond: "Bolsista QUALITEC/UERJ",
+                titration: "Doutor",
+            },
+            {
+                name: "Kellen Venâncio dos Santos",
+                unit: "NANOFAB/UERJ",
+                bond: "Bolsista TCT/FAPERJ",
+                titration: "Engenheira",
+            },
+            {
+                name: "Camila Alves Pelicarto Silva",
+                unit: "NANOFAB/UERJ",
+                bond: "Bolsista PROATEC/UERJ",
+                titration: "Engenheira",
+            }
+        ]
+    }
+]
 
   return (
     <Container>
       <HeaderTemplate />
 
-      <ListTemplate list={persons} />
+      {/* <ListTemplate list={personsData} /> */}
 
-      <ListDropdownTemplate list={persons} />
+      <ListDropdownTemplate list={personsData} />
 
       <FooterTemplate />
     </Container>

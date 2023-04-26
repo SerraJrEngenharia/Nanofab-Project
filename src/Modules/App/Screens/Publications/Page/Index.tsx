@@ -17,7 +17,7 @@ import ListDropdownTemplate from "../Templates/ListDropdown/Page/Index";
 // @Types
 import { PageProps } from "./Types";
 
-const PublicationsPage: React.FC<PageProps> = ({}) => {
+  const PublicationsPage: React.FC<PageProps> = ({}) => {
   const publications = [
     {
       year: "2022",

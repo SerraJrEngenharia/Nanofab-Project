@@ -3,10 +3,10 @@ import React from 'react';
 
 // Native Components
 import { Container, LogoContainer, Logo, Title } from './Style';
+import FunctionCardComponent from '../Components/FunctionCard/Index';
 
 // @Types
 import { ListDropdownTemplateProps } from './Types';
-import DropdownComponent from '../Components/Dropdown/Index';
 
 // Assets
 import TeamIcon from "@/Assets/Team/team.png";
@@ -19,18 +19,17 @@ const ListDropdownTemplate: React.FC<ListDropdownTemplateProps> = ({list}) => {
         </LogoContainer>
 
         <Title>Equipe NANOFAB</Title>
+        
         {list.map((eachItem) => {
-            return (
-                <DropdownComponent 
+            return(
+                <FunctionCardComponent
                     key={list.indexOf(eachItem)} 
-                    name={eachItem.name}  
-                    bond={eachItem.bond} 
-                    personFunction={eachItem.personFunction} 
-                    titration={eachItem.titration} 
-                    unit={eachItem.unit}
+                    title={eachItem.personFunction} 
+                    persons={eachItem.persons}
                 />
             )
-        })}
+        })
+        }
         
     </Container>
 );

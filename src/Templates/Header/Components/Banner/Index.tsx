@@ -2,7 +2,7 @@
 import React from "react";
 
 // Native Components
-import { Container, Items, Logo } from "./Style";
+import { Container, Items, Logo, LogoUERJ } from "./Style";
 
 // @Types
 import { BannerProps } from "./Types";
@@ -19,9 +19,9 @@ const BannerComponent: React.FC<BannerProps> = ({}) => {
   return (
     <Container>
       <Items>
-        <Logo src={LogoPPGEM} />
+        <LogoUERJ src={LogoUerj} />
         <Logo src={LogoNanoFab} />
-        {/* <Logo src={LogoUerj} /> */}
+        <Logo src={LogoPPGEM} />
       </Items>
     </Container>
   );

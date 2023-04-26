@@ -10,10 +10,6 @@ export const Container = styled.div`
   width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
-
-  @media screen and (min-width: ${width.notebook}) {
-    display: none;
-  }
 `;
 
 export const LogoContainer = styled.div`

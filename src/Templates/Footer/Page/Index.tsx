@@ -16,9 +16,13 @@ const FooterTemplate: React.FC<PageProps> = ({}) => {
 
       <FirstBottomSection>
 
-        <LogoImage src={UerjLogo}/>
-        
         <Position>
+          
+          <DivColumn>
+            <Title>Endereço</Title>
+            <TextCustom>Rua São Franscisco Xavier - 3107f - Maracanã, Rio de Janeiro</TextCustom>
+          </DivColumn>
+          
           <DivColumn>
             <Title>Email</Title>
             <TextCustom>adsad@gmail.com</TextCustom>

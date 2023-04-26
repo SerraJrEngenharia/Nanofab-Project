@@ -11,11 +11,15 @@ import FooterTemplate from "@/Templates/Footer/Page/Index";
 // @Types
 import { PageProps } from "./Types";
 
+import Templates from "../Templates/Index"
+
 const ProgressPage: React.FC<PageProps> = ({}) => {
   return (
     <Container>
       <HeaderTemplate />
 
+      <Templates/>
+      
       <FooterTemplate />
     </Container>
   );
