@@ -6,162 +6,143 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin: 0px;
 
-  @media screen and (max-width: 1022px) {
-    display: none;
-  }
-
 `;
 
-export const Section = styled.div`
-  position: relative;
-  width: 80%;
+export const ScheduleContainer = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 40px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+`;
 
-  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
+export const ButtonsNavigation = styled.div`
+  margin-top: 1%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+
+  @media screen and (max-width: ${width.mobile}) {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     width: 95%;
-    }
-  @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {    
+    margin-top: 20px;
+  }
+`;
+
+export const ButtonNavigate = styled.button`
+  width: 10%;
+  padding: 0.5%;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  margin: 1%;
+  font-size: ${({ theme }) => theme.fonts.small}px;
+  cursor: pointer;
+
+  :hover {
+    background-color: #d5d4d4;
+    transition: 0.5s;
+  }
+
+  @media screen and (max-width: ${width.mobile}) {
+    width: 40%;
+  }
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+    width: 40%;
+  }
+`;
+
+export const FilterSection = styled.div`
     width: 90%;
-  }
-
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
-    width: 70%;
-  }
-  @media screen and (min-width: ${width.extraLargeDesktop}){    
-    width: 70%;
-  }
+    margin-bottom: 3%;
 `;
 
-export const Aside = styled.div`
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #d5d4d4;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-
-  @media screen and (min-width: ${width.extraLargeDesktop}){    
-    height: 8vh;
-  }
-`;
-
-export const LogoContainer = styled.div`
-  position: absolute;
-  top: -70px;
-  left: 10px;
-  @media screen and (max-width: ${width.mobile}) {
-    top: -20px;
-    left: -15px;
-  }
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-    top: -50px;
-    left: -10px;
-  }
-  @media screen and (min-width: ${width.extraLargeDesktop}){    
-    top: -50px;
-    left: -10px;
-  }
-
-`;
-
-export const Logo = styled.img`
-  height: 140px;
-  @media screen and (max-width: ${width.mobile}) {
-    height: 80px;
-  }
-
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-    height: 100px;
-  }
-
-  @media screen and (min-width: 700px) and (max-width: 821px) {
-    height: 120px;
-  }
-  
-  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
-    height: 200px;
-  }
-  @media screen and (min-width: ${width.extraLargeDesktop}){    
-    height: 230px;
-  }
-`;
-
-export const Title = styled.span`
-  font-size: ${({ theme }) => theme.fonts.extralarge}px;
-  font-weight: bold;
+export const FilterTitle = styled.h2`
+  font-size: ${({ theme }) => theme.fonts.large}px;
   color: ${({ theme }) => theme.colors.text.TitleSubArticles};
-  text-align: center;
 
-  @media screen and (max-width: ${width.mobile}) {
-    font-size: ${({ theme }) => theme.fonts.medium}px;
-  }
-  
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
     font-size: ${({ theme }) => theme.fonts.large}px;
-  }
-  @media screen and (min-width: ${width.tablet}) and (max-width: 1025px) {
-    font-size: ${({ theme }) => theme.fonts.large}px;
-  }
-  
-  @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
-    font-size: ${({ theme }) => theme.fonts.extralarge * 1.5}px;
-  }
-  @media screen and (min-width: ${width.extraLargeDesktop}){    
-    font-size: ${({ theme }) => theme.fonts.extralarge * 2.0}px;
-  }
+}
 
-
+@media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
+  font-size: ${({ theme }) => theme.fonts.extralarge}px;
+ }
 `;
 
-export const Items = styled.div`
-  width: 100%;
-  padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
+export const Combobox = styled.select`
+    width: 25%;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 0.5%;
+    cursor: pointer;
 
-  @media screen and (max-width: ${width.mobile}) {
-    overflow-x: scroll;
-    ::-webkit-scrollbar {
-      width: 20px;
-    }
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey;
-      border-radius: 10px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #114676;
-      border-radius: 10px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #114676;
-    }
-  }
+    font-size: ${({ theme }) => theme.fonts.small}px;
 
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-    overflow-x: scroll;
-    ::-webkit-scrollbar {
-      width: 20px;
-    }
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey;
-      border-radius: 10px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #114676;
-      border-radius: 10px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #114676;
-    }
-  }
+    @media screen and (max-width: ${width.mobile}) {
+        width: 50%;
+      }
 
+    @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+        width: 50%;
+    }
+
+    @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
+      width: 50%;
+     }
+
+     @media screen and (min-width: ${width.extraLargeDesktop}) {
+      width: 50%;
+
+    }
+`;
+
+export const Options = styled.option`
+    font-size: ${({ theme }) => theme.fonts.extralarge}px;
+`;
+
+export const FilterButton = styled.button`
+    width: 10%;
+    padding: 0.5%;
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    font-size: ${({ theme }) => theme.fonts.small}px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #D5D4D4;
+        transition: 0.5s;
+    }
+
+    @media screen and (max-width: ${width.mobile}) {
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+      }
+
+    @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+        width: 50%;
+    }
+
+    @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
+       width: 50%;
+       
+      }
+`;
+
+export const FilterContainer = styled.div`
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: row;
+    width: 100%;
 `;

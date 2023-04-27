@@ -4,9 +4,9 @@ interface ListProps {
   startDate: string,
   endDate: string | null,
   samples: number,
-  situation: string
+  situation: string,
 }
 
 export interface PageProps {
-  list: Array<ListProps>
+  list: Array<ListProps>,
 }

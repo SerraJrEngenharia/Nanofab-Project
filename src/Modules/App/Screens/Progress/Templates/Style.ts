@@ -11,7 +11,9 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   font-size: ${({ theme }) => theme.fonts.extralarge}px;
-  border-bottom: 2px solid #4A4A4A;
+  color: ${({ theme }) => theme.colors.text.TitleSubArticles};
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4a4a4a;
   width: 90%;
   text-align: center;
 `;

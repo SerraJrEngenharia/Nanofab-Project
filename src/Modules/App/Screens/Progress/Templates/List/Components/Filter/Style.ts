@@ -1,17 +1,17 @@
 import styled from "styled-components";
 import { width } from "@/Services/screenSizes";
 
-export const Container = styled.div`
+export const FContainer = styled.div`
     width: 90%;
     margin-bottom: 3%;
 `;
 
-export const Title = styled.h2`
+export const FTitle = styled.h2`
   font-size: ${({ theme }) => theme.fonts.large}px;
   color: ${({ theme }) => theme.colors.text.TitleSubArticles};
 `;
 
-export const Combobox = styled.select`
+export const FCombobox = styled.select`
     width: 25%;
     border-radius: 10px;
     margin-right: 20px;
@@ -27,13 +27,15 @@ export const Combobox = styled.select`
     @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
         width: 50%;
     }
+
+   
 `;
 
-export const Options = styled.option`
+export const FOptions = styled.option`
     font-size: ${({ theme }) => theme.fonts.extralarge}px;
 `;
 
-export const ButtonFilter = styled.button`
+export const FButtonFilter = styled.button`
     width: 10%;
     padding: 0.5%;
     border-radius: 10px;
@@ -58,30 +60,10 @@ export const ButtonFilter = styled.button`
        width: 50%;
       }
 
-      @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
-        
-      }
-    
-      @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {
-      }
-    
-      @media screen and (min-width: ${width.desktop}) and (max-width: ${width.largeDesktop}) {
-      }
-    
-      @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
-        
-      }
-    
-      @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {
-       
-      }
-    
-      @media screen and (min-width: ${width.extraLargeDesktop}) {
-        
-      }
+      
 `;
 
-export const FilterContainer = styled.div`
+export const FFilterContainer = styled.div`
     display: flex;
     align-items: center;
     /* justify-content: center; */

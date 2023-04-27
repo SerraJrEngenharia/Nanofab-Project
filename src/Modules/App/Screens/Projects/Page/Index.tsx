@@ -11,10 +11,14 @@ import FooterTemplate from "@/Templates/Footer/Page/Index";
 // @Types
 import { PageProps } from "./Types";
 
+import Form from "./Templates/Form/Index"
+
 const ProjectsPage: React.FC<PageProps> = ({}) => {
   return (
     <Container>
       <HeaderTemplate />
+
+      <Form></Form>
 
       <FooterTemplate />
     </Container>

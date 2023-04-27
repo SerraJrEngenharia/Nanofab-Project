@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
 
-    h1, h2, h3, h4, span{
+    h1, h2, h3, h4, span, option, select{
       font-family: "Maven Pro";
     }
 
