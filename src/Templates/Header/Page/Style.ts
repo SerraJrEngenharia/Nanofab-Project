@@ -8,6 +8,7 @@ export const Container = styled.div`
   border-bottom-right-radius: 80px;
   background-color: #F8F8F8;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  
   overflow: hidden;
 
   @media screen and (max-width: ${width.mobile}) {    
@@ -29,8 +30,7 @@ export const Section = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px; */
 
   @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
     height: 10vh;
@@ -44,6 +44,16 @@ export const Section = styled.div`
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {  
     height: 8vh;
   }
+`;
+
+export const LoginContainer = styled.div`
+  width: 100%;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: ${({ theme }) => theme.colors.foreground};
+  padding-right: 25px;
 `;
 
 export const LogoCompany = styled.img`

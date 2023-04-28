@@ -9,6 +9,7 @@ import { NavigationProps } from "./Types";
 
 //Components
 import Link from "../Components/Link/Index";
+import LoginBadge from "@/Templates/Header/Components/LoginBadge/Index";
 
 const NavigationTemplate: React.FC<NavigationProps> = ({ urls }) => {
   return (

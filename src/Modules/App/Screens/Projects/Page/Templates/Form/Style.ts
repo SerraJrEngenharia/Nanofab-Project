@@ -13,6 +13,16 @@ export const Container = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(20px);
   border-radius: 35px;
+
+  @media screen and (max-width: ${width.mobile}) {
+    margin-top: 20%;
+    margin-bottom: 15%;
+  }
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+    margin-top: 20%;
+    margin-bottom: 15%;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -21,11 +31,15 @@ export const LogoContainer = styled.div`
   right: -50px;
   background-color: ${({ theme }) => theme.colors.foreground};
   border-radius: 100%;
-/* 
+
   @media screen and (max-width: ${width.mobile}) {
-    top: -5px;
-    left: -5px;
+    right: calc(100vw / 3);
   }
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+    right: calc(100vw / 3);
+  }
+  /*
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     top: -10px;
     left: -10px;
@@ -44,7 +58,7 @@ export const Image = styled.img`
   width: 150px;
   height: 150px;
 
-  /* @media screen and (max-width: ${width.mobile}) {    
+  @media screen and (max-width: ${width.mobile}) {    
       width: 90px;
       height: 90px;
   }
@@ -62,6 +76,30 @@ export const Image = styled.img`
   }
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {    
     width: 200px;
-    height: 200px; */
+    height: 200px;
+  }
+ 
+`;
+
+export const Title = styled.h1` // Submissão de Projeto
+  font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  color: ${({ theme }) => theme.colors.text.TitleSubArticles};
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4a4a4a;
+  width: 90%;
+  text-align: center;
+
+  @media screen and (max-width: ${width.mobile}) {    
+    font-size: ${({ theme }) => theme.fonts.large}px;
+    width: 100%;
+    margin-top: 15%;
+    margin-bottom: -8%; // Removes the space between this title and the 'Orientador' label
+  }
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+    font-size: ${({ theme }) => theme.fonts.large}px;
+    width: 100%;
+    margin-top: 15%;
+    margin-bottom: -8%; // Removes the space between this title and the 'Orientador' label
   }
 `;

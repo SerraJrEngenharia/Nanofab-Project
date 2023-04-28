@@ -2,7 +2,23 @@
 import React from 'react';
 
 // Native Components
-import { Container, InputOrientador, InputOrientadorContainer, InputOutrosContainer, Title, ComponentTypes, CheckBoxTypes, LabelTypes, DivRow, InputOutros} from './Style';
+import {
+    Container,
+    InputOrientador,
+    InputOrientadorContainer,
+    // InputOutrosContainer,
+    InputContainer,
+    // InputDetectoresContainer,
+    // InputProjetoCientificoContainer,
+    Title,
+    ComponentTypes,
+    CheckBoxTypes,
+    LabelTypes,
+    DivRow,
+    InputOutros,
+    InputDetectores,
+    InputProjetoCientifico,
+  } from "./Style";
 
 // @Types
 import { TypeProjectProps } from './Types';
@@ -39,11 +55,23 @@ const TypeProject: React.FC<TypeProjectProps> = ({}) => {
             </DivRow>
         </ComponentTypes>
 
-        <InputOutrosContainer>
+        <InputContainer>
             <Title>Outros:</Title>
             <InputOutros placeholder="Informar nome.">   
             </InputOutros>
-        </InputOutrosContainer>
+        </InputContainer>
+
+        <InputContainer>
+            <Title>Detectores:</Title>
+            <InputDetectores placeholder="[TEMP] Informar detectores.">   
+            </InputDetectores>
+        </InputContainer>
+
+        <InputContainer>
+            <Title>Projeto Científico e Descrição das Amostras:</Title>
+            <InputProjetoCientifico placeholder="[TEMP] Informar Projeto Científico e Descrição das Amostras:.">   
+            </InputProjetoCientifico>
+        </InputContainer>
 
     </Container>
 );

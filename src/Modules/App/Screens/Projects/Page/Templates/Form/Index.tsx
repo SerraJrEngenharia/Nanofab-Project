@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Native Components
-import { Container, LogoContainer, Image } from './Style';
+import { Container, LogoContainer, Image, Title } from './Style';
 
 // @Types
 import { FormProps } from './Types';
@@ -17,7 +17,10 @@ import Search from "@/Assets/Form/search.png";
 const Form: React.FC<FormProps> = ({}) => {
   return (
     <Container>
-        <LogoContainer><Image src={Search}/></LogoContainer>
+        <Title>Submissão de Projeto</Title>
+        <LogoContainer>
+          <Image src={Search}/>
+        </LogoContainer>
         <TypeProject/>
         <ButtonsBottom/>
     </Container>

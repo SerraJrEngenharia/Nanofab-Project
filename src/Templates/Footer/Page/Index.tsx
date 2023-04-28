@@ -2,7 +2,7 @@
 import React from "react";
 
 // Native Components
-import { Container, Text, Line, FirstBottomSection, SecondBottomSection, Title, DivColumn, TextCustom, Position, LogoImage } from "./Style";
+import { Container, Text, Line, FirstBottomSection, SecondBottomSection, Title, DivColumn, TextCustom, Position } from "./Style";
 
 //images
 import UerjLogo from "@/Assets/Banner/uerj.png"

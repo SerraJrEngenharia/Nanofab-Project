@@ -9,7 +9,6 @@ export const Container = styled.div`
   backdrop-filter: blur(20px);
   flex-direction: column;
   margin: 10px;
-  width: 300px;
   border-radius: 10px;
 `;
 
@@ -54,6 +53,9 @@ export const Status = styled.span<StatusInterface>`
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     ${({status}) => {
         if(status === "Aprovado"){
             return `background-color: rgba(48, 212, 111, 0.7);`
