@@ -13,7 +13,7 @@ const ButtonsBottom: React.FC<ButtonsBottomProps> = ({}) => {
     <Container>
         <ButtonContainer>
             <Button>Apagar</Button>
-            <Button>Enviar</Button>
+            <Button type='submit'>Enviar</Button>
         </ButtonContainer>
     </Container>
 );

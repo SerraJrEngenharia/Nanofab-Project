@@ -1,4 +1,4 @@
-interface ListProps {
+export interface ListProps {
   name: string,
   institution: string,
   startDate: string,

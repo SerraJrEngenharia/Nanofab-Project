@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 // Native Components
-import { Container, Content, Title, Text, ButtonArea, TextGroup, TextContainer, SubTitle } from './Style';
+import { Container, Content, Title, Text, ButtonArea, TextContainer, SubTitle } from './Style';
 import { RiArrowDropUpFill } from "react-icons/ri";
 import { RiArrowDropDownFill } from "react-icons/ri";
 
@@ -31,7 +31,6 @@ const DropdownComponent: React.FC<DropdownComponentProps> = ({
 
       {visible ?
         <Content isVisible={visible}>
-          <TextGroup>
             <TextContainer>
               <SubTitle>PPG/IES</SubTitle>
               <Text>{unit}</Text>
@@ -41,20 +40,12 @@ const DropdownComponent: React.FC<DropdownComponentProps> = ({
               <SubTitle>Vínculo</SubTitle>
               <Text>{bond}</Text>
             </TextContainer>
-          </TextGroup>
 
-          <TextGroup>
             <TextContainer>
               <SubTitle>Titulação</SubTitle>
               <Text>{titration}</Text>
             </TextContainer>
-
-            {/* <TextContainer>
-              <SubTitle>Função</SubTitle>
-              <Text>{personFunction}</Text>
-            </TextContainer> */}
-          </TextGroup>
-      </Content>
+        </Content>
         :
         null
       }

@@ -51,43 +51,61 @@ export const ButtonNavigate = styled.button`
     transition: 0.5s;
   }
 
-  @media screen and (max-width: ${width.mobile}) {
-    width: 50%;
-  }
+  // @media screen and (max-width: ${width.mobile}) {
+  //   width: 50%;
+  // }
 
-  @media screen and (min-width: 390px) and (max-width: ${width.largeMobile}) {
-    width: 50%;
-  }
+  // @media screen and (min-width: 390px) and (max-width: ${width.largeMobile}) {
+  //   width: 50%;
+  // }
 
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-    width: 50%;
-  }
+  // @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+  //   width: 50%;
+  // }
 
-  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
-    width: 50%;
-  }
+  // @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
+  //   width: 50%;
+  // }
 
-  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
-    width: 60%;
-  }
+  // @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
+  //   width: 60%;
+  // }
+
+  // @media screen and (min-width: ${width.extraLargeDesktop}) {
+  //   width: 30%;
+  //   font-size: ${({ theme }) => theme.fonts.extralarge * 2}px;
+  // }
+  // @media screen and (min-width: ${width.desktop}) and (max-width: ${width.largeDesktop}) {
+  //   width: 30%;
+  //   font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  // }
 `;
 
 export const FilterSection = styled.div`
-  width: 98%;
+  width: 50%;
   margin-bottom: 3%;
+  margin-right: 50%;
 `;
 
 export const FilterTitle = styled.h2`
   font-size: ${({ theme }) => theme.fonts.large}px;
   color: ${({ theme }) => theme.colors.text.TitleSubArticles};
 
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-    font-size: ${({ theme }) => theme.fonts.large}px;
-  }
+  // @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+  //   font-size: ${({ theme }) => theme.fonts.large}px;
+  // }
 
-  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
-    font-size: ${({ theme }) => theme.fonts.extralarge}px;
-  }
+  // @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
+  //   font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  // }
+
+  // @media screen and (min-width: ${width.desktop}) and (max-width: ${width.largeDesktop}) {
+  //   font-size: ${({ theme }) => theme.fonts.extralarge * 1.5}px;
+  // }
+
+  // @media screen and (min-width: ${width.extraLargeDesktop}) {
+  //   font-size: ${({ theme }) => theme.fonts.extralarge * 2.5}px;
+  // }
 `;
 
 export const Combobox = styled.select`
@@ -98,36 +116,39 @@ export const Combobox = styled.select`
   cursor: pointer;
   font-size: ${({ theme }) => theme.fonts.small}px;
 
-  @media screen and (max-width: ${width.mobile}) {
-    width: 50%;
-    margin-right: 6px;
-  }
+  // @media screen and (max-width: ${width.mobile}) {
+  //   width: 100%;
+  //   margin-right: 6px;
+  // }
 
-  @media screen and (min-width: 390px) and (max-width: ${width.largeMobile}) {
-    width: 50%;
-    margin-right: 5px;
-  }
+  // @media screen and (min-width: 390px) and (max-width: ${width.largeMobile}) {
+  //   width: 100%;
+  //   margin-right: 5px;
+  // }
 
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-    width: 60%;
-    margin-right: 6px;
-  }
+  // @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+  //   width: 100%;
+  //   margin-right: 6px;
+  // }
 
-  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
-    width: 60%;
-    margin-right: 10px;
-  }
+  // @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
+  //   width: 100%;
+  //   margin-right: 10px;
+  // }
 
-  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
-    width: 60%;
-    margin-right: 10px;
-  }
-  @media screen and (min-width: ${width.extraLargeDesktop}) {
-    width: 50%;
-  }
-  @media screen and (min-width: ${width.desktop}) and (max-width: ${width.largeDesktop}) {
-    width: 50%;
-  }
+  // @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
+  //   width: 100%;
+  //   margin-right: 10px;
+  // }
+  // @media screen and (min-width: ${width.extraLargeDesktop}) {
+  //   width: 30%;
+  //   font-size: ${({ theme }) => theme.fonts.extralarge * 2}px;
+  // }
+  
+  // @media screen and (min-width: ${width.desktop}) and (max-width: ${width.largeDesktop}) {
+  //   width: 30%;
+  //   font-size: ${({ theme }) => theme.fonts.extralarge}px;
+  // }
 
 `;
 
@@ -135,40 +156,6 @@ export const Options = styled.option`
   font-size: ${({ theme }) => theme.fonts.extralarge}px;
 `;
 
-export const FilterButton = styled.button`
-  width: 10%;
-  padding: 0.5%;
-  border-radius: 10px;
-  border: 1px solid #d9d9d9;
-  font-size: ${({ theme }) => theme.fonts.small}px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #d5d4d4;
-    transition: 0.5s;
-  }
-
-  @media screen and (max-width: ${width.mobile}) {
-    width: 50%;
-  }
-
-  @media screen and (min-width: 390px) and (max-width: ${width.largeMobile}) {
-    width: 50%;
-  }
-
-  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-    width: 60%;
-  }
-
-  @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
-    width: 50%;
-  }
-
-  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
-    width: 60%;
-    margin-right: 10px;
-  }
-`;
 
 export const FilterContainer = styled.div`
   display: flex;

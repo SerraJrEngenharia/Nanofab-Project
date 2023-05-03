@@ -27,4 +27,13 @@ export const Title = styled.h1`
   border-bottom: 2px solid #4a4a4a;
   width: 90%;
   text-align: center;
+
+
+  @media screen and (min-width: ${width.desktop}) and (max-width: ${width.largeDesktop}) {
+    font-size: ${({ theme }) => theme.fonts.extralarge * 2}px;
+  }
+
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    font-size: ${({ theme }) => theme.fonts.extralarge * 3.5}px;
+  }
 `;

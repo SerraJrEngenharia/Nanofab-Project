@@ -110,14 +110,14 @@ export const InputOrientadorContainer = styled.div`
     margin-bottom: 3%;
 `;
 
-// export const InputOutrosContainer = styled(InputOrientadorContainer)`
-//
-// `;
+export const InputOutrosContainer = styled(InputOrientadorContainer)`
 
-// export const InputDetectoresContainer = styled(InputOrientadorContainer)`
-//
-// `;
+`;
 
-// export const InputProjetoCientificoContainer = styled(InputOrientadorContainer)`
-//
-// `;
+export const InputDetectoresContainer = styled(InputOrientadorContainer)`
+
+`;
+
+export const InputProjetoCientificoContainer = styled(InputOrientadorContainer)`
+
+`;

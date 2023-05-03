@@ -150,6 +150,14 @@ const Templates: React.FC<TemplatesProps> = ({}) => {
       samples: 1,
       situation: "Agendado",
     },
+    {
+      name: "Joana Saraiva",
+      institution: "UFRJ",
+      startDate: "07 de dezembro",
+      endDate: null,
+      samples: 1,
+      situation: "Antigos",
+    },
   ];
   
   return (

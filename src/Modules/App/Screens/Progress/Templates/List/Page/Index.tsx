@@ -1,6 +1,7 @@
 // React
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, ReactNode, ReactElement } from "react";
 import { useState } from "react";
+import { ListProps } from "./Types";
 
 // Native Components
 import {
@@ -10,7 +11,6 @@ import {
   FilterSection,
   FilterTitle,
   Combobox,
-  FilterButton,
   FilterContainer,
   ScheduleContainer
 } from "./Style";
@@ -23,7 +23,7 @@ const ListTemplate: React.FC<PageProps> = ({ list }) => {
   const [firstIndex, setFirstIndex] = useState(0);
   const [lastIndex, setLastIndex] = useState(9);
   const [filter, setFilter] = useState("Todos");
-  const [aux, setAux] = useState("");
+  const [auxList, setAuxList] = useState(Array<ListProps>);
 
   const increaseIndex = () => {
     if (firstIndex === 9) {
@@ -45,12 +45,44 @@ const ListTemplate: React.FC<PageProps> = ({ list }) => {
     }
   };
 
+  // const createAuxList = (list: Array<ListProps>, filter: string) => {
+    
+  //   list.forEach((eachElement)=>{
+  //     if(filter === 'Todos')
+  //     {
+  //       setAuxList([...auxList, eachElement])
+  //     }
+  //     else
+  //     {
+  //       if(eachElement.situation === filter)
+  //       {
+  //         setAuxList([...auxList, eachElement])
+  //       }
+  //     }
+  //   })
+
+  //   auxList.map((eachItem) => (
+  //     <ProgressCardComponent
+  //       key={list.indexOf(eachItem)}
+  //       name={eachItem.name}
+  //       institution={eachItem.institution}
+  //       startDate={eachItem.startDate}
+  //       endDate={eachItem.endDate}
+  //       samples={eachItem.samples}
+  //       situation={eachItem.situation}
+  //     />
+  //   ))
+  // }
+
+
   const renderListItens = list
     .slice(firstIndex, lastIndex)
     .filter((eachItem) => {
       if (filter === "Todos") {
         return true;
-      } else {
+      }
+      else
+      {
         return eachItem.situation === filter;
       }
     })
@@ -67,19 +99,6 @@ const ListTemplate: React.FC<PageProps> = ({ list }) => {
     ));
 
   function changingSelection(element: ChangeEvent<HTMLSelectElement>){
-    
-    // switch(element.target.value)
-    // {
-    //   case 'Todos':
-    //     setFilter("Todos");
-    //   case 'Aprovado':
-    //     setFilter("Aprovado");
-    //   case 'Agendado':
-    //     setFilter("Agendado");
-    //   case 'Solicitado':
-    //     setFilter("Solicitado");
-    // }
-
     if(element.target.value === 'Todos')
     {
       setFilter('Todos')
@@ -96,9 +115,9 @@ const ListTemplate: React.FC<PageProps> = ({ list }) => {
     {
       setFilter('Solicitado')
     }
-    else if(element.target.value === 'Recentes')
+    else if(element.target.value === 'Antigos')
     {
-      setFilter('Recentes')
+      setFilter('Antigos')
     }
   }
   return (
@@ -111,10 +130,8 @@ const ListTemplate: React.FC<PageProps> = ({ list }) => {
             <option value="Aprovado">Aprovado</option>
             <option value="Agendado">Agendado</option>
             <option value="Solicitado">Solicitado</option>
-            <option value="Recentes">Recentes</option>
+            <option value="Antigos">Antigos</option>
           </Combobox>
-
-          <FilterButton>Filtrar</FilterButton>
         </FilterContainer>
       </FilterSection>
 

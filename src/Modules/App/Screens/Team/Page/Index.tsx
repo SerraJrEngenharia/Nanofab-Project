@@ -50,6 +50,29 @@ const TeamPage: React.FC<PageProps> = ({}) => {
         ]
     },
     {
+        personFunction: 'Equipe NANOFAB',
+        persons:[
+            {
+                name: "Maybi Fálker Sampaio",
+                unit: "NANOFAB/UERJ",
+                bond: "Bolsista QUALITEC/UERJ",
+                titration: "Doutor",
+            },
+            {
+                name: "Kellen Venâncio dos Santos",
+                unit: "NANOFAB/UERJ",
+                bond: "Bolsista TCT/FAPERJ",
+                titration: "Engenheira",
+            },
+            {
+                name: "Camila Alves Pelicarto Silva",
+                unit: "NANOFAB/UERJ",
+                bond: "Bolsista PROATEC/UERJ",
+                titration: "Engenheira",
+            }
+        ]
+    },
+    {
         personFunction: 'Comitê de Usuários',
         persons: [
             {
@@ -216,36 +239,11 @@ const TeamPage: React.FC<PageProps> = ({}) => {
             },
         ]
     },
-    {
-        personFunction: 'Equipe NANOFAB',
-        persons:[
-            {
-                name: "Maybi Fálker Sampaio",
-                unit: "NANOFAB/UERJ",
-                bond: "Bolsista QUALITEC/UERJ",
-                titration: "Doutor",
-            },
-            {
-                name: "Kellen Venâncio dos Santos",
-                unit: "NANOFAB/UERJ",
-                bond: "Bolsista TCT/FAPERJ",
-                titration: "Engenheira",
-            },
-            {
-                name: "Camila Alves Pelicarto Silva",
-                unit: "NANOFAB/UERJ",
-                bond: "Bolsista PROATEC/UERJ",
-                titration: "Engenheira",
-            }
-        ]
-    }
 ]
 
   return (
     <Container>
       <HeaderTemplate />
-
-      {/* <ListTemplate list={personsData} /> */}
 
       <ListDropdownTemplate list={personsData} />
 

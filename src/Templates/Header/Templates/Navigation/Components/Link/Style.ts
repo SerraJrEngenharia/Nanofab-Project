@@ -15,7 +15,7 @@ export const Container = styled.a`
 
   &:hover {
     background-color: #e6e6e6;
-    border-radius: 15px;
+    /* border-radius: 15px; */
   }
 `;
 

@@ -12,6 +12,7 @@ import ProjectsPage from "@/Modules/App/Screens/Projects/Page/Index";
 import PublicationsPage from "@/Modules/App/Screens/Publications/Page/Index";
 import PartnershipsPage from "@/Modules/App/Screens/Partnerships/Page/Index";
 import ErrorPage from "@/Modules/App/Screens/Error/Page/Index";
+import LoginRegisterPage from "@/Modules/App/Screens/LoginRegister/Page/Index";
 
 // @Types
 import { RoutesProps } from "./Types";
@@ -42,6 +43,10 @@ const router = createBrowserRouter(
     {
       path: "/parcerias",
       element: <PartnershipsPage />,
+    },
+    {
+      path: "/login",
+      element: <LoginRegisterPage />,
     },
     {
       path: "*",

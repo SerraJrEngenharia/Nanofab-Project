@@ -2,7 +2,7 @@
 import React from "react";
 
 // Native Components
-import { Container, LoginContainer, LogoCompany, Section } from "./Style";
+import { Container, LoginContainer, LogoCompany, NavigationContainer, Section } from "./Style";
 
 // Assets
 //import NanoImage from "@/Assets/Company/nanofab.png";
@@ -51,15 +51,17 @@ const HeaderTemplate: React.FC<PageProps> = ({}) => {
   return (
     <Container>
       <Section>
+        <MobileNavigationTemplate />
+        
         <LogoCompany src={NanoImage} />
 
-        <NavigationTemplate urls={navLinks} />
-        <MobileNavigationTemplate />
+        <NavigationContainer>
+          <NavigationTemplate urls={navLinks} />
+          
+          <LoginBadge />
+        </NavigationContainer>
       </Section>
-
-      <LoginContainer>
-        <LoginBadge />
-      </LoginContainer>
+      
 
       <BannerComponent />
     </Container>

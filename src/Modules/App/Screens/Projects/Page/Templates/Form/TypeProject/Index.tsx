@@ -23,17 +23,27 @@ import {
 // @Types
 import { TypeProjectProps } from './Types';
 
-const TypeProject: React.FC<TypeProjectProps> = ({}) => {
+const TypeProject: React.FC<TypeProjectProps> = ({ formData, setFormData }) => {
+
   return (
     <Container>
         <InputOrientadorContainer>
             <Title>Orientador:</Title>
-            <InputOrientador placeholder="(*) Informar o nome do orientador, quando o soliciante for aluno de graduação ou pós-graduação. (Ex: 'Prof. ****')">   
-            </InputOrientador>
+            <InputOrientador
+                type="text"
+                name="orientador"
+                value={formData.orientador}
+                onChange={(e) =>
+                    setFormData(
+                        { orientador: e.target.value,
+                        outros: formData.outros
+                        })}
+                placeholder="(*) Informar o nome do orientador, quando o soliciante for aluno de graduação ou pós-graduação. (Ex: 'Prof. ****')"
+        ></InputOrientador>
         </InputOrientadorContainer>
 
         <Title>Tipos:</Title>
-        <ComponentTypes>
+        {/* <ComponentTypes> */}
             <DivRow>
                 <CheckBoxTypes type="checkbox" value="1"></CheckBoxTypes>
                 <LabelTypes>{"Microscopia de Varredura de Alta Resolução (MEV-FEG)"}</LabelTypes> 
@@ -53,12 +63,21 @@ const TypeProject: React.FC<TypeProjectProps> = ({}) => {
                 <CheckBoxTypes type="checkbox" value="1"></CheckBoxTypes>
                 <LabelTypes>Difração de Raios-x</LabelTypes> 
             </DivRow>
-        </ComponentTypes>
+        {/* </ComponentTypes> */}
 
         <InputContainer>
             <Title>Outros:</Title>
-            <InputOutros placeholder="Informar nome.">   
-            </InputOutros>
+            <InputOutros
+          type="text"
+          name="outros"
+          value={formData.outros}
+          onChange={(e) =>
+            setFormData(
+                { orientador: formData.orientador,
+                  outros: e.target.value
+                })}
+          placeholder="Informar nome."
+        ></InputOutros>
         </InputContainer>
 
         <InputContainer>

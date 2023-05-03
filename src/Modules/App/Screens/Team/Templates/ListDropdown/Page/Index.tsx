@@ -18,7 +18,7 @@ const ListDropdownTemplate: React.FC<ListDropdownTemplateProps> = ({list}) => {
             <Logo src={TeamIcon} />
         </LogoContainer>
 
-        <Title>Equipe NANOFAB</Title>
+        <Title>Equipe</Title>
         
         {list.map((eachItem) => {
             return(

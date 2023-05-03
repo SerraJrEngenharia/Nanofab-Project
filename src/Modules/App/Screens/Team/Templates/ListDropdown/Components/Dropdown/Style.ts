@@ -67,6 +67,7 @@ export const Content = styled.div<DropdownStyleProps>`
     border-bottom-right-radius: 15px;
     border: 1px solid #c2c2c2;
     border-top: none;
+    flex-wrap: wrap;
 
     @media screen and (max-width: ${width.mobile}) {   
         justify-content: space-between;
@@ -106,29 +107,13 @@ export const Content = styled.div<DropdownStyleProps>`
     
 `;
 
-export const TextGroup = styled.div`
-    width: 50%;
-    
-
-    @media screen and (min-width: 500px) {    
-        width: 30%;
-    }
-`;
 
 
 export const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin: 20px;
-    
-
-    @media screen and (max-width: ${width.mobile}) {   
-        min-height: 80px;
-    }
-
-    @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
-        min-height: 70px;
-    }
+    flex: 1
 `;
 
 export const SubTitle = styled.span`

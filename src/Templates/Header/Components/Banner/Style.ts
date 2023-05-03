@@ -42,66 +42,96 @@ export const Logo = styled.img`
   width: 20%;
 
   @media screen and (max-width: ${width.mobile}) {
-    width: 60%;
+    width: 250px;
+    margin-top: 15px;
   }
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-    width: 50%;
+    width: 250px;
     margin-top: 15px;
   }
 
+  @media screen and (min-width: 767px) and (max-width: ${width.tablet}) {
+    width: 250px;
+  }
+
   @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
-    width: 40%;
+    width: 250px;
   }
 
   @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
-    width: 35%;
+    width: 400px;
   }
   @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {
-    width: 25%;
+    width: 400px;
   }
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
-    width: 40%;
+    width: 650px;
+  }
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    width: 900px;
   }
 
   border-radius: 10px;
 `;
 
 export const LogoUERJ = styled.img`
-  width: 10%;
-  border-radius: 10px;
-  margin-left: 150px;
+  width: 30%;
+  margin-left: 17%;
 
   @media screen and (max-width: ${width.mobile}) {
-    width: 30%;
-    margin-left: 0px;
+    width: 80%;
   }
-
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
-    width: 30%;
-    margin-left: 0px;
+    width: 80%;
+    margin-top: 15px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 769px) {
-    width: 22%;
-    margin-left: 0px;
+  @media screen and (min-width: 768px) and (max-width: ${width.tablet}) {
+    width: 35%;
+    margin-left: 20%;
   }
 
   @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
-    width: 22%;
-    margin-left: 0px;
+    width: 40%;
+    margin-left: 20%;
   }
 
   @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {
-    width: 12%;
-    margin-left: 190px;
+    width: 30%;
+    margin-left: 20%;
   }
   @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {
-    width: 10%;
-  }
-  @media screen and (min-width: 2560px) and (max-width: ${width.largeDesktop}) {
-    width: 8%;
+    width: 25%;
+    margin-left: 20%;
   }
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
-    width: 20%;
+    width: 35%;
+    margin-left: 20%;
   }
+  @media screen and (min-width: ${width.extraLargeDesktop}) {
+    width: 35%;
+  }
+
+  border-radius: 10px;
+`;
+
+export const LeftLogo = styled.div`
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const CenterLogo = styled.div`
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const RightLogo = styled.div`
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

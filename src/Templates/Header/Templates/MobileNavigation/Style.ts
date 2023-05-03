@@ -4,7 +4,6 @@ import {Link} from "react-router-dom";
 import { width } from "@/Services/screenSizes";
 
 export const Container = styled.nav`
-    width: 100%;
     background-color: transparent;
     display: flex;
     justify-content: flex-end;
@@ -49,13 +48,14 @@ export const Menu = styled.nav`
     flex-direction: column;
     position: absolute;
     top: 80px;
+    left: 0px;
     transition: 0.2s;
     z-index: 10;
     padding: 15px;
     
     border: 1px solid #c2c2c2;
     background: #f2f2f2;
-    border-radius: 15px 0px 0px 15px;
+    border-radius: 0px 15px 15px 0px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(0px);

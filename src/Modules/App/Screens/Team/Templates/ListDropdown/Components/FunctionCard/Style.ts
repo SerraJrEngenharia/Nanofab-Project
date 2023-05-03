@@ -3,6 +3,7 @@ import { width } from '@/Services/screenSizes';
 
 export const Container = styled.div`
     width: 80%;
+    max-width: 1200px;
     display: flex;
     align-items: center;
     justify-content: center;
