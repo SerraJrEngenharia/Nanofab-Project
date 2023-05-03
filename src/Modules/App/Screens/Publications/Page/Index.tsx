@@ -10,7 +10,6 @@ import PublicationIcon from "@/Assets/Publications/publications2.svg";
 // Templates
 import HeaderTemplate from "@/Templates/Header/Page/Index";
 import SubHeaderTemplate from "@/Templates/SubHeader/Page/Index";
-import ListTemplate from "../Templates/List/Page/Index";
 import FooterTemplate from "@/Templates/Footer/Page/Index";
 import ListDropdownTemplate from "../Templates/ListDropdown/Page/Index";
 
