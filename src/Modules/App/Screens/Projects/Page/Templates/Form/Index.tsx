@@ -11,6 +11,8 @@ import TypeProject from "./TypeProject/Index";
 
 import ButtonsBottom from "./ButtonsBottom/Index";
 
+import FirstGroupForm from "./FirstGroupForm/Index";
+
 import SampleDataForm from "./SampleDataForm/Index";
 
 import SampleConditionsForm from "./SampleConditionsForm/Index";
@@ -19,22 +21,25 @@ import SampleConditionsForm from "./SampleConditionsForm/Index";
 import Search from "@/Assets/Form/search.png";
 
 const Form: React.FC<FormProps> = ({}) => {
+
+  const [sampleNumber, setSampleNumber] = useState(1);
   const [formData, setFormData] = useState(
     { 
       orientador: "",
       outros: "" ,
-      /*
       analise_qualitativa: false,
       analise_quantitativa: false,
-      quantidade_amostras: 0,
+      quantidade_amostras: 1,
       tecnicas_condicoes: "",
-
+      detectores: "",
+      projeto_descricao_amostras: "",
+      
       // SampleData
-
+      
       amostras: [
         {
-          identificacao_amostra: "1",
-          composicao_quimica: "1",
+              identificacao_amostra: "1",
+              composicao_quimica: "1",
         }, 
         {
           identificacao_amostra: "2",
@@ -45,16 +50,17 @@ const Form: React.FC<FormProps> = ({}) => {
           composicao_quimica: "3",
         }
       ],
-
+      
       // SampleConditionsData
-
+      
       retornar_amostra: false, // sim -> true; não -> false, s/ state para cada botão sim/não
-      nivel_prioridade: "prioridade_teste"
+      nivel_prioridade: "urgente",
       inflamavel: false,
       toxico: false,
       hidroscopico: false,
       radioativo: false,
       corrosivo: false,
+      /*
       // outros: ""
       */
     }
@@ -67,15 +73,15 @@ const Form: React.FC<FormProps> = ({}) => {
   };
   
   function saveFormData() {
-    localStorage.setItem('formData', JSON.stringify(formData));
+    // localStorage.setItem('formData', JSON.stringify(formData));
   }
   
   useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem('formData') || "{}");
+    // const storedData = JSON.parse(localStorage.getItem('formData') || "{}");
     
-    if (storedData != '{}') {
-      setFormData(storedData);
-    }
+    // if (storedData != '{}') {
+    //   setFormData(storedData);
+    // }
   }, []);  
   
 
@@ -85,6 +91,7 @@ const Form: React.FC<FormProps> = ({}) => {
         <Image src={Search} />
       </LogoContainer>
       <form onSubmit={handleSubmit}>
+        <FirstGroupForm formData={formData} setFormData={setFormData}/>
         <TypeProject formData={formData} setFormData={setFormData} />
         <SampleDataForm formData={formData} setFormData={setFormData}  />
         <SampleConditionsForm formData={formData} setFormData={setFormData}  />

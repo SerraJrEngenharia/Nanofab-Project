@@ -1,3 +1,5 @@
-export interface FirstGroupFormProps{
+import {FormDataProps} from '../Types'
+
+export interface FirstGroupFormProps extends FormDataProps {
    
 }

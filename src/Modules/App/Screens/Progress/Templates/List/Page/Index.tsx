@@ -1,6 +1,6 @@
 // React
 import React, { ChangeEvent, ReactNode, ReactElement } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ListProps } from "./Types";
 
 // Native Components
@@ -12,7 +12,7 @@ import {
   FilterTitle,
   Combobox,
   FilterContainer,
-  ScheduleContainer
+  ScheduleContainer,
 } from "./Style";
 
 // @Types
@@ -23,7 +23,24 @@ const ListTemplate: React.FC<PageProps> = ({ list }) => {
   const [firstIndex, setFirstIndex] = useState(0);
   const [lastIndex, setLastIndex] = useState(9);
   const [filter, setFilter] = useState("Todos");
-  const [auxList, setAuxList] = useState(Array<ListProps>);
+  const [auxList, setAuxList] = useState<ListProps[]>([]);
+  const [filteredItems, setFilteredItems] = useState<ListProps[]>([]);
+
+  useEffect(() => {
+    const loadData: Array<ListProps> = [];
+
+    list.forEach((eachElement) => {
+      if (filter === "Todos") {
+        loadData.push(eachElement);
+      } else {
+        if (eachElement.situation === filter) {
+          loadData.push(eachElement);
+        }
+      }
+    });
+
+    setFilteredItems(loadData);
+  }, [list, filter]);
 
   const increaseIndex = () => {
     if (firstIndex === 9) {
@@ -45,47 +62,8 @@ const ListTemplate: React.FC<PageProps> = ({ list }) => {
     }
   };
 
-  // const createAuxList = (list: Array<ListProps>, filter: string) => {
-    
-  //   list.forEach((eachElement)=>{
-  //     if(filter === 'Todos')
-  //     {
-  //       setAuxList([...auxList, eachElement])
-  //     }
-  //     else
-  //     {
-  //       if(eachElement.situation === filter)
-  //       {
-  //         setAuxList([...auxList, eachElement])
-  //       }
-  //     }
-  //   })
-
-  //   auxList.map((eachItem) => (
-  //     <ProgressCardComponent
-  //       key={list.indexOf(eachItem)}
-  //       name={eachItem.name}
-  //       institution={eachItem.institution}
-  //       startDate={eachItem.startDate}
-  //       endDate={eachItem.endDate}
-  //       samples={eachItem.samples}
-  //       situation={eachItem.situation}
-  //     />
-  //   ))
-  // }
-
-
-  const renderListItens = list
+  const renderListItens = filteredItems
     .slice(firstIndex, lastIndex)
-    .filter((eachItem) => {
-      if (filter === "Todos") {
-        return true;
-      }
-      else
-      {
-        return eachItem.situation === filter;
-      }
-    })
     .map((eachItem) => (
       <ProgressCardComponent
         key={list.indexOf(eachItem)}
@@ -98,26 +76,17 @@ const ListTemplate: React.FC<PageProps> = ({ list }) => {
       />
     ));
 
-  function changingSelection(element: ChangeEvent<HTMLSelectElement>){
-    if(element.target.value === 'Todos')
-    {
-      setFilter('Todos')
-    }
-    else if(element.target.value === 'Aprovado')
-    {
-      setFilter('Aprovado')
-    }
-    else if(element.target.value === 'Agendado')
-    {
-      setFilter('Agendado')
-    }
-    else if(element.target.value === 'Solicitado')
-    {
-      setFilter('Solicitado')
-    }
-    else if(element.target.value === 'Antigos')
-    {
-      setFilter('Antigos')
+  function changingSelection(element: ChangeEvent<HTMLSelectElement>) {
+    if (element.target.value === "Todos") {
+      setFilter("Todos");
+    } else if (element.target.value === "Aprovado") {
+      setFilter("Aprovado");
+    } else if (element.target.value === "Agendado") {
+      setFilter("Agendado");
+    } else if (element.target.value === "Solicitado") {
+      setFilter("Solicitado");
+    } else if (element.target.value === "Antigos") {
+      setFilter("Antigos");
     }
   }
   return (

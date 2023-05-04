@@ -2,18 +2,20 @@
 import React from 'react';
 
 // Native Components
-import { Container, DivComboBox, Section, Title, SubTitle, SecurityContainer, RadioInput, RadioLabel, RadioContainer, Priority, Option, OptionsContainer } from './Style';
+import { Container, DivComboBox, Section, Title, SubTitle, SecurityContainer, RadioInput, RadioLabel, RadioContainer, Priority, Option, OptionsContainer, Description } from './Style';
 
 // @Types
 import { SampleConditionsFormProps } from './Types';
 
-const SampleConditionsForm: React.FC<SampleConditionsFormProps> = ({}) => {
+const SampleConditionsForm: React.FC<SampleConditionsFormProps> = ({ formData, setFormData }) => {
+
+// const handleRetornarAmostraAnalisada = (bool : true) => 
 
     const priorityOptions = [
         "Urgente",
         "Alta",
-        "Médio",
-        "Baixo"
+        "Média",
+        "Baixa"
     ]
   return (
     <Container>
@@ -21,12 +23,29 @@ const SampleConditionsForm: React.FC<SampleConditionsFormProps> = ({}) => {
             <Section>
                 <Title>{"Retornar a(s) amostra(s) analisada(s)?"}</Title>
                 <RadioContainer>
-                    <RadioInput type="radio" id="retorna_sim" name="analysisType" value="retorna_sim" color='red'/>
+                    <RadioInput type="radio" id="retorna_sim" name="analysisType" value="retorna_sim" color='red'
+                checked={formData.retornar_amostra || false}
+                onChange={(e) =>
+                    setFormData(
+                        { 
+                            ...formData,
+                            retornar_amostra: true,
+                        })}
+                    
+                    />
                     <RadioLabel htmlFor="retorna_sim">Sim</RadioLabel>
                 </RadioContainer>
 
                 <RadioContainer>
-                    <RadioInput type="radio" id="retorna_nao" name="analysisType" value="retorna_nao" color='red'/>
+                    <RadioInput type="radio" id="retorna_nao" name="analysisType" value="retorna_nao" color='red'
+                    checked={!formData.retornar_amostra || false}
+                    onChange={(e) =>
+                        setFormData(
+                            { 
+                                ...formData,
+                                retornar_amostra: false,
+                            })}
+                    />
                     <RadioLabel htmlFor="retorna_nao">Não</RadioLabel>
                 </RadioContainer>
             </Section>
@@ -72,7 +91,7 @@ const SampleConditionsForm: React.FC<SampleConditionsFormProps> = ({}) => {
                 </RadioContainer>
             </OptionsContainer>
 
-            
+            <Description>(*) Caso não saiba as condições de segurança quanto ao manuseio, não é necessário selecionar os campos.</Description>
         </SecurityContainer>
     </Container>
 );

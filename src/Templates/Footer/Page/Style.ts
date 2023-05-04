@@ -144,6 +144,12 @@ export const Position = styled.div`
     flex-direction: column;
     align-items: center;
   }
+  
+  @media screen and (min-width: 390px) and (max-width: ${width.largeMobile}) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+  }
 
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {      
     flex-direction: column;

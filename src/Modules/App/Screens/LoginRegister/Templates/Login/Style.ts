@@ -8,7 +8,6 @@ export const Container = styled.div`
   justify-content: space-between;
 
   width: 40%;
-  height: 400px;
   background-color: #d9d9d9aa;
   border-radius: 30px;
   margin: 3%;
@@ -19,6 +18,14 @@ export const Container = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(20px);
   border-radius: 35px;
+
+  @media screen and (max-width: ${width.mobile}) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {    
+    width: 100%;
+  }
 `;
 
 export const Section = styled.div`
@@ -78,6 +85,8 @@ export const Button = styled.button`
   padding-right: 10%;
   color: white;
   border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #5086b6;
 
   :hover {
     color: #5086b6;

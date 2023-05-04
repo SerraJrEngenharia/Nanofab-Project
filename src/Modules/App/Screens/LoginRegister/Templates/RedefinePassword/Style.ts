@@ -76,6 +76,8 @@ export const Button = styled.button`
   padding-right: 10%;
   color: white;
   border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #5086b6;
 
   :hover {
     color: #5086b6;

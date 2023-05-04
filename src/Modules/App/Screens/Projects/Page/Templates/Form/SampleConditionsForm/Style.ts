@@ -67,6 +67,8 @@ export const RadioContainer = styled.div`
     justify-content: start;
     align-items: center;
     margin-top: 5px;
+    margin: 3%;
+    margin-left: 0px;
 `;
 
 export const RadioInput = styled.input`
@@ -122,5 +124,7 @@ export const SecurityContainer = styled.div`
   flex-direction: column;
 `;
 
-
+export const Description = styled.p`
+  color: #5086B6;
+`;
 

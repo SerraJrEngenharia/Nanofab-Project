@@ -25,8 +25,16 @@ export const Items = styled.div`
     flex-direction: column;
   }
 
+  @media screen and (min-width: 390px) and (max-width: ${width.largeMobile}) {
+    flex-direction: column;
+  }
+  
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     flex-direction: column;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px ) {
+    flex-direction: row;
   }
 
   @media screen and (min-width: ${width.tablet}) and (max-width: ${width.notebook}) {
@@ -45,6 +53,12 @@ export const Logo = styled.img`
     width: 250px;
     margin-top: 15px;
   }
+
+  @media screen and (min-width: 390px) and (max-width: ${width.largeMobile}) {
+    width: 250px;
+    margin-top: 15px;
+  }
+
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     width: 250px;
     margin-top: 15px;
@@ -81,6 +95,12 @@ export const LogoNANO = styled.img`
     width: 250px;
     margin-top: 15px;
   }
+
+  @media screen and (min-width: 390px) and (max-width: ${width.largeMobile}) {
+    width: 250px;
+    margin-top: 15px;
+  }
+
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     width: 250px;
     margin-top: 15px;
@@ -117,6 +137,12 @@ export const LogoUERJ = styled.img`
   @media screen and (max-width: ${width.mobile}) {
     width: 80%;
   }
+
+  @media screen and (min-width: 390px) and (max-width: ${width.largeMobile}) {
+    width: 80%;
+    margin-top: 15px;
+  }
+
   @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
     width: 80%;
     margin-top: 15px;

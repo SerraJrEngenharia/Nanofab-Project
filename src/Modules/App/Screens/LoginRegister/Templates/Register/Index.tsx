@@ -1,15 +1,31 @@
-import { useState } from 'react'
+import { useDebugValue, useEffect, useState } from 'react'
 
 // React
 import React from 'react';
 
 // Native Components
-import { Container, Title, Text, Input, Button, InputContainer100, InputContainer50, InputContainer33, ExternalContainer } from './Style';
+import {
+  Container,
+  Title,
+  Text,
+  Input,
+  Button,
+  InputContainer100,
+  InputContainer50,
+  InputContainer33,
+  ExternalContainer,
+  InstContainer,
+  InstSection,
+  Combobox,
+  RadioContainer,
+  RadioInput,
+  RadioLabel
+} from "./Style";
 
 // @Types
 import { RegisterProps } from './Types';
 
-const Register: React.FC<RegisterProps> = ({}) => {
+const Register: React.FC = ({}) => {
   
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
@@ -22,13 +38,22 @@ const Register: React.FC<RegisterProps> = ({}) => {
   const [senha1, setSenha1] = useState('')
   const [senha2, setSenha2] = useState('')
 
+  const [tipo, setTipo] = useState('');
+
   const [list, setList] = useState(Array<RegisterProps>)
   const [status, setStatus] = useState(false)
   
-  const renderInfos = () => {
-    list.map((eachElement)=>{
-      console.log(eachElement)
-    })
+  useEffect(() => {
+    console.log(list)
+    console.log(status)
+  }, [list, status])
+
+  const handleClick = () => {
+    const response = comparePasswords()
+
+    if(response){
+      saveInfo()
+    }
   }
 
   const comparePasswords = () => {
@@ -37,10 +62,14 @@ const Register: React.FC<RegisterProps> = ({}) => {
       alert('Suas senhas são diferentes. Tente novamente.')
       setSenha1('')
       setSenha2('')
+
+      return false
     }
     else
     {
       setStatus(true)
+
+      return true
     }
   }
 
@@ -48,88 +77,181 @@ const Register: React.FC<RegisterProps> = ({}) => {
     if(status)
     {
       const info = {
-        nome: {nome},
-        telefone: {telefone},
-        ramal: {ramal},
-        funcao: {funcao},
-        email: {email},
-        departamento: {dept},
-        usuario: {usuario},
-        senha: {senha1},
-        outro: {outro},
+        nome: nome,
+        telefone: telefone,
+        ramal: ramal,
+        funcao: funcao,
+        email: email,
+        departamento: dept,
+        usuario: usuario,
+        senha1: senha1,
+        outro: outro,
       }
 
       // setList([...list, info])
     }
   }
+
+    function changingSelection(element: ChangeEvent<HTMLSelectElement>) {
+      if (element.target.value === "") {
+        setTipo("");
+      } else if (element.target.value === "") {
+        setTipo("");
+      } else if (element.target.value === "") {
+        setTipo("");
+      } else if (element.target.value === "") {
+        setTipo("");
+      } else if (element.target.value === "") {
+        setTipo("");
+      }
+    }
   
   return (
     <Container>
       <Title>Registrar-se</Title>
 
       <ExternalContainer>
-        <InputContainer100>
+        <InputContainer50>
           <Text>Instituição:</Text>
-          <Input placeholder="Entre com a instituição" />
-        </InputContainer100>
+          <InstSection>
+            <InstContainer>
+              <Combobox onChange={(e) => changingSelection(e)}>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </Combobox>
+            </InstContainer>
+          </InstSection>
+        </InputContainer50>
+
+        <InputContainer50>
+          <Text>Tipo:</Text>
+          <RadioContainer>
+            <RadioInput
+              type="radio"
+              id="publica"
+              name="institutionType"
+              value="Publica"
+            />
+            <RadioLabel>Pública</RadioLabel>
+          </RadioContainer>
+          <RadioContainer>
+            <RadioInput
+              type="radio"
+              id="privada"
+              name="institutionType"
+              value="Privada"
+            />
+            <RadioLabel>Privada</RadioLabel>
+          </RadioContainer>
+        </InputContainer50>
       </ExternalContainer>
 
       <ExternalContainer>
         <InputContainer50>
           <Text>Departamento:</Text>
-          <Input placeholder="Entre com a departamento" onChange={(dept)=>{setDept(dept.target.value);}}/>
+          <Input
+            placeholder="Entre com a departamento"
+            onChange={(dept) => {
+              setDept(dept.target.value);
+            }}
+          />
         </InputContainer50>
         <InputContainer50>
           <Text>Outros:</Text>
-          <Input placeholder="Outros" onChange={(outro)=>{setOutro(outro.target.value)}} />
+          <Input
+            placeholder="Outros"
+            onChange={(outro) => {
+              setOutro(outro.target.value);
+            }}
+          />
         </InputContainer50>
       </ExternalContainer>
 
       <ExternalContainer>
         <InputContainer100>
           <Text>Nome:</Text>
-          <Input placeholder="Digite seu nome" onChange={(nome)=>{setNome(nome.target.value)}}/>
+          <Input
+            placeholder="Digite seu nome"
+            onChange={(nome) => {
+              setNome(nome.target.value);
+            }}
+          />
         </InputContainer100>
       </ExternalContainer>
 
       <ExternalContainer>
-
         <InputContainer33>
           <Text>Telefone:</Text>
-          <Input placeholder="Digite seu telefone" onChange={(telefone)=>{setTelefone(telefone.target.value)}}/>
+          <Input
+            placeholder="Digite seu telefone"
+            onChange={(telefone) => {
+              setTelefone(telefone.target.value);
+            }}
+          />
         </InputContainer33>
-        
+
         <InputContainer33>
           <Text>Ramal:</Text>
-          <Input placeholder="Digite seu ramal" onChange={(ramal)=>{setRamal(ramal.target.value)}} />
+          <Input
+            placeholder="Digite seu ramal"
+            onChange={(ramal) => {
+              setRamal(ramal.target.value);
+            }}
+          />
         </InputContainer33>
-        
+
         <InputContainer33>
           <Text>Função:</Text>
-          <Input placeholder="Digite sua função" onChange={(funcao)=>{setFuncao(funcao.target.value)}} />
+          <InstSection>
+            <InstContainer>
+              <Combobox onChange={(e) => changingSelection(e)}>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </Combobox>
+            </InstContainer>
+          </InstSection>
         </InputContainer33>
       </ExternalContainer>
-      
+
       <ExternalContainer>
         <InputContainer100>
           <Text>Usuário:</Text>
-          <Input placeholder='Digite seu usuário' onChange={(usuario)=>{setUsuario(usuario.target.value)}} />
+          <Input
+            placeholder="Digite seu usuário"
+            onChange={(usuario) => {
+              setUsuario(usuario.target.value);
+            }}
+          />
         </InputContainer100>
       </ExternalContainer>
 
       <ExternalContainer>
         <InputContainer50>
           <Text>Senha:</Text>
-          <Input type='password' placeholder='Entre com sua senha aqui' onChange={(senha1)=>{setSenha1(senha1.target.value)}}/>
+          <Input
+            type="password"
+            placeholder="Entre com sua senha aqui"
+            onChange={(senha1) => {
+              setSenha1(senha1.target.value);
+            }}
+          />
         </InputContainer50>
-        
+
         <InputContainer50>
           <Text>Confirme sua senha:</Text>
-          <Input type='password' placeholder='Confirme sua senha aqui' onChange={(senha2)=>{setSenha2(senha2.target.value)}} />
+          <Input
+            type="password"
+            placeholder="Confirme sua senha aqui"
+            onChange={(senha2) => {
+              setSenha2(senha2.target.value);
+            }}
+          />
         </InputContainer50>
       </ExternalContainer>
-     
-      <Button onClick={renderInfos}>Registrar</Button>
+
+      <Button onClick={handleClick}>Registrar</Button>
     </Container>
   );
 }

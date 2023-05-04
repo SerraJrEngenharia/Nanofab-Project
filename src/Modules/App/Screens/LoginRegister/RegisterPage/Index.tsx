@@ -21,7 +21,7 @@ const ComponentLoginRegister: React.FC<ComponentLoginRegisterProps> = ({}) => {
       <HeaderTemplate />
       
       <Section>
-        {/* <Register /> */}
+        <Register />
       </Section>
 
       <FooterTemplate />

@@ -22,13 +22,11 @@ import {
 
 // @Types
 import { TypeProjectProps } from './Types';
-import FirstGroupForm from '../FirstGroupForm/Index';
 
 const TypeProject: React.FC<TypeProjectProps> = ({ formData, setFormData }) => {
 
   return (
     <Container>
-        <FirstGroupForm />
         <InputOrientadorContainer>
             <Title>Orientador:</Title>
             <InputOrientador
@@ -37,8 +35,9 @@ const TypeProject: React.FC<TypeProjectProps> = ({ formData, setFormData }) => {
                 value={formData.orientador}
                 onChange={(e) =>
                     setFormData(
-                        { orientador: e.target.value,
-                        outros: formData.outros
+                        {   
+                            ...formData,
+                            orientador: e.target.value,
                         })}
                 placeholder="(*) Informar o nome do orientador, quando o soliciante for aluno de graduação ou pós-graduação. (Ex: 'Prof. ****')"
         ></InputOrientador>
@@ -70,27 +69,48 @@ const TypeProject: React.FC<TypeProjectProps> = ({ formData, setFormData }) => {
         <InputContainer>
             <Title>Outros:</Title>
             <InputOutros
-          type="text"
-          name="outros"
-          value={formData.outros}
-          onChange={(e) =>
-            setFormData(
-                { orientador: formData.orientador,
-                  outros: e.target.value
-                })}
-          placeholder="Informar nome."
+                type="text"
+                name="outros"
+                value={formData.outros}
+                onChange={(e) =>
+                    setFormData(
+                        { 
+                            ...formData,
+                            outros: e.target.value
+                        })}
+                placeholder="Informar nome."
         ></InputOutros>
         </InputContainer>
 
         <InputContainer>
             <Title>Detectores:</Title>
-            <InputDetectores placeholder="[TEMP] Informar detectores.">   
+            <InputDetectores
+                type="text"
+                name="outros"
+                value={formData.detectores}
+                onChange={(e) =>
+                    setFormData(
+                        { 
+                            ...formData,
+                            detectores: e.target.value
+                        })} 
+                placeholder="[TEMP] Informar detectores.">   
             </InputDetectores>
         </InputContainer>
 
         <InputContainer>
             <Title>Projeto Científico e Descrição das Amostras:</Title>
-            <InputProjetoCientifico placeholder="[TEMP] Informar Projeto Científico e Descrição das Amostras:.">   
+            <InputProjetoCientifico
+                type="text"
+                name="outros"
+                value={formData.projeto_descricao_amostras}
+                onChange={(e) =>
+                    setFormData(
+                        { 
+                            ...formData,
+                            projeto_descricao_amostras: e.target.value
+                        })} 
+                 placeholder="[TEMP] Informar Projeto Científico e Descrição das Amostras:.">   
             </InputProjetoCientifico>
         </InputContainer>
 

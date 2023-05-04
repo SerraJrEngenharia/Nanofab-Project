@@ -7,7 +7,7 @@ import { Container, Section, Title, SampleInput } from './Style';
 // @Types
 import { SampleDataFormProps } from './Types';
 
-const SampleDataForm: React.FC<SampleDataFormProps> = ({}) => {
+const SampleDataForm: React.FC<SampleDataFormProps> = ({ formData, setFormData }) => {
   return (
     <Container>
 

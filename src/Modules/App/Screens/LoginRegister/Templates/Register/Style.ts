@@ -7,7 +7,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     
-    width: 40%;
+    width: 50%;
     background-color: #D9D9D9aa;
     border-radius: 30px;
     margin: 3%;
@@ -91,6 +91,8 @@ export const Button = styled.button`
     padding-right: 10%;
     color: white;
     border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #5086B6;
 
     :hover{
             color: #5086B6; 
@@ -98,6 +100,53 @@ export const Button = styled.button`
             border: 1px solid #5086B6;
             transition: 0.5s;
             cursor: pointer;
+            /* transform: scale(1.05); */
         }
 `;
+
+export const InstContainer = styled.div`
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: row;
+`;
+
+export const Combobox = styled.select`
+  width: 100%;
+  height: 50px;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+  border: 0px;
+  cursor: pointer;
+  font-size: ${({ theme }) => theme.fonts.small}px;
+  color: ${({ theme }) => theme.colors.text.TitleSubArticles};
+
+  //
+  // padding: 10px;
+  // margin-bottom: 10px;
+`;
+
+export const InstSection = styled.div`
+  width: 100%;
+`;
+
+export const RadioContainer = styled.div`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+`;
+
+export const RadioInput = styled.input`
+  border: 1px solid #e8e8e8;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+`;
+
+export const RadioLabel = styled.label`
+    margin-right: 20px;
+    color: #AE0806;
+    font-weight: bolder;
+`;
+
 
