@@ -12,18 +12,15 @@ import HeaderTemplate from "@/Templates/Header/Page/Index";
 import FooterTemplate from "@/Templates/Footer/Page/Index";
 
 //imports components 
-import Register from "../Templates/Register/Index"
-import Login from "../Templates/Login/Index"
+import RedefPassw from "../Templates/RedefinePassword/Index"
 
-const ComponentLoginRegister: React.FC<ComponentLoginRegisterProps> = ({}) => {
+const ComponentRedefPassw: React.FC<ComponentLoginRegisterProps> = ({}) => {
   return (
     <Container>
       <HeaderTemplate />
       
       <Section>
-        <Register />
-        <Line/>
-        <Login />
+        <RedefPassw />
       </Section>
 
       <FooterTemplate />
@@ -31,4 +28,4 @@ const ComponentLoginRegister: React.FC<ComponentLoginRegisterProps> = ({}) => {
 );
 }
 
-export default ComponentLoginRegister;
+export default ComponentRedefPassw;

@@ -2,19 +2,17 @@
 import React from 'react';
 
 // Native Components
-import { Container, Title, Text, Input, Button, InputContainer, Section } from './Style';
+import { Container, Title, Text, Input, Button, InputContainer, Section, LinkContainer, Link } from './Style';
 
 // @Types
 import { LoginProps } from './Types';
 
-const Login: React.FC<LoginProps> = ({}) => {
+const RedefPassword: React.FC<LoginProps> = ({}) => {
   return (
     <Container>
-        <Title>Entrar</Title>
-        
+      <Title>Entrar</Title>
 
-        <Section>
-
+      <Section>
         <InputContainer>
           <Text>Email ou Nome de Usuário:</Text>
           <Input placeholder="Digite seu Email"></Input>
@@ -23,13 +21,18 @@ const Login: React.FC<LoginProps> = ({}) => {
         <InputContainer>
           <Text>Senha:</Text>
           <Input type="password" placeholder="Digite sua senha"></Input>
-          </InputContainer>
-        </Section>
+        </InputContainer>
+        <LinkContainer>
+          <Link href={"/Nanofab-Project/login/createAccount"}>Não tem conta? Crie uma!</Link>
+          <Link href={"/Nanofab-Project/login/RedefinePassword"}>
+            Esqueci minha senha
+          </Link>
+        </LinkContainer>
+      </Section>
 
-        <Button>Entrar</Button>
-
+      <Button>Entrar</Button>
     </Container>
-);
+  );
 }
 
-export default Login;
+export default RedefPassword;

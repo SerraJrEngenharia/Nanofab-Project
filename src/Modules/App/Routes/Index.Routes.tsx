@@ -12,7 +12,10 @@ import ProjectsPage from "@/Modules/App/Screens/Projects/Page/Index";
 import PublicationsPage from "@/Modules/App/Screens/Publications/Page/Index";
 import PartnershipsPage from "@/Modules/App/Screens/Partnerships/Page/Index";
 import ErrorPage from "@/Modules/App/Screens/Error/Page/Index";
-import LoginRegisterPage from "@/Modules/App/Screens/LoginRegister/Page/Index";
+import LoginPage from "@/Modules/App/Screens/LoginRegister/LoginPage/Index";
+
+import RegisterPage from '@/Modules/App/Screens/LoginRegister/RegisterPage/Index'
+import RedefPassw from '@/Modules/App/Screens/LoginRegister/RedefPasswordPage/Index'
 
 // @Types
 import { RoutesProps } from "./Types";
@@ -46,7 +49,15 @@ const router = createBrowserRouter(
     },
     {
       path: "/login",
-      element: <LoginRegisterPage />,
+      element: <LoginPage />,
+    },
+    {
+      path: "/login/createAccount",
+      element: <RegisterPage />,
+    },
+    {
+      path: "/login/RedefinePassword",
+      element: <RedefPassw />,
     },
     {
       path: "*",

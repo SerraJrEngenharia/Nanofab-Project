@@ -8,7 +8,6 @@ export const Container = styled.div`
   justify-content: space-between;
 
   width: 40%;
-  height: 400px;
   background-color: #d9d9d9aa;
   border-radius: 30px;
   margin: 3%;
@@ -49,7 +48,6 @@ export const Input = styled.input`
   border-radius: 10px;
   border: 0px;
   padding: 10px;
-  margin-top: 10px;
   margin-bottom: 10px;
 
   ::placeholder {
@@ -90,19 +88,15 @@ export const Button = styled.button`
 
 export const LinkContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-beetween;
-  margin-bottom: 20px;
-  padding-left: 20px;
-  width: 60%;
 `;
 
 export const Link = styled.a`
   color: ${({ theme }) => theme.colors.text.TitleSubArticles};
   font-size: ${({ theme }) => theme.fonts.small}px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 
   :hover {
     color: #5086b6;

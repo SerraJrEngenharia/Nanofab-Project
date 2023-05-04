@@ -22,11 +22,13 @@ import {
 
 // @Types
 import { TypeProjectProps } from './Types';
+import FirstGroupForm from '../FirstGroupForm/Index';
 
 const TypeProject: React.FC<TypeProjectProps> = ({ formData, setFormData }) => {
 
   return (
     <Container>
+        <FirstGroupForm />
         <InputOrientadorContainer>
             <Title>Orientador:</Title>
             <InputOrientador

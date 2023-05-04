@@ -8,7 +8,6 @@ export const Container = styled.div`
     justify-content: center;
     
     width: 40%;
-    height: 500px;
     background-color: #D9D9D9aa;
     border-radius: 30px;
     margin: 3%;
@@ -34,7 +33,7 @@ export const Text = styled.span`
 `;
 
 export const Input = styled.input`
-    width: 50%;
+    
     height: 30px;
     background-color: #E8E8E8;
     border-radius: 10px;
@@ -51,14 +50,38 @@ export const Input = styled.input`
     
 `;
 
-export const InputContainer = styled.div`
-    margin-bottom: 2%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
- `;
+export const ExternalContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const InputContainer100 = styled.div`
+  width: 100%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const InputContainer50 = styled.div`
+  width: 45%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const InputContainer33 = styled.div`
+  width: 30%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 
 export const Button = styled.button`
     background-color: #5086B6;

@@ -2,10 +2,8 @@ import styled from "styled-components";
 import { width } from "@/Services/screenSizes";
 
 export const Container = styled.div`
-  width: 100%;
-  padding: 5%;
-  padding-left: 3.5%;
-  padding-bottom: 0;
+    width: 100%;
+    margin-bottom: 3%;
 
 `;
 
@@ -38,11 +36,43 @@ export const Title = styled.h2` // Orientador, Tipos, Outros, etc.
   */
 `;
 
-export const InputOrientador = styled.input`
+export const DivComboBox = styled.div`
     width: 90%;
-    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+`;
+
+export const Section = styled.section`
+    width: 30%;
+`;
+
+export const RadioContainer = styled.div`
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 5px;
+`;
+
+export const RadioInput = styled.input`
+    border: 1px solid #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+`;
+
+export const RadioLabel = styled.label`
+    margin-right: 20px;
+    color: #AE0806;
+    font-weight: bolder;
+`;
+
+export const QtdAmostras = styled.input`
+    width: 90%;
+    height: 40px;
     background-color: #E8E8E8;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 0px;
     padding: 5px;
     
@@ -66,60 +96,36 @@ export const InputOrientador = styled.input`
 `;
 
 
-export const ComponentTypes = styled.form`
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3%;
-    `;
-
-export const CheckBoxTypes = styled.input`
-    height: 15px;
-    width: 15px;
-`;
-
-export const LabelTypes = styled.label`
-  margin-left: 5px;
-  font-family: "Maven Pro";
-  `;
-
-export const DivRow = styled.div`
-  display: flex;
-  
-  flex-direction: row;
-  margin: 5px;
-  `;
-
 export const InputContainer = styled.div`
   margin-bottom: 3%;
-  margin-top: 3%;
-  `;
+`;
 
-export const InputOutros = styled(InputOrientador)`
+export const TecniqueInput = styled.input`
+    width: 90%;
+    height: 30px;
+    background-color: #E8E8E8;
+    border-radius: 10px;
+    border: 0px;
+    padding: 5px;
+    font-family: 'Maven Pro';
+    
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      padding-left: 20px;
+      color: #5086B699;
+      opacity: 1; /* Firefox */
+    }
+    
+    @media screen and (max-width: ${width.mobile}) {
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        padding-left: 10px;
+      }
+    }
 
+    @media screen and (min-width: ${width.largeMobile}) and (max-width: ${width.tablet}) {
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        padding-left: 10px;
+      } 
+   }
 `;
 
 
-export const InputDetectores = styled(InputOrientador)`
-
-`;
-
-
-export const InputProjetoCientifico = styled(InputOrientador)`
-
-`;
-
-export const InputOrientadorContainer = styled.div`
-    margin-bottom: 3%;
-`;
-
-export const InputOutrosContainer = styled(InputOrientadorContainer)`
-
-`;
-
-export const InputDetectoresContainer = styled(InputOrientadorContainer)`
-
-`;
-
-export const InputProjetoCientificoContainer = styled(InputOrientadorContainer)`
-
-`;
