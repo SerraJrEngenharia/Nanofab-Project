@@ -23,8 +23,8 @@ const RedefPassword: React.FC<LoginProps> = ({}) => {
           <Input type="password" placeholder="Digite sua senha"></Input>
         </InputContainer>
         <LinkContainer>
-          <Link href={"/Nanofab-Project/login/createAccount"}>Não tem conta? Crie uma!</Link>
-          <Link href={"/Nanofab-Project/login/RedefinePassword"}>
+          <Link href={"/Nanofab-Project/login/create_Account"}>Não tem conta? Crie uma!</Link>
+          <Link href={"/Nanofab-Project/login/Redefine_Password"}>
             Esqueci minha senha
           </Link>
         </LinkContainer>

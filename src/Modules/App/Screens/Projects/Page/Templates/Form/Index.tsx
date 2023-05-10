@@ -25,44 +25,79 @@ const Form: React.FC<FormProps> = ({}) => {
   const [sampleNumber, setSampleNumber] = useState(1);
   const [formData, setFormData] = useState(
     { 
-      orientador: "",
-      outros: "" ,
       analise_qualitativa: false,
       analise_quantitativa: false,
       quantidade_amostras: 1,
       tecnicas_condicoes: "",
+      orientador: "", 
+      
+      // TIPOS
+      microscopia_eletronica: false,
+      amostras_met: false,
+      nanomat: false,
+      microfab: false,
+      grafeno_cvd: false,
+      microsoldadora: false,
+      microdurometro: false,
+      estereoscopio: false,
+      //
+      
+      outros: "",
       detectores: "",
       projeto_descricao_amostras: "",
       
       // SampleData
       
       amostras: [
-        {
-              identificacao_amostra: "1",
-              composicao_quimica: "1",
-        }, 
-        {
-          identificacao_amostra: "2",
-          composicao_quimica: "2",
-        }, 
-        {
-          identificacao_amostra: "3",
-          composicao_quimica: "3",
-        }
-      ],
+          {
+                identificacao_amostra: "1",
+                composicao_quimica: "1",
+          }, 
+          {
+            identificacao_amostra: "2",
+            composicao_quimica: "2",
+          }, 
+          {
+            identificacao_amostra: "3",
+            composicao_quimica: "3",
+          }
+        ],
       
       // SampleConditionsData
+      nivel_prioridade: "",
+      condicao_seguranca: "",
+
+      // orientador: "",
+      // outros: "" ,
+      // analise_qualitativa: false,
+      // analise_quantitativa: false,
+      // quantidade_amostras: 1,
+      // tecnicas_condicoes: "",
+      // detectores: "",
+      // projeto_descricao_amostras: "",
       
-      retornar_amostra: false, // sim -> true; não -> false, s/ state para cada botão sim/não
-      nivel_prioridade: "urgente",
-      inflamavel: false,
-      toxico: false,
-      hidroscopico: false,
-      radioativo: false,
-      corrosivo: false,
-      /*
-      // outros: ""
-      */
+      // // SampleData
+      
+      // amostras: [
+      //   {
+      //         identificacao_amostra: "1",
+      //         composicao_quimica: "1",
+      //   }, 
+      //   {
+      //     identificacao_amostra: "2",
+      //     composicao_quimica: "2",
+      //   }, 
+      //   {
+      //     identificacao_amostra: "3",
+      //     composicao_quimica: "3",
+      //   }
+      // ],
+      
+      // // SampleConditionsData
+      
+      // // retornar_amostra: undefined, // sim -> true; não -> false, s/ state para cada botão sim/não
+      // nivel_prioridade: "teste",
+      // condicao_seguranca: ""
     }
     );
 

@@ -79,12 +79,12 @@ const ListTemplate: React.FC<PageProps> = ({ list }) => {
   function changingSelection(element: ChangeEvent<HTMLSelectElement>) {
     if (element.target.value === "Todos") {
       setFilter("Todos");
-    } else if (element.target.value === "Aprovado") {
-      setFilter("Aprovado");
-    } else if (element.target.value === "Agendado") {
-      setFilter("Agendado");
     } else if (element.target.value === "Solicitado") {
       setFilter("Solicitado");
+    } else if (element.target.value === "Agendado") {
+      setFilter("Agendado");
+    } else if (element.target.value === "Finalizado") {
+      setFilter("Finalizado");
     } else if (element.target.value === "Antigos") {
       setFilter("Antigos");
     }
@@ -96,9 +96,9 @@ const ListTemplate: React.FC<PageProps> = ({ list }) => {
         <FilterContainer>
           <Combobox onChange={(e) => changingSelection(e)}>
             <option value="Todos">Todos</option>
-            <option value="Aprovado">Aprovado</option>
-            <option value="Agendado">Agendado</option>
             <option value="Solicitado">Solicitado</option>
+            <option value="Agendado">Agendado</option>
+            <option value="Finalizado">Finalizado</option>
             <option value="Antigos">Antigos</option>
           </Combobox>
         </FilterContainer>

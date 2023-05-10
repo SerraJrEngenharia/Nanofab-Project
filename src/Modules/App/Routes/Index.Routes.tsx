@@ -17,6 +17,9 @@ import LoginPage from "@/Modules/App/Screens/LoginRegister/LoginPage/Index";
 import RegisterPage from '@/Modules/App/Screens/LoginRegister/RegisterPage/Index'
 import RedefPassw from '@/Modules/App/Screens/LoginRegister/RedefPasswordPage/Index'
 
+import SpecialProgPage from '@/Modules/App/Screens/SpecialProgramns/Page/Index'
+import EquipInfraPage from "@/Modules/App/Screens/Equip&Infra/Page/Index";
+
 // @Types
 import { RoutesProps } from "./Types";
 import { Container } from "./Style";
@@ -52,12 +55,20 @@ const router = createBrowserRouter(
       element: <LoginPage />,
     },
     {
-      path: "/login/createAccount",
+      path: "/login/create_Account",
       element: <RegisterPage />,
     },
     {
-      path: "/login/RedefinePassword",
+      path: "/login/Redefine_Password",
       element: <RedefPassw />,
+    },
+    {
+      path: "/equipamentos_infraestrutura",
+      element: <EquipInfraPage />,
+    },
+    {
+      path: "/programas_especiais",
+      element: <SpecialProgPage />,
     },
     {
       path: "*",
@@ -65,7 +76,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/Nanofab-Project"
+    basename: "/Nanofab-Project",
   }
 );
 

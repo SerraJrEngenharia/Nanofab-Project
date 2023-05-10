@@ -20,12 +20,12 @@ const FooterTemplate: React.FC<PageProps> = ({}) => {
           
           <DivColumn>
             <Title>Endereço</Title>
-            <TextCustom>Rua São Franscisco Xavier - 3107f - Maracanã, Rio de Janeiro</TextCustom>
+            <TextCustom>Rua Fonseca Teles 121, São Cristóvão, Rio de Janeiro, CEP: 20.940-903</TextCustom>
           </DivColumn>
           
           <DivColumn>
             <Title>Email</Title>
-            <TextCustom>adsad@gmail.com</TextCustom>
+            <TextCustom>nanofabuerj@gmail.com</TextCustom>
           </DivColumn>
 
           <DivColumn>

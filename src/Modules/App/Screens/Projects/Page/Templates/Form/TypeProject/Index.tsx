@@ -24,6 +24,60 @@ import {
 import { TypeProjectProps } from './Types';
 
 const TypeProject: React.FC<TypeProjectProps> = ({ formData, setFormData }) => {
+    
+    // const setFormData2 = (teste) => {
+    //     let temporario = teste
+    //     setFormData({...formData,
+    //     temporario: !formData.teste})
+    // }
+        
+
+    const handleCheck = (teste: string) => {
+        console.log(teste)
+        // switch (teste) {
+        //     // case 'microscopia_eletronica':
+        //     //     setFormData(teste)
+        //     //     console.log('teste_microscop');
+        //     //         break;
+        //     case 'amostras_met':
+        //         setFormData(
+        //             {   
+        //                 ...formData,
+        //                 amostras_met: !formData.amostras_met,
+        //             })
+        //             break;
+        //     case 'grafeno_cvd':
+        //         setFormData(
+        //             {   
+        //                 ...formData,
+        //                 grafeno_cvd: !formData.grafeno_cvd,
+        //             })
+        //             break;
+        //     case 'microsoldadora':
+        //         setFormData(
+        //             {   
+        //                 ...formData,
+        //                 microsoldadora: !formData.microsoldadora,
+        //             })
+        //             break;
+        //     case 'estereoscopio':
+        //         setFormData(
+        //             {   
+        //                 ...formData,
+        //                 estereoscopio: !formData.estereoscopio,
+        //             })
+        //             break;
+        //     case 'nanomat':
+        //         setFormData(
+        //             {   
+        //                 ...formData,
+        //                 nanomat: !formData.nanomat,
+        //             })
+        //             break;
+        //     default:
+        //       console.log('Caso fora do switch-case');
+        //   }
+    }
 
   return (
     <Container>
@@ -45,25 +99,41 @@ const TypeProject: React.FC<TypeProjectProps> = ({ formData, setFormData }) => {
 
         <Title>Tipos:</Title>
         {/* <ComponentTypes> */}
+
             <DivRow>
-                <CheckBoxTypes type="checkbox" value="1"></CheckBoxTypes>
-                <LabelTypes>{"Microscopia de Varredura de Alta Resolução (MEV-FEG)"}</LabelTypes> 
+                <CheckBoxTypes type="checkbox" value="1" checked={formData.microscopia_eletronica} onChange={() => handleCheck('microscopia_eletronica')}></CheckBoxTypes>
+                <LabelTypes>Microscopia Eletrônica de Varredura</LabelTypes> 
             </DivRow>
 
             <DivRow>
-                <CheckBoxTypes type="checkbox" value="1"></CheckBoxTypes>
-                <LabelTypes>Microscopia por Feixe de Íons Focalizado</LabelTypes> 
+                <CheckBoxTypes type="checkbox" value="amostras_met" checked={formData.amostras_met} onChange={() => handleCheck('amostras_met')}></CheckBoxTypes>
+                <LabelTypes>Preparação de Amostras para MET</LabelTypes> 
+            </DivRow>
+
+            {/* <DivRow>
+                <CheckBoxTypes type="checkbox" value="nanomat" checked={formData.nanomat} onChange={() => handleCheck('nanomat')}></CheckBoxTypes>
+                <LabelTypes>Sala Limpa: microfabricação</LabelTypes> 
             </DivRow>
 
             <DivRow>
-                <CheckBoxTypes type="checkbox" value="1"></CheckBoxTypes>
-                <LabelTypes>Textura</LabelTypes> 
+                <CheckBoxTypes type="checkbox" value="microfab" checked={formData.microfab} onChange={() => handleCheck('microfab')}></CheckBoxTypes>
+                <LabelTypes>Sala Limpa: preparação de Nanomateriais</LabelTypes> 
             </DivRow>
 
             <DivRow>
-                <CheckBoxTypes type="checkbox" value="1"></CheckBoxTypes>
-                <LabelTypes>Difração de Raios-x</LabelTypes> 
+                <CheckBoxTypes type="checkbox" value="grafeno_cvd" checked={formData.grafeno_cvd} onChange={() => handleCheck('microsoldadora')}></CheckBoxTypes>
+                <LabelTypes>Microsoldadora</LabelTypes> 
             </DivRow>
+
+            <DivRow>
+                <CheckBoxTypes type="checkbox" value="microdurometro" checked={formData.microdurometro} onChange={() => handleCheck('microdurometro')}></CheckBoxTypes>
+                <LabelTypes>Microdurômetro</LabelTypes> 
+            </DivRow>
+
+            <DivRow>
+                <CheckBoxTypes type="checkbox" value="estereoscopio" checked={formData.estereoscopio} onChange={() => handleCheck('estereoscopio')}></CheckBoxTypes>
+                <LabelTypes>Estereoscópio</LabelTypes> 
+            </DivRow> */}
         {/* </ComponentTypes> */}
 
         <InputContainer>

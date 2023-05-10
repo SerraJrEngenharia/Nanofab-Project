@@ -3,8 +3,9 @@ import { width } from "@/Services/screenSizes";
 
 export const Container = styled.div`
   width: 100%;
-  padding: 5%;
-  padding-left: 3.5%;
+  padding: 2%;
+  padding-left: 0%;
+  padding-right: 0%;
   padding-bottom: 0;
 
 `;

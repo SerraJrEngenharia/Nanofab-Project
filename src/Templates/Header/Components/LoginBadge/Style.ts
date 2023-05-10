@@ -19,11 +19,6 @@ export const Container = styled.div`
     background-color: #b11211;
     transition: 0.2s;
   }
-
-  @media screen and (max-width: 1300px) {    
-    background-color: #f8f8f8;
-    color: #000
-  }
 `;
 
 
@@ -31,8 +26,8 @@ export const Text = styled.span`
   font-size: ${({ theme }) => theme.fonts.small}px;
   margin-right: 10px;
 
-  @media screen and (max-width: 1300px) {    
-    display: none;
+  @media screen and (max-width: ${width.largeDesktop}) {     
+   font-size: 16px;
   }
 
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
@@ -47,6 +42,10 @@ export const Text = styled.span`
 
 export const Icon = styled(IoPersonCircleOutline)`
   font-size: 38px;
+
+  @media screen and (max-width: ${width.largeDesktop}) {     
+   font-size: 28px;
+  }
 
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {     
    font-size: 48px;

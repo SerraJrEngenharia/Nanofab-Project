@@ -55,14 +55,10 @@ const HeaderTemplate: React.FC<PageProps> = ({}) => {
         
         <LogoCompany src={NanoImage} />
 
-        <NavigationContainer>
-          <NavigationTemplate urls={navLinks} />
-          
-          <LoginBadge />
-        </NavigationContainer>
+        <LoginBadge />
+       
       </Section>
       
-
       <BannerComponent />
     </Container>
   );

@@ -31,18 +31,7 @@ export const Section = styled.div`
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
 
-  @media screen and (min-width: ${width.notebook}) and (max-width: ${width.largeNotebook}) {    
-    height: 10vh;
-  }
-  @media screen and (min-width: ${width.largeNotebook}) and (max-width: ${width.desktop}) {    
-    height: 10vh;
-  }
-  @media screen and (min-width: ${width.desktop}) and (max-width: ${width.largeDesktop}) {  
-    height: 10vh;
-  }
-  @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {  
-    height: 10vh;
-  }
+  height: 10vh;
 
 `;
 
@@ -64,8 +53,11 @@ export const LoginContainer = styled.div`
 `;
 
 export const LogoCompany = styled.img`
-  padding-left: 15px;
   width: 150px;
+
+  @media screen and (max-width: ${width.mobile}) {    
+    width: 110px;
+  }
 
   @media screen and (min-width: ${width.largeDesktop}) and (max-width: ${width.extraLargeDesktop}) {
     width: 400px;

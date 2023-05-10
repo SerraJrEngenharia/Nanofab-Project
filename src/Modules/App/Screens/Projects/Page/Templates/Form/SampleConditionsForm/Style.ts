@@ -4,7 +4,8 @@ import { width } from "@/Services/screenSizes";
 export const Container = styled.div`
   width: 100%;
   padding: 5%;
-  padding-left: 3.5%;
+  padding-left: 0px;
+  padding-right: 0px;
   padding-top: 0;
 
 `;
@@ -54,7 +55,6 @@ export const DivComboBox = styled.div`
     width: 90%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 3%;
 `;
 
@@ -128,3 +128,6 @@ export const Description = styled.p`
   color: #5086B6;
 `;
 
+export const ConditionSelector = styled.select`
+  
+`;

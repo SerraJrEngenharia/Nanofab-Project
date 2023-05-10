@@ -2,6 +2,8 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 
 import { width } from "@/Services/screenSizes";
+import { IoMenuOutline } from "react-icons/io5";
+import { IoCloseOutline } from "react-icons/io5";
 
 export const Container = styled.nav`
     background-color: transparent;
@@ -9,9 +11,9 @@ export const Container = styled.nav`
     justify-content: flex-end;
     align-items: center;
 
-    @media screen and (min-width: 1300px) {    
+    /* @media screen and (min-width: 1300px) {    
         display: none;
-    }
+    } */
 `;
 
 export const Text = styled(Link)`
@@ -22,6 +24,11 @@ export const Text = styled(Link)`
     text-decoration: none;
     color: var(--white);
     font-family: 'Maven Pro';
+
+    @media screen and (max-width: ${width.tablet}) {
+        margin: 15px 7px;   
+        font-size: var(--small);
+    }
 
     &:hover{
         opacity: 0.7;
@@ -59,4 +66,21 @@ export const Menu = styled.nav`
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(0px);
+`;
+
+export const IconOpen = styled(IoMenuOutline)`
+    font-size: 40px;
+
+    @media screen and (max-width: ${width.tablet}) {    
+        font-size: 30px;
+    }
+
+`;
+
+export const IconClose = styled(IoCloseOutline)`
+    font-size: 40px;
+
+    @media screen and (max-width: ${width.tablet}) {    
+        font-size: 30px;
+    }
 `;

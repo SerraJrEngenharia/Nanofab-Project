@@ -17,13 +17,25 @@ const FirstGroupForm: React.FC<FirstGroupFormProps> = ({formData, setFormData}) 
                     <RadioInput type="radio" id="quantitativa" name="analysisType" color='red'
                     value="quantitativa"
                     checked={formData.analise_quantitativa}
-                    onChange={() => setFormData(
-                        { 
-                            ...formData,
-                            analise_quantitativa: !formData.analise_quantitativa,
-                            analise_qualitativa: !formData.analise_qualitativa
-                        })}
-                    />
+                    onChange={() => 
+                        {
+                        if (formData.analise_quantitativa !== formData.analise_qualitativa){
+                            setFormData(
+                                { 
+                                ...formData,
+                                analise_quantitativa: !formData.analise_quantitativa,
+                                analise_qualitativa: !formData.analise_qualitativa
+                                })
+                        }
+                        if (formData.analise_quantitativa === formData.analise_qualitativa){
+                            setFormData(
+                                { 
+                                    ...formData,
+                                    analise_quantitativa: true,
+                                    analise_qualitativa: false
+                                })       
+                            }}
+                    } />
                     <RadioLabel htmlFor="quantitativa">Quantitativa</RadioLabel>
                 </RadioContainer>
 
@@ -31,11 +43,25 @@ const FirstGroupForm: React.FC<FirstGroupFormProps> = ({formData, setFormData}) 
                     <RadioInput type="radio" id="qualitativa" name="analysisType" 
                     value="Qualitativa"
                     // checked={formData.analise_qualitativa}
-                    onChange={() => setFormData(
-                        { 
-                            ...formData,
-                            analise_qualitativa: !formData.analise_qualitativa
-                        })}
+                    onChange={() => 
+                        {
+                        if (formData.analise_quantitativa !== formData.analise_qualitativa){
+                            setFormData(
+                                { 
+                                ...formData,
+                                analise_quantitativa: !formData.analise_quantitativa,
+                                analise_qualitativa: !formData.analise_qualitativa
+                                })
+                        }
+                        if (formData.analise_quantitativa === formData.analise_qualitativa){
+                            setFormData(
+                                { 
+                                    ...formData,
+                                    analise_quantitativa: false,
+                                    analise_qualitativa: true
+                                })    
+                            }}
+                        }
                     />
                     <RadioLabel htmlFor="qualitativa">Qualitativa</RadioLabel>
                 </RadioContainer>
@@ -55,7 +81,16 @@ const FirstGroupForm: React.FC<FirstGroupFormProps> = ({formData, setFormData}) 
 
         <InputContainer>
             <Title>Técnicas de Medida e Condições de Varredura:</Title>
-            <TecniqueInput placeholder="Se souber, descreva as técnicas de medida e as condições de carredura." />   
+            <TecniqueInput
+                type="text"
+                name="tecnicas_condicoes"
+                value={formData.tecnicas_condicoes}
+                onChange={(e) =>
+                    setFormData(
+                        {   
+                            ...formData,
+                            tecnicas_condicoes: e.target.value,
+                        })} placeholder="Se souber, descreva as técnicas de medida e as condições de carredura." />   
         </InputContainer>
     </Container>
 );

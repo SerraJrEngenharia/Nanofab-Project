@@ -2,13 +2,12 @@ import styled from "styled-components";
 import { width } from "@/Services/screenSizes";
 
 export const Container = styled.div`
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 5%;
-    padding-left: 0.9%;
+    justify-content: space-between;
     padding-top: 0;
+    margin-bottom: 3%;
 `;
 
 export const Section = styled.div`
@@ -31,8 +30,6 @@ export const SampleInput = styled.input`
     background-color: #E8E8E8;
     border-radius: 10px;
     border: 0px;
-    padding: 5px;
     margin-bottom: 10px;
-    padding-left: 5%;
     
     `;

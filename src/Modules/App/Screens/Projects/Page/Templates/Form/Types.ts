@@ -14,12 +14,24 @@ export interface SampleProps {
 
 export interface FormDataProps {
     formData: {
-        orientador: string;
-        outros: string;
         analise_qualitativa: boolean,
         analise_quantitativa: boolean,
         quantidade_amostras: number,
         tecnicas_condicoes: string,
+        orientador: string;
+        
+        // TIPOS
+        microscopia_eletronica: boolean,
+        amostras_met: boolean,
+        nanomat: boolean,
+        microfab: boolean,
+        grafeno_cvd: boolean,
+        microsoldadora: boolean,
+        microdurometro: boolean,
+        estereoscopio: boolean,
+        //
+        
+        outros: string;
         detectores: string,
         projeto_descricao_amostras: string,
         
@@ -29,24 +41,29 @@ export interface FormDataProps {
         
         // SampleConditionsData
         
-        retornar_amostra: boolean,
+        retornar_amostra?: boolean,
         nivel_prioridade: string,
-        inflamavel: boolean,
-        toxico: boolean,
-        hidroscopico: boolean,
-        radioativo: boolean,
-        corrosivo: boolean,
-        /*
-        // outros: ""
-        */
+        condicao_seguranca: string,
     };
     setFormData: React.Dispatch<React.SetStateAction<{
-        orientador: string;
-        outros: string;
         analise_qualitativa: boolean,
         analise_quantitativa: boolean,
         quantidade_amostras: number,
         tecnicas_condicoes: string,
+        orientador: string;
+        
+        // TIPOS
+        microscopia_eletronica: boolean,
+        amostras_met: boolean,
+        nanomat: boolean,
+        microfab: boolean,
+        grafeno_cvd: boolean,
+        microsoldadora: boolean,
+        microdurometro: boolean,
+        estereoscopio: boolean,
+        //
+        
+        outros: string;
         detectores: string,
         projeto_descricao_amostras: string,
         
@@ -56,15 +73,8 @@ export interface FormDataProps {
         
         // SampleConditionsData
         
-        retornar_amostra: boolean,
+        retornar_amostra?: boolean,
         nivel_prioridade: string,
-        inflamavel: boolean,
-        toxico: boolean,
-        hidroscopico: boolean,
-        radioativo: boolean,
-        corrosivo: boolean,
-        /*
-        // outros: ""
-        */
+        condicao_seguranca: string,
     }>>;
 }

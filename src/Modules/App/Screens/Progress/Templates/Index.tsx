@@ -116,7 +116,7 @@ const Templates: React.FC<TemplatesProps> = ({}) => {
       startDate: "07 de dezembro",
       endDate: null,
       samples: 1,
-      situation: "Cancelado",
+      situation: "Finalizado",
     },
     {
       name: "Sandra Barros",
@@ -163,8 +163,6 @@ const Templates: React.FC<TemplatesProps> = ({}) => {
   return (
     <Container>
         <Title>Lista de Solitações</Title>
-        
-        {/* <Filter/> */}
 
         <List list={listDescription}/>
 
