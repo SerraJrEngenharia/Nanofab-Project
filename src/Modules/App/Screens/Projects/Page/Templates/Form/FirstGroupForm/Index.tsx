@@ -7,6 +7,9 @@ import { Container, DivComboBox, Section, QtdAmostras, Title, InputContainer, Te
 // @Types
 import { FirstGroupFormProps } from './Types';
 
+// Constants
+import {MAX_SAMPLE} from '../Index'
+
 const FirstGroupForm: React.FC<FirstGroupFormProps> = ({formData, setFormData}) => {
   return (
     <Container>
@@ -68,8 +71,8 @@ const FirstGroupForm: React.FC<FirstGroupFormProps> = ({formData, setFormData}) 
             </Section>
 
             <Section>
-                <Title>Qntd. de Amostras</Title>
-                <QtdAmostras type='number' min="1"
+                <Title>Qntd. de Amostras - Máximo {MAX_SAMPLE}</Title>
+                <QtdAmostras type='number' min="1" max={MAX_SAMPLE}
                 value={formData.quantidade_amostras}
                 onChange={(e) => setFormData(
                 { 

@@ -1,5 +1,5 @@
 // React
-import React from 'react';
+import React, { useState } from 'react';
 
 // Native Components
 import { Container, Section, Line } from './Style';
@@ -16,12 +16,18 @@ import Register from "../Templates/Register/Index"
 import Login from "../Templates/Login/Index"
 
 const ComponentLoginRegister: React.FC<ComponentLoginRegisterProps> = ({}) => {
+
+  const [formLogin, setFormLogin] = useState({
+    email: "",
+    senha: ""
+  })
+  
   return (
     <Container>
       <HeaderTemplate />
       
       <Section>
-        <Login />
+        <Login formLogin={formLogin} setFormLogin={setFormLogin}/>
       </Section>
 
       <FooterTemplate />

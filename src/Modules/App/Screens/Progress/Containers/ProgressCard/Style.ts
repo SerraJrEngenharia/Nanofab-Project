@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { width } from "@/Services/screenSizes";
 
 export const Container = styled.div`
   display: flex;
@@ -10,6 +11,8 @@ export const Container = styled.div`
   flex-direction: column;
   margin: 10px;
   border-radius: 10px;
+  
+  
 `;
 
 export const Title = styled.div`
@@ -25,22 +28,31 @@ export const Title = styled.div`
     padding-bottom: 10px;
 
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
 `;
 
 export const TitleText = styled.span`
     font-size: ${({ theme }) => theme.fonts.medium}px;
     margin: 5px;
     font-weight: bold;
-
     margin-left: 10px;
+
+    @media screen and (min-width: 2560px) and (max-width: ${width.extraLargeDesktop}) {    
+        font-size: ${({ theme }) => theme.fonts.large}px;
+      }
+      @media screen and (min-width: ${width.extraLargeDesktop}){    
+        
+      }
+      
 `;
 
 export const Content = styled.div`
     width: 100%;
-    
     display: flex;
     flex-direction: column;
     background-color: #fff;
+    
     
 `;
 

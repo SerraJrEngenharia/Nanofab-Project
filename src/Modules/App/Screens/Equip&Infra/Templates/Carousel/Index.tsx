@@ -1,36 +1,33 @@
+// React
 import React from 'react';
+
+// Native Components
+import { Container } from './Style';
 import { Carousel } from 'antd';
 
-const contentStyle: React.CSSProperties = {
-  margin: 0,
-  height: '160px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
-};
+// @Types
+import { CarouselProps } from './Types'
 
-const CarouselComponent: React.FC = () => {
-  const onChange = (currentSlide: number) => {
-    console.log(currentSlide);
-  };
+const CarouselComponent: React.FC<CarouselProps> = ({}) => {
 
   return (
-    <Carousel afterChange={onChange}>
-      <div>
-        <h3 style={contentStyle}>1</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>2</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>3</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>4</h3>
-      </div>
-    </Carousel>
+    <Container>
+      <Carousel autoplay>
+        <div>
+          <h3>1</h3>
+        </div>
+        <div>
+          <h3>2</h3>
+        </div>
+        <div>
+          <h3>3</h3>
+        </div>
+        <div>
+          <h3>4</h3>
+        </div>
+      </Carousel>
+    </Container>
   );
-};
+}
 
 export default CarouselComponent;

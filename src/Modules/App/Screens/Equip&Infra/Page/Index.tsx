@@ -2,14 +2,16 @@
 import React from 'react';
 
 // Native Components
-import { Container } from './Style';
+import { Container, Content, Section, EquipImg } from "./Style";
+import { Carousel } from "antd";
 
 import HeaderTemplate from "@/Templates/Header/Page/Index";
 import FooterTemplate from "@/Templates/Footer/Page/Index";
 
+import MicroImage from "@/Assets/institutoMaua.png";
+
 // @Types
 import { PageProps } from './Types';
-import CarouselComponent from '../Templates/Carousel/Index';
 
 const EquipInfraPage: React.FC<PageProps> = ({}) => {
   
@@ -47,11 +49,26 @@ const EquipInfraPage: React.FC<PageProps> = ({}) => {
 
   return (
     <Container>
-        <HeaderTemplate />
-        {/* <CarouselComponent /> */}
-        <FooterTemplate />    
+      <HeaderTemplate />
+      <Content>
+        <Carousel autoplay>
+          <Section>
+            <EquipImg src={MicroImage}/>
+          </Section>
+          <Section>
+            <EquipImg />
+          </Section>
+          <Section>
+            <EquipImg />
+          </Section>
+          <Section>
+            <EquipImg />
+          </Section>
+        </Carousel>
+      </Content>
+      <FooterTemplate />
     </Container>
-);
+  );
 }
 
 export default EquipInfraPage;

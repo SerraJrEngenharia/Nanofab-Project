@@ -34,49 +34,67 @@ const TypeProject: React.FC<TypeProjectProps> = ({ formData, setFormData }) => {
 
     const handleCheck = (teste: string) => {
         console.log(teste)
-        // switch (teste) {
-        //     // case 'microscopia_eletronica':
-        //     //     setFormData(teste)
-        //     //     console.log('teste_microscop');
-        //     //         break;
-        //     case 'amostras_met':
-        //         setFormData(
-        //             {   
-        //                 ...formData,
-        //                 amostras_met: !formData.amostras_met,
-        //             })
-        //             break;
-        //     case 'grafeno_cvd':
-        //         setFormData(
-        //             {   
-        //                 ...formData,
-        //                 grafeno_cvd: !formData.grafeno_cvd,
-        //             })
-        //             break;
-        //     case 'microsoldadora':
-        //         setFormData(
-        //             {   
-        //                 ...formData,
-        //                 microsoldadora: !formData.microsoldadora,
-        //             })
-        //             break;
-        //     case 'estereoscopio':
-        //         setFormData(
-        //             {   
-        //                 ...formData,
-        //                 estereoscopio: !formData.estereoscopio,
-        //             })
-        //             break;
-        //     case 'nanomat':
-        //         setFormData(
-        //             {   
-        //                 ...formData,
-        //                 nanomat: !formData.nanomat,
-        //             })
-        //             break;
-        //     default:
-        //       console.log('Caso fora do switch-case');
-        //   }
+        switch (teste) {
+            case 'microscopia_eletronica':
+                setFormData(
+                    {   
+                        ...formData,
+                        microscopia_eletronica: !formData.microscopia_eletronica,
+                    })
+                    break;
+            case 'amostras_met':
+                setFormData(
+                    {   
+                        ...formData,
+                        amostras_met: !formData.amostras_met,
+                    })
+                    break;
+            case 'grafeno_cvd':
+                setFormData(
+                    {   
+                        ...formData,
+                        grafeno_cvd: !formData.grafeno_cvd,
+                    })
+                    break;
+            case 'microsoldadora':
+                setFormData(
+                    {   
+                        ...formData,
+                        microsoldadora: !formData.microsoldadora,
+                    })
+                    break;
+            case 'microdurometro':
+                setFormData(
+                    {   
+                        ...formData,
+                        microdurometro: !formData.microdurometro,
+                    })
+                    break;
+            case 'estereoscopio':
+                setFormData(
+                    {   
+                        ...formData,
+                        estereoscopio: !formData.estereoscopio,
+                    })
+                    break;
+            case 'nanomat':
+                setFormData(
+                    {   
+                        ...formData,
+                        nanomat: !formData.nanomat,
+                    })
+                    break;
+
+            case 'microfab':
+                setFormData(
+                    {   
+                        ...formData,
+                        microfab: !formData.microfab,
+                    })
+                    break;
+            default:
+              console.log('Caso fora do switch-case');
+          }
     }
 
   return (
@@ -110,18 +128,23 @@ const TypeProject: React.FC<TypeProjectProps> = ({ formData, setFormData }) => {
                 <LabelTypes>Preparação de Amostras para MET</LabelTypes> 
             </DivRow>
 
-            {/* <DivRow>
-                <CheckBoxTypes type="checkbox" value="nanomat" checked={formData.nanomat} onChange={() => handleCheck('nanomat')}></CheckBoxTypes>
-                <LabelTypes>Sala Limpa: microfabricação</LabelTypes> 
-            </DivRow>
-
             <DivRow>
-                <CheckBoxTypes type="checkbox" value="microfab" checked={formData.microfab} onChange={() => handleCheck('microfab')}></CheckBoxTypes>
+                <CheckBoxTypes type="checkbox" value="nanomat" checked={formData.nanomat} onChange={() => handleCheck('nanomat')}></CheckBoxTypes>
                 <LabelTypes>Sala Limpa: preparação de Nanomateriais</LabelTypes> 
             </DivRow>
 
             <DivRow>
-                <CheckBoxTypes type="checkbox" value="grafeno_cvd" checked={formData.grafeno_cvd} onChange={() => handleCheck('microsoldadora')}></CheckBoxTypes>
+                <CheckBoxTypes type="checkbox" value="microfab" checked={formData.microfab} onChange={() => handleCheck('microfab')}></CheckBoxTypes>
+                <LabelTypes>Sala Limpa: microfabricação</LabelTypes> 
+            </DivRow>
+
+            <DivRow>
+                <CheckBoxTypes type="checkbox" value="grafeno_cvd" checked={formData.grafeno_cvd} onChange={() => handleCheck('grafeno_cvd')}></CheckBoxTypes>
+                <LabelTypes>Sala Limpa: Deposição de Grafeno por CVD</LabelTypes> 
+            </DivRow>
+
+            <DivRow>
+                <CheckBoxTypes type="checkbox" value="microsoldadora" checked={formData.microsoldadora} onChange={() => handleCheck('microsoldadora')}></CheckBoxTypes>
                 <LabelTypes>Microsoldadora</LabelTypes> 
             </DivRow>
 
@@ -133,7 +156,7 @@ const TypeProject: React.FC<TypeProjectProps> = ({ formData, setFormData }) => {
             <DivRow>
                 <CheckBoxTypes type="checkbox" value="estereoscopio" checked={formData.estereoscopio} onChange={() => handleCheck('estereoscopio')}></CheckBoxTypes>
                 <LabelTypes>Estereoscópio</LabelTypes> 
-            </DivRow> */}
+            </DivRow>
         {/* </ComponentTypes> */}
 
         <InputContainer>

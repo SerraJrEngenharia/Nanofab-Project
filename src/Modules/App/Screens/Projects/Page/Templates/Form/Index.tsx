@@ -5,7 +5,7 @@ import React, { EventHandler, ReactEventHandler, useState, useEffect } from "rea
 import { Container, LogoContainer, Image } from "./Style";
 
 // @Types
-import { FormProps } from "./Types";
+import { FormProps, SampleProps } from "./Types";
 
 import TypeProject from "./TypeProject/Index";
 
@@ -20,8 +20,10 @@ import SampleConditionsForm from "./SampleConditionsForm/Index";
 //images
 import Search from "@/Assets/Form/search.png";
 
-const Form: React.FC<FormProps> = ({}) => {
+export const MAX_SAMPLE = 200
 
+
+const Form: React.FC<FormProps> = ({}) => {
   const [sampleNumber, setSampleNumber] = useState(1);
   const [formData, setFormData] = useState(
     { 
@@ -47,21 +49,22 @@ const Form: React.FC<FormProps> = ({}) => {
       projeto_descricao_amostras: "",
       
       // SampleData
+      amostras: Array(MAX_SAMPLE).fill({}),
       
-      amostras: [
-          {
-                identificacao_amostra: "1",
-                composicao_quimica: "1",
-          }, 
-          {
-            identificacao_amostra: "2",
-            composicao_quimica: "2",
-          }, 
-          {
-            identificacao_amostra: "3",
-            composicao_quimica: "3",
-          }
-        ],
+      // amostras: [
+      //     {
+      //       identificacao_amostra: "1",
+      //       composicao_quimica: "1",
+      //     }, 
+      //     {
+      //       identificacao_amostra: "2",
+      //       composicao_quimica: "2",
+      //     }, 
+      //     {
+      //       identificacao_amostra: "3",
+      //       composicao_quimica: "3",
+      //     }
+      //   ],
       
       // SampleConditionsData
       nivel_prioridade: "",
