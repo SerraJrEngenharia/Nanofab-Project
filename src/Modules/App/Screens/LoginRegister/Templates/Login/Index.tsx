@@ -1,13 +1,34 @@
 // React
-import React from 'react';
+import React, { useContext } from 'react';
 
 // Native Components
 import { Container, Title, Text, Input, Button, InputContainer, Section, LinkContainer, Link } from './Style';
+import { toast } from 'react-toastify'
 
 // @Types
 import { LoginProps } from './Types';
+import { AuthContext } from '@/Modules/App/Context/Auth';
+import { useNavigate } from 'react-router-dom';
 
 const RedefPassword: React.FC<LoginProps> = ({formLogin, setFormLogin}) => {
+  const { login } = useContext(AuthContext)
+  const navigate = useNavigate()
+
+  const handleLogin = async () => {
+    if(formLogin.email, formLogin.senha){
+      try{
+        await login(formLogin.email, formLogin.senha) 
+        navigate("/")
+      } catch(e) {
+        toast.error("Erro, tente novamente.")
+      }
+    }
+    else{
+      toast.error('Preencha todos os campos de texto!')
+    }
+  }
+
+
   return (
     <Container>
       <Title>Entrar</Title>
@@ -45,7 +66,7 @@ const RedefPassword: React.FC<LoginProps> = ({formLogin, setFormLogin}) => {
         </LinkContainer>
       </Section>
 
-      <Button onClick={() => console.log(formLogin)}>Entrar</Button>
+      <Button onClick={() => handleLogin()}>Entrar</Button>
     </Container>
   );
 }

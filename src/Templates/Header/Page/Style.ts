@@ -54,6 +54,7 @@ export const LoginContainer = styled.div`
 
 export const LogoCompany = styled.img`
   width: 150px;
+  cursor: pointer;
 
   @media screen and (max-width: ${width.mobile}) {    
     width: 110px;

@@ -3,7 +3,7 @@ import React from 'react';
 
 // Native Components
 import { Container } from './Style';
-import { Carousel } from 'antd';
+// import { Carousel } from 'antd';
 
 // @Types
 import { CarouselProps } from './Types'
@@ -12,7 +12,7 @@ const CarouselComponent: React.FC<CarouselProps> = ({}) => {
 
   return (
     <Container>
-      <Carousel autoplay>
+      {/* <Carousel autoplay>
         <div>
           <h3>1</h3>
         </div>
@@ -25,7 +25,7 @@ const CarouselComponent: React.FC<CarouselProps> = ({}) => {
         <div>
           <h3>4</h3>
         </div>
-      </Carousel>
+      </Carousel> */}
     </Container>
   );
 }

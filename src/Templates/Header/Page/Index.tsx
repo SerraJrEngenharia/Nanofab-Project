@@ -18,44 +18,20 @@ import MobileNavigationTemplate from "../Templates/MobileNavigation/Index";
 // @Types
 import { PageProps } from "./Types";
 import LoginBadge from "../Components/LoginBadge/Index";
+import { useNavigate } from "react-router-dom";
+import UserStatus from "../Templates/UserStatus/Index";
 
 
 const HeaderTemplate: React.FC<PageProps> = ({}) => {
-  const navLinks = [
-    {
-      name: "Home",
-      url: "/",
-    },
-    {
-      name: "Equipe",
-      url: "/equipe",
-    },
-    {
-      name: "Andamento",
-      url: "/andamento",
-    },
-    {
-      name: "Submissão de Projetos",
-      url: "/submissao_projetos",
-    },
-    {
-      name: "Publicações",
-      url: "/publicacoes",
-    },
-    {
-      name: "Parcerias",
-      url: "/parcerias",
-    },
-  ];
-
+  const navigate = useNavigate()
   return (
     <Container>
       <Section>
         <MobileNavigationTemplate />
         
-        <LogoCompany src={NanoImage} />
+        <LogoCompany src={NanoImage} onClick={() => navigate("/")}/>
 
-        <LoginBadge />
+        <UserStatus  />
        
       </Section>
       

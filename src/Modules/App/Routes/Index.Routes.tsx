@@ -23,6 +23,7 @@ import EquipInfraPage from "@/Modules/App/Screens/Equip&Infra/Page/Index";
 // @Types
 import { RoutesProps } from "./Types";
 import { Container } from "./Style";
+import { AuthProvider } from "../Context/Auth";
 
 const router = createBrowserRouter(
   [
@@ -83,7 +84,9 @@ const router = createBrowserRouter(
 const Routes: React.FC<RoutesProps> = ({}) => {
   return (
     <Container>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </Container>
   );
 };

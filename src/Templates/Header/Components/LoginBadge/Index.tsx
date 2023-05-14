@@ -2,7 +2,7 @@
 import React from "react";
 
 // Native Components
-import { Container, Text, Icon } from "./Style";
+import { Container, Text, IconLogin } from "./Style";
 
 // @Types
 import { LoginBadgeProps } from "./Types";
@@ -15,7 +15,7 @@ const LoginBadge: React.FC<LoginBadgeProps> = ({}) => {
   return (
     <Container onClick={() => navigate('/Login')}>
       <Text>Entrar</Text>
-      <Icon />
+      <IconLogin />
     </Container>
   );
 };

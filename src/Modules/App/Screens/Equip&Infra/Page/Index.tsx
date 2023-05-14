@@ -3,7 +3,7 @@ import React from 'react';
 
 // Native Components
 import { Container, Content, Section, EquipImg } from "./Style";
-import { Carousel } from "antd";
+// import { Carousel } from "antd";
 
 import HeaderTemplate from "@/Templates/Header/Page/Index";
 import FooterTemplate from "@/Templates/Footer/Page/Index";
@@ -51,7 +51,7 @@ const EquipInfraPage: React.FC<PageProps> = ({}) => {
     <Container>
       <HeaderTemplate />
       <Content>
-        <Carousel autoplay>
+        {/* <Carousel autoplay>
           <Section>
             <EquipImg src={MicroImage}/>
           </Section>
@@ -64,7 +64,7 @@ const EquipInfraPage: React.FC<PageProps> = ({}) => {
           <Section>
             <EquipImg />
           </Section>
-        </Carousel>
+        </Carousel> */}
       </Content>
       <FooterTemplate />
     </Container>
