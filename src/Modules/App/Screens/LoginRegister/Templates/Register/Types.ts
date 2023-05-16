@@ -1,5 +1,8 @@
 export interface RegisterProps {
   nome: string;
+  publica: boolean;
+  privada: boolean;
+  inst: string;
   telefone: string;
   ramal: string;
   funcao: string;

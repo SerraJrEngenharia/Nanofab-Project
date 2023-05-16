@@ -59,8 +59,8 @@ const RedefPassword: React.FC<LoginProps> = ({formLogin, setFormLogin}) => {
           />
         </InputContainer>
         <LinkContainer>
-          <Link href={"/Nanofab-Project/login/create_Account"}>Não tem conta? Crie uma!</Link>
-          <Link href={"/Nanofab-Project/login/Redefine_Password"}>
+          <Link onClick={() => navigate("/criar_conta")}>Não tem conta? Crie uma!</Link>
+          <Link onClick={() => navigate("/redefinir_senha")}>
             Esqueci minha senha
           </Link>
         </LinkContainer>

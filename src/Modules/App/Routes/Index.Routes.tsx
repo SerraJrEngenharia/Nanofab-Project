@@ -56,11 +56,11 @@ const router = createBrowserRouter(
       element: <LoginPage />,
     },
     {
-      path: "/login/create_Account",
+      path: "/criar_conta",
       element: <RegisterPage />,
     },
     {
-      path: "/login/Redefine_Password",
+      path: "/redefinir_senha",
       element: <RedefPassw />,
     },
     {

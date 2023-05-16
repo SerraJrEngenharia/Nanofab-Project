@@ -1,5 +1,5 @@
 // React
-import React from 'react';
+import React, { useState } from 'react';
 
 // Native Components
 import { Container, Section, Line } from './Style';
@@ -13,9 +13,9 @@ import FooterTemplate from "@/Templates/Footer/Page/Index";
 
 //imports components 
 import Register from "../Templates/Register/Index"
-import Login from "../Templates/Login/Index"
 
 const ComponentLoginRegister: React.FC<ComponentLoginRegisterProps> = ({}) => {
+
   return (
     <Container>
       <HeaderTemplate />

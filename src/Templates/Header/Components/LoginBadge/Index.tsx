@@ -13,7 +13,7 @@ const LoginBadge: React.FC<LoginBadgeProps> = ({}) => {
   const navigate = useNavigate()
 
   return (
-    <Container onClick={() => navigate('/Login')}>
+    <Container onClick={() => navigate('/login')}>
       <Text>Entrar</Text>
       <IconLogin />
     </Container>
